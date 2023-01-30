@@ -1,0 +1,57 @@
+HTML -> stands for HyperText Markup Language
+CSS -> stands for Cascading Style Sheets
+JS -> stands for JavaScript
+
+
+Question 01 => No
+Question 02 => Yes
+Question 03 => No
+Question 04 => No
+
+<!-- Example -->
+
+<!--
+  Meta Tag
+  For Defining The Content Encoding
+-->
+<meta charset="UTF-8" />
+ <!-- This is for defining the Content Type of a web page-->
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <!-- This is for optimizing SEO for our web page, it appears in the search result of a search engine -->
+  <meta name="description" content="This is a description for my first page">
+  <!-- This is for defining the viewport of a web page -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- This is for defining the keywords of a web page, it increase the chance of appearing in the top search results of
+  search engine. -->
+  <meta name="keywords" content="HTML, CSS, and JS">
+
+
+<!-- Type Question 1 Answer Below -->
+"<!DOCTYPE html>"
+
+<!-- Type Question 2 Answer Below -->
+"Quirks Mode"
+
+<!-- Type Question 3 Answer Below -->
+"Yes"
+
+<!-- Type Question 4 Answer Below -->
+"No"
+
+<!-- Type Question 5 Answer Below -->
+"heading from 1 to 6"
+
+No, 
+No,
+Yes,
+Yes,
+
+
+title -> No
+href -> No
+src -> No
+hidden -> Yes
+charset -> No
+class -> Yes 
+id -> Yes
+type -> No 
