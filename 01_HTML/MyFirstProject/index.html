@@ -10,11 +10,13 @@
 
 <body>
   <h1>#100DaysOfWebDevelopment</h1>
-  <h2>Working with Audio</h2>
-  <audio src="./assets/audios/audio_1.mp3" controls autoplay loop>
-  </audio>
-  <audio src="./assets/audios/audio_2.m4a" type="audio/m4a" controls muted>
-  </audio>
+  <h2>Video Tag</h2>
+
+  <video src="./assets/videos/video_1.mp4" width="600" height="350" controls autoplay loop muted
+    poster="./assets/images/image_2.png">
+    <track src="my_track_file_en.vtt" kind="subtitles" srclang="en" label="English">
+    <track src="my_track_file_it.vtt" kind="subtitles" srclang="it" label="Italian">
+  </video>
 </body>
 
 </html>
