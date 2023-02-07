@@ -11,19 +11,22 @@
 <body>
   <h1>#100DaysOfWebDevelopment</h1>
   <form action="" method="POST">
-    <label for="username">Username</label>
-    <input type="text" name="username" id="username" placeholder="John Doe" required>
+    <div>
+      <label for="username">Username</label>
+      <input type="text" name="username" id="username" required placeholder="John Doe">
+    </div>
     <br>
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" placeholder="johndoe@gmail.com" required>
+    <div>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required value="moatasem.abunema@gmail.com">
+    </div>
     <br>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password" placeholder="*********" required>
-    <br><br>
-    <button type="submit">Register</button>
-    <button type="reset">Reset</button>
-    <button disabled="disabled">Disabled</button>
-    <input type="button" value="Login">
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" required placeholder="********">
+    </div>
+    <br>
+    <input type="submit" value="Save">
   </form>
 </body>
 
