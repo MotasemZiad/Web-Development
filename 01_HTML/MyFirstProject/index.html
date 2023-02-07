@@ -15,18 +15,36 @@
       <label for="username">Username</label>
       <input type="text" name="username" id="username" required placeholder="John Doe">
     </div>
-    <br>
     <div>
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" required value="moatasem.abunema@gmail.com">
+      <input type="email" name="email" id="email" required placeholder="johndoe@gmail.com">
     </div>
-    <br>
     <div>
       <label for="password">Password</label>
       <input type="password" name="password" id="password" required placeholder="********">
     </div>
+    <div>
+      <label for="color">Color</label>
+      <input type="color" name="color" id="color">
+    </div>
+    <div>
+      <label for="range">Range</label>
+      <input type="range" name="range" id="range" min="0" max="100" step="20" value="60">
+    </div>
+    <div>
+      <label for="search">Search</label>
+      <input type="search" name="search" id="search">
+    </div>
+    <div>
+      <label for="number">Number</label>
+      <input type="number" name="number" id="number" min="10" max="100" step="10">
+    </div>
+
+
     <br>
+    <input hidden name="id" value="user_id">
     <input type="submit" value="Save">
+    <input type="reset" value="Reset">
   </form>
 </body>
 
