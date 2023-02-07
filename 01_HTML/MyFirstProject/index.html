@@ -10,18 +10,18 @@
 
 <body>
   <h1>#100DaysOfWebDevelopment</h1>
-  <form action="" method="POST">
+  <form action="" method="GET">
     <div>
       <label for="username">Username</label>
-      <input type="text" name="username" id="username" required placeholder="John Doe">
+      <input type="text" name="username" id="username" value="motasemabunima" maxlength="20">
     </div>
     <div>
       <label for="email">Email</label>
-      <input type="email" name="email" id="email" required placeholder="johndoe@gmail.com">
+      <input type="email" name="email" id="email" value="motasemabunima@gmail.com" disabled>
     </div>
     <div>
       <label for="password">Password</label>
-      <input type="password" name="password" id="password" required placeholder="********">
+      <input type="password" name="password" id="password" required placeholder="********" minlength="8">
     </div>
     <div>
       <label for="color">Color</label>
@@ -33,7 +33,7 @@
     </div>
     <div>
       <label for="search">Search</label>
-      <input type="search" name="search" id="search">
+      <input type="search" name="search" id="search" autofocus>
     </div>
     <div>
       <label for="number">Number</label>
