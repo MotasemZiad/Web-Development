@@ -10,7 +10,7 @@
 
 <body>
   <h1>#100DaysOfWebDevelopment</h1>
-  <form action="" method="GET">
+  <form action="./home.html" method="GET" novalidate target="_blank">
     <div>
       <label for="username">Username</label>
       <input type="text" name="username" id="username" value="motasemabunima" maxlength="20">
@@ -96,14 +96,36 @@
     </div>
 
     <div><label for="url">URL</label><input type="url" name="url" id="url"></div>
-    <label for="date">Date</label><input type="date" name="date" id="date">
-    <label for="date_time">Date Time</label><input type="datetime" name="date_time" id="date_time">
+    <label for="date">Date</label><input type="date" name="date" id="date"> <br>
+    <label for="date_time">Date Time</label><input type="datetime" name="date_time" id="date_time"><br>
     <label for="date_time_local">Date Time Local</label><input type="datetime-local" name="date_time_local"
-      id="date_time_local">
-    <label for="week">Week</label><input type="week" name="week" id="week">
-    <label for="month">Month</label><input type="month" name="month" id="month">
-    <label for="time">Time</label><input type="time" name="time" id="time">
-    <label for="tel">Telephone</label><input type="tel" name="tel" id="tel">
+      id="date_time_local"> <br>
+    <label for="week">Week</label><input type="week" name="week" id="week"> <br>
+    <label for="month">Month</label><input type="month" name="month" id="month"> <br>
+    <label for="time">Time</label><input type="time" name="time" id="time"> <br>
+    <label for="tel">Telephone</label><input type="tel" name="tel" id="tel"><br><br>
+    <div>
+      <label for="programming_languages">Programming Languages</label><input list="programming_languages"
+        name="programming_languages">
+      <datalist id="programming_languages">
+        <option value="Python">
+        <option value="C">
+        <option value="C++">
+        <option value="C#">
+        <option value="Objective-C">
+        <option value="Swift">
+        <option value="Kotlin">
+        <option value="Java">
+        <option value="JavaScript">
+        <option value="TypeScript">
+        <option value="Scala">
+        <option value="Julia">
+        <option value="R">
+        <option value="Ruby">
+        <option value="PHP">
+        <option value="Visual Basic">
+      </datalist>
+    </div>
     <br>
     <input hidden name="id" value="user_id">
     <input type="submit" value="Save">
