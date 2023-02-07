@@ -58,6 +58,32 @@
       </div>
       <div><input type="checkbox" name="programming_language" id="c#" value="c#"><label for="c#">C#</label></div>
     </div>
+
+    <div><label for="book">Choose your book</label>
+      <select name="book" id="book" multiple spellcheck="true">
+        <optgroup label="Self Development">
+          <option value="rich_dad_poor_dad">Rich Dad Poor Dad</option>
+          <option value="atomic_habits" selected>Atomic Habits</option>
+          <option value="flow">Flow</option>
+        </optgroup>
+        <optgroup label="Novels">
+          <option value="4">Book 4</option>
+          <option value="5" selected>Book 5</option>
+          <option value="6">Book 6</option>
+        </optgroup>
+        <optgroup label="Stories">
+          <option value="7">Book 7</option>
+          <option value="8" selected>Book 8</option>
+          <option value="9">Book 9</option>
+        </optgroup>
+
+      </select>
+    </div>
+    <br>
+    <div>
+      <textarea name="compliance" id="compliance" cols="30" rows="10"
+        placeholder="Your Compliances Or Suggestions"></textarea>
+    </div>
     <br>
     <input hidden name="id" value="user_id">
     <input type="submit" value="Save">
