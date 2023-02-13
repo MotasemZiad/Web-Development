@@ -1,8 +1,10 @@
 .first-element {
-    background-color: #ff0000;
-    background-image: url('../assets/images/image_3.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 10% 50%;
-    background-size: cover;
+    background-color: blue;
+    color: white;
+    padding: 16px;
+    margin: auto;
+    border: solid red 3px;
+    border-radius: 12px;
+    width: 80%;
+    height: auto;
 }
