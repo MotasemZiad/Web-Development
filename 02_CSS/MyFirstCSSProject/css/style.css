@@ -1,4 +1,8 @@
 .first-element {
-    background-image: url('../assets/images/image_1.png');
-    background-repeat: repeat-y;
+    background-color: #ff0000;
+    background-image: url('../assets/images/image_3.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 10% 50%;
+    background-size: cover;
 }
