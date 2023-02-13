@@ -1,0 +1,10 @@
+.content {
+    color: red;
+    font-weight: bold;
+}
+
+
+#my-id {
+    color: green;
+    font-weight: 900;
+}
