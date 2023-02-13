@@ -1,10 +1,29 @@
-.content {
-    color: red;
-    font-weight: bold;
+p {
+    color: blue;
 }
 
-
-#my-id {
+.special {
     color: green;
-    font-weight: 900;
 }
+
+#specific {
+    color: red;
+}
+
+.class-item {
+  font-family: Tahoma, Arial;
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 200px;
+  height: 400px;
+  background-color: #333;
+  color: #FFF;
+}
+/* 
+Here you can add either single line comment and multiline comment
+in order to proceed with your own idea.
+*/
