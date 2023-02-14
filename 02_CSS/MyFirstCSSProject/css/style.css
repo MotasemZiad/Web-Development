@@ -3,6 +3,10 @@ div {
   padding: 12px;
   font-weight: 700;
   font-size: 2em;
-  width: fit-content;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 1px red;
+  text-align: center;
+}
+
+img {
+  vertical-align: top;
 }
