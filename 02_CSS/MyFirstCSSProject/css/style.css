@@ -1,0 +1,7 @@
+.first-outline {
+    background-color: #ccc;
+    width: 200px;
+    padding: 10px;
+    border: 10px solid red;
+    outline: 10px solid green;
+}
