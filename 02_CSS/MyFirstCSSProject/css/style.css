@@ -1,19 +1,31 @@
-/* display: none;
-- remove the element as well as the space.
-
-visibility: hidden;
-- remove the element but still has the space.
-*/
-
-div {
-    background-color: red;
-    margin: 10px 0;
+.one {
+  border-bottom: solid red 1px;
+  color: red;
 }
 
-.first {
-    display: none;
+.two {
+  border-bottom: solid green 1px;
+  color: green;
 }
 
-.second {
-    visibility: hidden;
+.three {
+  border-bottom: solid blue 1px;
+  color: blue;
+}
+
+.four {
+  border-bottom: solid purple 1px;
+  color: purple;
+}
+
+.one,
+.two,
+.three,
+.four,
+.my-p {
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #d8d8d8;
+  font-size: 18px;
+  font-weight: bold;
 }
