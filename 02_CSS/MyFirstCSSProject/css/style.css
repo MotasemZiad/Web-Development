@@ -5,8 +5,6 @@ div {
   font-size: 2em;
   text-shadow: 1px 1px 1px red;
   text-align: center;
-}
-
-img {
-  vertical-align: top;
+  text-decoration: line-through;
+  text-transform: capitalize;
 }
