@@ -1,6 +1,8 @@
 div {
-  background-color: blue;
-  color: white;
+  background-color: #d8d8d8;
   padding: 12px;
+  font-weight: 700;
+  font-size: 2em;
   width: fit-content;
+  text-shadow: 1px 1px 1px black;
 }
