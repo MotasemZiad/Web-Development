@@ -11,32 +11,6 @@
 */
 /* inline-block 
    - Place elements beside each other
-   - 
+   - Add line break whenever needed
    - Respect everything: padding, margin, width, height, etc...
 */
-
-.block-element {
-    display: block;
-    background-color: #DDD;
-    width: 300px;
-    height: 250px;
-    padding: 10px;
-    margin: 10px;
-}
-
-.inline-element{
-    display: inline;
-    background-color: #f00;
-    padding: 20px;
-    margin: 20px;
-}
-
-.inline-block-element {
-    display: inline-block;
-    background-color: blue;
-    color: white;
-    width: 300px;
-    height: 250px;
-    padding: 10px;
-    margin: 10px;
-}
