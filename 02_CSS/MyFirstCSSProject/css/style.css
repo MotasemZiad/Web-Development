@@ -1,16 +1,19 @@
-/* block 
-   - Take full width if you do not provide it a width.
-   - Add line break
-   - Respect everything: padding, margin, width, height, etc...
+/* display: none;
+- remove the element as well as the space.
+
+visibility: hidden;
+- remove the element but still has the space.
 */
-/* inline 
-   - Place elements beside each other
-   - Do not add line break
-   - Do not respect width & height
-   - Respect padding & margin [from left & right only]
-*/
-/* inline-block 
-   - Place elements beside each other
-   - Add line break whenever needed
-   - Respect everything: padding, margin, width, height, etc...
-*/
+
+div {
+    background-color: red;
+    margin: 10px 0;
+}
+
+.first {
+    display: none;
+}
+
+.second {
+    visibility: hidden;
+}
