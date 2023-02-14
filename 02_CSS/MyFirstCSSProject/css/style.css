@@ -1,7 +1,42 @@
-.first-outline {
-    background-color: #ccc;
-    width: 200px;
+/* block 
+   - Take full width if you do not provide it a width.
+   - Add line break
+   - Respect everything: padding, margin, width, height, etc...
+*/
+/* inline 
+   - Place elements beside each other
+   - Do not add line break
+   - Do not respect width & height
+   - Respect padding & margin [from left & right only]
+*/
+/* inline-block 
+   - Place elements beside each other
+   - 
+   - Respect everything: padding, margin, width, height, etc...
+*/
+
+.block-element {
+    display: block;
+    background-color: #DDD;
+    width: 300px;
+    height: 250px;
     padding: 10px;
-    border: 10px solid red;
-    outline: 10px solid green;
+    margin: 10px;
+}
+
+.inline-element{
+    display: inline;
+    background-color: #f00;
+    padding: 20px;
+    margin: 20px;
+}
+
+.inline-block-element {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    width: 300px;
+    height: 250px;
+    padding: 10px;
+    margin: 10px;
 }
