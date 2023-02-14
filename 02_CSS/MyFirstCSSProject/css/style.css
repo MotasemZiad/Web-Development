@@ -1,10 +1,17 @@
 div {
+  width: 300px;
   background-color: #d8d8d8;
   padding: 12px;
   font-weight: 700;
   font-size: 2em;
   text-shadow: 1px 1px 1px red;
-  text-align: center;
-  text-decoration: line-through;
+  text-align: left;
+  text-decoration: underline;
   text-transform: capitalize;
+  letter-spacing: 2px;
+  word-spacing: 2px;
+  text-indent: 100px;
+  line-height: 1.6;
+  white-space: nowrap;
+  word-break: break-word;
 }
