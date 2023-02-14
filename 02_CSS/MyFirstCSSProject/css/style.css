@@ -29,3 +29,15 @@
   font-size: 18px;
   font-weight: bold;
 }
+
+div p {
+  color: red;
+}
+
+p {
+  color: green;
+}
+
+div .special {
+  color: aqua;
+}
