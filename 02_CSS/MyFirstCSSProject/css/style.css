@@ -1,19 +1,20 @@
-/* Font Family */
+/* CSS Units
+    - px
+    - em => time 
+    - rem => root time
+    - vw => viewport width
+    - percentage
 
-.serif {
-  font-family: "Times New Roman", Times, serif;
-}
 
-.sans-serif {
-  font-family: Arial, Helvetica, sans-serif;
-}
+    Read
+    - vmin
+    - vh
 
-.cairo {
-  font-family: "Cairo", sans-serif;
-}
-.serif,
-.sans-serif,
-.cairo {
-  background-color: #e8e8e8;
-  padding: 10px;
+
+    Default standard font size for web page is 16px
+    approximately 1em = 16px
+*/
+
+div {
+  font-size: 5vw;
 }
