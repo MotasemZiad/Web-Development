@@ -1,6 +1,22 @@
-div {
-  font-size: 5vh;
-  font-style: italic;
-  font-weight: 900;
-  font-variant: small-caps;
+.google-btn {
+  width: fit-content;
+  padding: 12px;
+  margin: 8px 16px;
+  background-color: blue;
+  border-radius: 12px;
+}
+
+.google-btn a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.6em;
+}
+
+button {
+  color: red;
+  background-color: transparent;
+  font-size: 1.2em;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
 }
