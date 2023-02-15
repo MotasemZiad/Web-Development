@@ -1,0 +1,17 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+div {
+  background-color: #eee;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  border: solid 2px blue;
+}
+
+div p {
+  border: solid 2px;
+  border-color: inherit; /* This border-color property inherit its value from its parent */
+  padding: inherit; /* This padding property inherit its value from its parent */
+}
