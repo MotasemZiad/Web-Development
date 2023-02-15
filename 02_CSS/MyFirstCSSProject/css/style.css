@@ -1,18 +1,8 @@
-body {
-  margin: 0;
+.one {
+  background-color: red;
+  opacity: 0.3;
 }
 
-div {
-  background-color: #eee;
-  padding: 10px 0;
-  text-align: center;
-  float: left;
-  width: calc((100% - 72px) / 5);
-  margin-left: 2%;
+.two {
+  background-color: rgba(255, 0, 0, 0.3);
 }
-
-/* Do some calculations 
-100%
-12px margin left = 12 * 6 = 72px 
-(100% - 72px) Available Space => ((100% - 72px) / 5) =
-*/
