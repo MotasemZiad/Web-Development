@@ -12,7 +12,8 @@
   font-family: "Cairo", sans-serif;
 }
 .serif,
-.sans-serif {
+.sans-serif,
+.cairo {
   background-color: #e8e8e8;
   padding: 10px;
 }
