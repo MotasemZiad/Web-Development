@@ -1,20 +1,6 @@
-/* CSS Units
-    - px
-    - em => time 
-    - rem => root time
-    - vw => viewport width
-    - percentage
-
-
-    Read
-    - vmin
-    - vh
-
-
-    Default standard font size for web page is 16px
-    approximately 1em = 16px
-*/
-
 div {
-  font-size: 5vw;
+  font-size: 5vh;
+  font-style: italic;
+  font-weight: 900;
+  font-variant: small-caps;
 }
