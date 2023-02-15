@@ -1,16 +1,18 @@
-.parent {
-  background-color: red;
-  padding: 10px;
+body {
+  margin: 0;
 }
 
-.parent div {
+div {
+  background-color: #eee;
   padding: 10px 0;
   text-align: center;
-  background-color: #ccc;
   float: left;
-  width: 25%;
+  width: calc((100% - 72px) / 5);
+  margin-left: 2%;
 }
 
-.clear {
-  clear: both;
-}
+/* Do some calculations 
+100%
+12px margin left = 12 * 6 = 72px 
+(100% - 72px) Available Space => ((100% - 72px) / 5) =
+*/
