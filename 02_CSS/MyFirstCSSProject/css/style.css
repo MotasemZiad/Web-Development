@@ -1,22 +1,16 @@
-.google-btn {
-  width: fit-content;
-  padding: 12px;
-  margin: 8px 16px;
-  background-color: blue;
-  border-radius: 12px;
+.parent {
+  background-color: red;
+  padding: 10px;
 }
 
-.google-btn a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.6em;
+.parent div {
+  padding: 10px 0;
+  text-align: center;
+  background-color: #ccc;
+  float: left;
+  width: 25%;
 }
 
-button {
-  color: red;
-  background-color: transparent;
-  font-size: 1.2em;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
+.clear {
+  clear: both;
 }
