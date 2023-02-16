@@ -30,7 +30,6 @@
   color: white;
   width: 0px;
   height: 0px;
-  background-color: white;
   position: absolute;
   left: -20px;
   margin-top: -10px;
@@ -65,4 +64,28 @@
   right: -10px;
   top: 50%;
   border-radius: 6px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+ul li::before {
+  content: "";
+  color: black;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  left: -20px;
+  margin-top: -10px;
+  top: 50%;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent blue transparent transparent;
 }
