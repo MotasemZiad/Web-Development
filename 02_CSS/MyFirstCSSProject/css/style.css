@@ -1,53 +1,29 @@
-/* Pseudo Classes */
-
+/* 
+Pseudo Classes VS. Pseudo Elements
+single colon  - double colons
+*/
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.one {
-  background-color: red;
-  color: white;
-  padding: 10px;
+.one span {
+  display: inline-block;
+  font-size: 64px;
   font-weight: bold;
 }
 
-.two {
-  background-color: #e8e8e8;
-  width: 100px;
-  height: 100px;
+.two::first-letter {
+  display: inline-block;
+  font-size: 64px;
+  font-weight: bold;
 }
 
-div:empty {
-  border: solid 2px #383838;
+.three::first-line {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-a {
-  color: green;
-  text-decoration: none;
-}
-
-a:hover {
-  color: purple;
-}
-
-a:visited {
-  color: aqua;
-}
-
-.in {
-  border: 1px solid blue;
-}
-
-.in:focus {
-  border: 2px solid blue;
-  outline: none;
-  border-radius: 2px;
-}
-
-.ch {
-  accent-color: purple;
-}
-
-.ch:checked + label {
-  color: purple;
+::selection {
+  background-color: black;
+  color: yellow;
 }
