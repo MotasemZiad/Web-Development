@@ -1,6 +1,7 @@
 .parent {
   margin-bottom: 20px;
   overflow: hidden;
+  counter-increment: member-counter;
 }
 
 .user {
@@ -25,7 +26,7 @@
 }
 
 .one::before {
-  content: "";
+  content: attr(data-text);
   color: white;
   width: 0px;
   height: 0px;
@@ -38,7 +39,7 @@
   border-style: solid;
   border-color: transparent blue transparent transparent;
 }
-
+/* 
 .one::after {
   content: "";
   position: absolute;
@@ -49,4 +50,19 @@
   top: 0;
   border-end-end-radius: 6px;
   border-start-end-radius: 6px;
+} */
+
+.one::after {
+  content: counter(member-counter);
+  position: absolute;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  width: fit-content;
+  height: 20px;
+  padding: 8px;
+  right: -10px;
+  top: 50%;
+  border-radius: 6px;
 }
