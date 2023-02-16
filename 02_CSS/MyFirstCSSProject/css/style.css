@@ -1,0 +1,44 @@
+/* 
+Position
+    - static => default
+    - relative
+    - absolute
+    - fixed 
+    - sticky
+
+
+    Note: 
+    in order to use absolute position the parent element must be from type relative 
+*/
+
+body {
+  min-height: 5000px;
+}
+
+div {
+  color: white;
+  width: 200px;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+.one {
+  background-color: red;
+  position: absolute;
+  left: 20px;
+}
+
+.two {
+  background-color: green;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.parent {
+  width: 400px;
+  height: 200px;
+  background-color: blue;
+  position: relative;
+}
