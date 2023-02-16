@@ -1,0 +1,24 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+table td {
+  background-color: #e8e8e8;
+}
+
+table thead th {
+  background-color: blue;
+  color: white;
+  font-size: 1.2em;
+}
+
+table td,
+table thead th {
+  padding: 12px;
+  border: solid 1px #c8c8c8;
+}
