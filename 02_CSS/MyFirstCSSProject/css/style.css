@@ -1,24 +1,53 @@
+/* Pseudo Classes */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-table {
-  width: 100%;
-  border-spacing: 0;
-}
-
-table td {
-  background-color: #e8e8e8;
-}
-
-table thead th {
-  background-color: blue;
+.one {
+  background-color: red;
   color: white;
-  font-size: 1.2em;
+  padding: 10px;
+  font-weight: bold;
 }
 
-table td,
-table thead th {
-  padding: 12px;
-  border: solid 1px #c8c8c8;
+.two {
+  background-color: #e8e8e8;
+  width: 100px;
+  height: 100px;
+}
+
+div:empty {
+  border: solid 2px #383838;
+}
+
+a {
+  color: green;
+  text-decoration: none;
+}
+
+a:hover {
+  color: purple;
+}
+
+a:visited {
+  color: aqua;
+}
+
+.in {
+  border: 1px solid blue;
+}
+
+.in:focus {
+  border: 2px solid blue;
+  outline: none;
+  border-radius: 2px;
+}
+
+.ch {
+  accent-color: purple;
+}
+
+.ch:checked + label {
+  color: purple;
 }
