@@ -1,41 +1,72 @@
-/* margin collapse
-    - apply on vertical margins only
-    - bigger margin wins
-    - works only if they don't have any elements between them
-    - Nesting does not affect collapsing
-*/
+/* CSS Variables
+    - Global Scope
+    - Local Scope
 
-.parent {
-  overflow: hidden;
-  width: 400px;
-  height: 200px;
-  margin: auto;
-  padding: 10px;
+    var(variable name, fallback value)
+ */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --primary-color: purple;
+  --secondary-color: green;
+  --accent-color: pink;
+  --default-margin: 20px auto;
+  --default-padding: 16px;
+  --default-radius: 6px;
+  --border: solid 2px black;
+}
+
+.main-div {
+  background-color: var(--primary-color, green);
+  color: white;
+  padding: var(--default-padding, 20px);
+  margin: var(--default-margin, 20px);
+  font-size: 1.7em;
+  font-weight: bold;
+  border-radius: var(--default-radius, 4px);
+}
+
+.main-title {
   background-color: #e8e8e8;
+  color: var(--primary-color, green);
+  font-size: 1.7em;
+  font-weight: bold;
+  padding: var(--default-padding, 20px);
+  margin: var(--default-margin, 20px);
+  border-radius: var(--default-radius, 4px);
 }
 
-.parent.one,
-.parent.two {
-  float: left;
-  width: 50%;
-  height: 100%;
+.main-paragraph {
+  background-color: transparent;
+  color: var(--primary-color, green);
+  font-size: 1.2em;
+  font-weight: 100;
+  border: solid 1px var(--primary-color, green);
+  padding: var(--default-padding, 20px);
+  margin: var(--default-margin, 20px);
+  border-radius: var(--default-radius, 4px);
 }
 
-.one {
-  background-color: #b8b8b8;
+.main-link {
+  margin: var(--default-margin, 20px);
 }
 
-.two {
-  background-color: #707070;
-}
-.up {
-  background-color: red;
-  color: white;
-  height: 100px;
+a {
+  text-decoration: none;
 }
 
-.down {
-  background-color: green;
-  color: white;
-  height: 100px;
+a:hover {
+  color: var(--primary-color, green);
+  font-weight: bold;
+}
+
+.local {
+  --main-color: darkorange;
+  padding: var(--default-padding, 20px);
+  margin: var(--default-margin, 20px auto);
+  border-radius: var(--default-radius, 4px);
+  background-color: var(--main-color, orange);
+  border: solid 2px var(--main-color, orange);
 }
