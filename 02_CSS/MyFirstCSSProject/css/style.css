@@ -1,11 +1,22 @@
-/* Box Shadow
-    Horizontal Shadow | Vertical Shadow | Blur | Spread | Color | Inset
-*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-div {
-  background-color: #e8e8e8;
-  width: 300px;
+.parent {
+  width: 600px;
   margin: 20px auto;
-  padding: 12px;
-  box-shadow: 10px 10px 10px 10px black inset;
+  padding: 10px;
+  background-color: #eee;
+  overflow: hidden;
+}
+
+.child {
+  background-color: #aaa;
+  width: 300px;
+  float: left;
+  padding: 10px;
+  border: 10px solid red;
 }
