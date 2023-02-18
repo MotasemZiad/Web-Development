@@ -1,43 +1,11 @@
-/* Vendor Prefixes
-    -webkit => Google Chrome, Safari, new Opera version
-    -moz => Mozilla Firefox
-    -ms => Microsoft Edge
-    -o => Opera
+/* Box Shadow
+    Horizontal Shadow | Vertical Shadow | Blur | Spread | Color | Inset
 */
 
-h1 {
-  background-color: #eee;
-  width: fit-content;
-  padding: 10px;
-  border-radius: 12px;
-  -webkit-text-stroke-color: #ff0000;
-  -moz-text-stroke-color: #ff0000;
-  -ms-text-stroke-color: #ff0000;
-  -o-text-stroke-color: #ff0000;
-}
-
 div {
-  width: 150px;
-  height: 150px;
-  background-color: red;
+  background-color: #e8e8e8;
+  width: 300px;
   margin: 20px auto;
-  border-start-start-radius: 12px;
-  border-end-end-radius: 12px;
-}
-
-.signup-btn {
-  width: fit-content;
-  height: fit-content;
-  border-radius: 32px;
-  padding: 10px;
-  background-color: blue;
-  border: 3px solid black;
-  text-align: center;
-}
-
-.signup-btn a {
-  font-weight: bold;
-  font-size: 1.6em;
-  text-decoration: none;
-  color: white;
+  padding: 12px;
+  box-shadow: 10px 10px 10px 10px black inset;
 }
