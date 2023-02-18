@@ -1,6 +1,41 @@
-/* !important declaration */
+/* margin collapse
+    - apply on vertical margins only
+    - bigger margin wins
+    - works only if they don't have any elements between them
+    - Nesting does not affect collapsing
+*/
 
-.main {
-  background-color: green !important;
-  color: white !important;
+.parent {
+  overflow: hidden;
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  padding: 10px;
+  background-color: #e8e8e8;
+}
+
+.parent.one,
+.parent.two {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.one {
+  background-color: #b8b8b8;
+}
+
+.two {
+  background-color: #707070;
+}
+.up {
+  background-color: red;
+  color: white;
+  height: 100px;
+}
+
+.down {
+  background-color: green;
+  color: white;
+  height: 100px;
 }
