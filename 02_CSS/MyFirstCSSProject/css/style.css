@@ -17,11 +17,11 @@
   height: 200px;
   background-color: #eee;
   padding: 10px;
-  transition: 500ms 500ms ease-in-out color, background-color;
-  /* transition-duration: 500ms;
+  transition-duration: 500ms;
   transition-delay: 500ms;
-  transition-property: color, background-color;
-  transition-timing-function: ease-in-out; */
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  /* transition: color 500ms ease-in-out, background-color 500ms ease-in-out; */
 }
 
 .parent:hover {
