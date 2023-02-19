@@ -22,7 +22,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  align-items: end;
+  align-items: start;
   background-color: #c3c3c3;
   width: 600px;
   padding: 20px;
@@ -32,9 +32,11 @@
 .flex div {
   background-color: #ff0000;
   color: white;
-  float: left;
+  width: 150px;
+  height: 80px;
   text-align: center;
   padding: 20px;
+  margin: 10px auto;
 }
 
 .float {
@@ -52,4 +54,14 @@
   width: 25%;
   text-align: center;
   padding: 20px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  color: white;
+  width: 150px;
+  height: 150px;
 }
