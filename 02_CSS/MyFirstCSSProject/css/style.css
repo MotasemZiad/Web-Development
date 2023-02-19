@@ -15,6 +15,7 @@
             - order
             - flex-basis
             - flex: [flex-grow] [flex-shrink] [flex-basis]
+            - align-self
     
 */
 
@@ -47,4 +48,5 @@
   flex-shrink: 1;
   order: 19;
   flex-basis: 200px;
+  align-self: end;
 }
