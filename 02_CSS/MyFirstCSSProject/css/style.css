@@ -31,6 +31,18 @@ header {
   flex: 1;
 }
 
+.holy-grail-content img {
+  width: 400px;
+  height: 300px;
+  border-radius: 12px;
+  transition: 500ms;
+  filter: grayscale(100%) blur(3px) invert(25%);
+}
+
+.holy-grail-content img:hover {
+  filter: grayscale(0%) blur(0) invert(0);
+}
+
 .holy-grail-nav,
 .holy-grail-ads {
   flex: 0 0 8em;
