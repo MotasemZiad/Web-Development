@@ -1,0 +1,29 @@
+div {
+  width: 400px;
+  height: 200px;
+  background-color: #e2e2e2;
+  margin: 20px auto;
+  position: relative;
+}
+
+div:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100px;
+  height: 10px;
+  background-image: linear-gradient(
+    to right,
+    #f44336 20%,
+    #e91e63 20%,
+    #9c27b0 40%,
+    #673ab7 40%,
+    #3f51b5 60%,
+    #2196f3 60%,
+    #03a9f4 80%,
+    #00bcd4 80%,
+    #009688 100%,
+    #4caf50 100%
+  );
+}
