@@ -3,6 +3,7 @@
     - display: grid, inline-grid
     - grid-template-columns: [number of columns] => [px, %, auto, repeat(), fraction] 
     - grid-template-rows: [number of rows] => [px, %, auto, repeat(), fraction] 
+    - grid-template-area: [rows & columns]
     - justify-content: 
     - align-content: 
     "fraction is greedy, auto is shy"
@@ -29,6 +30,23 @@
 
 .parent div {
   background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  background-color: #e8e8e8;
+  margin: 20px auto;
+  width: 600px;
+  height: 400px;
+}
+
+.container div {
+  background-color: blue;
   color: white;
   padding: 20px;
   font-size: 30px;
