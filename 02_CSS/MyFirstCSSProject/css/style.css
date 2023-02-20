@@ -1,55 +1,67 @@
-/* Grid Layout System 
-  - parent 
-    - display: grid, inline-grid
-    - grid-template-columns: [number of columns] => [px, %, auto, repeat(), fraction] 
-    - grid-template-rows: [number of rows] => [px, %, auto, repeat(), fraction] 
-    - grid-template-area: [rows & columns]
-    - justify-content: 
-    - align-content: 
-    "fraction is greedy, auto is shy"
-  - children
-
-*/
-
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.parent {
+.page {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 2px 4px;
-  justify-content: center;
-  align-content: center;
+  height: 100vh;
   background-color: #e8e8e8;
-  margin: 20px auto;
-  width: 600px;
-  height: 400px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 50px auto 50px;
+  grid-template-areas:
+    "logo logo nav nav nav nav nav nav nav nav"
+    "cont cont cont cont cont cont cont cont side side"
+    "foot foot foot foot foot foot foot foot foot foot";
 }
 
-.parent div {
+h2 {
+  grid-area: logo;
   background-color: red;
   color: white;
-  padding: 20px;
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
 }
 
-.container {
-  display: grid;
-  background-color: #e8e8e8;
-  margin: 20px auto;
-  width: 600px;
-  height: 400px;
+nav {
+  grid-area: nav;
+  background-color: green;
+  color: white;
 }
 
-.container div {
+ul {
+  list-style: none;
+  padding: 8px;
+}
+
+ul li {
+  display: inline-block;
+  padding: 2px;
+}
+
+section {
+  grid-area: cont;
   background-color: blue;
   color: white;
-  padding: 20px;
-  font-size: 30px;
+}
+
+aside {
+  grid-area: side;
+  background-color: cyan;
+  color: white;
+}
+
+footer {
+  grid-area: foot;
+  background-color: black;
+  color: white;
+}
+
+h2,
+section,
+aside,
+footer {
+  color: white;
+  font-size: 1.6em;
   font-weight: bold;
   text-align: center;
 }
