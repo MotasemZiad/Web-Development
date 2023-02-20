@@ -4,64 +4,22 @@
   margin: 0;
 }
 
-.page {
+.parent {
+  margin: 20px auto;
+  width: 800px;
+  height: 600px;
+  background-color: #787878;
   display: grid;
-  height: 100vh;
-  background-color: #e8e8e8;
-  grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: 50px auto 50px;
-  grid-template-areas:
-    "logo logo nav nav nav nav nav nav nav nav"
-    "cont cont cont cont cont cont cont cont side side"
-    "foot foot foot foot foot foot foot foot foot foot";
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4px 8px;
 }
 
-h2 {
-  grid-area: logo;
-  background-color: red;
-  color: white;
-}
-
-nav {
-  grid-area: nav;
-  background-color: green;
-  color: white;
-}
-
-ul {
-  list-style: none;
-  padding: 8px;
-}
-
-ul li {
-  display: inline-block;
-  padding: 2px;
-}
-
-section {
-  grid-area: cont;
+.parent div {
   background-color: blue;
   color: white;
-}
-
-aside {
-  grid-area: side;
-  background-color: cyan;
-  color: white;
-}
-
-footer {
-  grid-area: foot;
-  background-color: black;
-  color: white;
-}
-
-h2,
-section,
-aside,
-footer {
-  color: white;
-  font-size: 1.6em;
   font-weight: bold;
-  text-align: center;
+  font-size: 1.6em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
