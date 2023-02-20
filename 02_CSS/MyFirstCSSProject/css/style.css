@@ -1,17 +1,37 @@
-/* 
-  Caret Color
-  Pointer Events
+/* Grid Layout System 
+  - parent 
+    - display: grid, inline-grid
+    - grid-template-columns: [number of columns] => [px, %, auto, repeat(), fraction] 
+    - grid-template-rows: [number of rows] => [px, %, auto, repeat(), fraction] 
+    - justify-content: 
+    - align-content: 
+    "fraction is greedy, auto is shy"
+  - children
+
 */
-a:hover {
-  pointer-events: none;
-  color: aqua;
+
+* {
+  box-sizing: border-box;
 }
 
-p {
-  caret-color: purple;
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 2px 4px;
+  justify-content: center;
+  align-content: center;
+  background-color: #e8e8e8;
+  margin: 20px auto;
+  width: 600px;
+  height: 400px;
 }
 
-input {
-  caret-color: greenyellow;
-  caret-shape: underscore;
+.parent div {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
 }
