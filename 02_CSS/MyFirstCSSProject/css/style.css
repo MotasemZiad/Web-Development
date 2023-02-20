@@ -23,3 +23,12 @@
   justify-content: center;
   align-items: center;
 }
+
+.special {
+  background-color: red !important;
+  /* grid-row-start: 2; */
+  /* grid-column-start: 2; */
+  /* grid-row-end: 5; */
+  /* grid-column-end: 6; */
+  grid-area: 2 /2 / 5/ 6;
+}
