@@ -1,3 +1,11 @@
+/* 3D Transform => x, y, z
+    - rotate()
+    - scale()
+    - translate()
+    - backface()
+
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
