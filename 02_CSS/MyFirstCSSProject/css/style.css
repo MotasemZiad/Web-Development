@@ -30,7 +30,7 @@ div {
   animation-iteration-count: infinite;
   animation-play-state: running;
   animation-delay: 0s;
-  animation-fill-mode: both;
+  animation-fill-mode: none;
   animation-direction: reverse;
 }
 
