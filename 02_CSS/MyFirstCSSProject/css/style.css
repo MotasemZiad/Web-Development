@@ -24,14 +24,15 @@ div {
   border-radius: 50%;
   border: 5px solid #e91e63;
   border-left-color: transparent;
-  animation-name: spin;
+  animation: spin 1000ms ease-in-out 0s infinite reverse;
+  /* animation-name: spin;
   animation-duration: 1000ms;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-play-state: running;
   animation-delay: 0s;
   animation-fill-mode: none;
-  animation-direction: reverse;
+  animation-direction: reverse; */
 }
 
 @keyframes spin {
