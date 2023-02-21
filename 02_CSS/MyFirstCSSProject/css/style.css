@@ -1,0 +1,38 @@
+/* 2D Transform
+    - scale: 
+        scaleX:
+        scaleY:
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.shape {
+  background-color: #c8c8c8;
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.shape > div {
+  background-color: red;
+  width: 90%;
+  height: 90%;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
+.shape > div:hover {
+  transform: scale(-2);
+  transition: 500ms;
+}
