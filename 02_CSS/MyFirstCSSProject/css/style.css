@@ -1,53 +1,51 @@
-/* 3D Transform => x, y, z
-    - rotate()
-    - scale()
-    - translate()
-    - backface()
-
-*/
-
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
 }
 
-.image {
-  overflow: hidden;
-  object-fit: cover;
-  margin: 20px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.image > img {
-  transition: 500ms;
+.container {
+  margin: 40px auto;
+  width: 200px;
+  perspective: 600px;
+  border-radius: 3%;
 }
 
-.image:hover > img {
-  transform: scale(1.2) rotate(3deg);
-  opacity: 0.7;
-}
-
-header h2 {
+.box {
   position: relative;
-  color: white;
-  width: fit-content;
-  margin: 20px auto;
-  padding: 12px;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
 }
 
-h2:before {
-  content: "";
+.box:hover {
+  transform: rotateY(-180deg);
+}
+
+.box .face {
   position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
-  background-color: red;
-  z-index: -1;
-  transform: skew(0);
-  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.6em;
+  color: white;
+  backface-visibility: hidden;
 }
 
-h2:hover::before {
-  transform: skew(20deg);
+.box .front {
+  background-color: red;
+  border-radius: 3%;
+}
+
+.box .back {
+  background-color: green;
+  border-radius: 3%;
+  transform: rotateY(180deg);
 }
