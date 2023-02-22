@@ -20,3 +20,22 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.parent {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  margin: 20px auto;
+}
+
+div {
+  width: fit-content;
+  height: 100px;
+  padding: 10px;
+  background-color: red;
+  margin: 8px 16px;
+  color: white;
+  font-weight: bold;
+}
