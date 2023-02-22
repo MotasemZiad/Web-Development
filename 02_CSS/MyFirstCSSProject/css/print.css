@@ -1,0 +1,4 @@
+.parent > div {
+  background-color: blue;
+  font-size: 100px;
+}

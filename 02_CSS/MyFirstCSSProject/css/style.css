@@ -1,3 +1,10 @@
+/* Responsive Web Design
+    - Desktop screens: 1200px and up
+    - Laptop screens: 1024px to 1199px
+    - Tablet screens: 768px to 1023px
+    - Smartphone screens: 320px to 767px
+*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -24,14 +31,9 @@ body {
   font-weight: bold;
 }
 
-@media (min-width: 800px) and (max-width: 1000px) {
-  .parent > div {
-    background-color: green;
-  }
-}
-
-@media (max-width: 400px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .parent > div {
     background-color: blue;
+    font-size: 36px;
   }
 }
