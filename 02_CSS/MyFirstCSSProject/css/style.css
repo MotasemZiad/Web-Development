@@ -55,3 +55,14 @@ div:nth-last-child(3) {
 div:nth-child(even) {
   background-color: darkcyan;
 }
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin: 20px;
+}
+
+input[type="checkbox"]:checked + label {
+  color: red;
+}
