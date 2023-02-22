@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.parent {
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.parent > div {
+  width: 290px;
+  background-color: red;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+  .parent > div {
+    background-color: green;
+  }
+}
+
+@media (max-width: 400px) {
+  .parent > div {
+    background-color: blue;
+  }
+}
