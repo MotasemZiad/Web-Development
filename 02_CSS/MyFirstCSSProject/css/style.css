@@ -1,13 +1,22 @@
 /* CSS Selectors:
-    - Element Selector
-    - Class Selector 
-    - ID Selector
-    - Attribute Selector
-    - Pseudo-Class Selector
-    - Pseudo-Element Selector
-    - Descendant Selector 
-    - Child [Direct Descendant] Selector
-    - Sibling Selector
-    - Universal Selector 
-    - Group Selector
+    - Element Selector [ h1{} ]
+    - Class Selector [ .parent {} ]
+    - ID Selector [ #element {} ]
+    - Attribute Selector [ a[target="_blank"] {} ]
+    - Pseudo-Class Selector [ a:hover {} ]
+    - Pseudo-Element Selector [ a::first-letter {} ]
+    - Descendant Selector [ div p {} ]
+    - Child (Direct Descendant) Selector [ div > p {} ]
+    - Sibling Selector (next selector) [ h1 + p {} ]
+    - Universal Selector  [ * {} ]
+    - Group Selector [ .element-1, .element-2 {} ]
 */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
