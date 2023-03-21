@@ -1,1 +1,1 @@
-console.log("Hello World!");
+document.querySelector("h1").style.color = "green";
