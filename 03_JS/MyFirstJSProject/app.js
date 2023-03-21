@@ -1,1 +1,3 @@
-document.querySelector("h1").style.color = "green";
+window.onload = function () {
+    document.querySelector("h1").style.color = "green";
+}
