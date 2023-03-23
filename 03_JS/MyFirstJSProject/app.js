@@ -85,3 +85,27 @@
 // articlesContainer.className = "articles-container";
 // articlesContainer.innerHTML = htmlMarkup.repeat(4);
 // document.body.appendChild(articlesContainer);
+
+// Unary Plus && Unary Negation
+
+console.log("Unary Plus");
+console.log(+100);
+console.log(+"100");
+console.log(+"-100");
+console.log(+"Mohammed");
+console.log(+2.6);
+console.log(+0xff);
+console.log(+true);
+console.log(+false);
+console.log(+null);
+
+console.log("Unary Negation");
+console.log(-100);
+console.log(-"100");
+console.log(-"-100");
+console.log(-"Mohammed");
+console.log(-2.6);
+console.log(-0xff);
+console.log(-true);
+console.log(-false);
+console.log(-null);
