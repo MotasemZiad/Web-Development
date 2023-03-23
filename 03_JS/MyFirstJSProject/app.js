@@ -44,4 +44,10 @@ console.log("Hello from Windows");
 let a = "I love";
 let b = "JS";
 
-document.write(a + " " + b);
+document.addEventListener("DOMContentLoaded", function () {
+  document.write(a + " " + b);
+});
+
+var element = document.createElement("p");
+element.textContent = a + " " + b;
+document.body.appendChild(element);
