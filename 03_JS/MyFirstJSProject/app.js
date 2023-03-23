@@ -53,17 +53,35 @@
 // Template Literals
 // console.log(`${a} ${b}, ${c}, and ${d}.`);
 
-var name = "Motasem Abunima";
-var title = "Solutions Architect";
+// var name = "Motasem Abunima";
+// var title = "Solutions Architect";
 
-let markup = `
-    <div class="card">
-        <img src="https://via.placeholder.com/100/f00/fff?text=I+Love+JS" alt="Card Image" />
-        <div class="info">
-            <h2>${name}</h2>
-            <p>${title}</p>
-        </div>
-    </div>
+// let markup = `
+//     <div class="card">
+//         <img src="https://via.placeholder.com/100/f00/fff?text=I+Love+JS" alt="Card Image" />
+//         <div class="info">
+//             <h2>${name}</h2>
+//             <p>${title}</p>
+//         </div>
+//     </div>
+// `;
+
+// document.body.innerHTML = markup;
+
+// Exercise:
+var articleTitle = "Elzero",
+  articleDescription = "Elzero Web School",
+  articleDate = "25/10";
+
+let htmlMarkup = `
+        <article>
+            <h3>Hello ${articleTitle}</h3>
+            <p>${articleDescription}</p>
+            <span>${articleDate}</span>
+        </article>
 `;
 
-document.body.innerHTML = markup;
+var articlesContainer = document.createElement("div");
+articlesContainer.className = "articles-container";
+articlesContainer.innerHTML = htmlMarkup.repeat(4);
+document.body.appendChild(articlesContainer);
