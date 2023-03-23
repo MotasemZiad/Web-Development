@@ -114,18 +114,34 @@
 
 // Exercise 2
 
-let a = 10;
-let b = "20";
-let c = 80;
+// let a = 10;
+// let b = "20";
+// let c = 80;
 
-console.log(++a + +b++ + +c++ - +a++);
-console.log(++a + -b + +c++ - -a++ + +a);
-console.log(--c + +b + --a * +b++ - +b * a + --a - +true);
+// console.log(++a + +b++ + +c++ - +a++);
+// console.log(++a + -b + +c++ - -a++ + +a);
+// console.log(--c + +b + --a * +b++ - +b * a + --a - +true);
 
-let d = "-100";
-let e = "20";
-let f = 30;
-let g = true;
+// let d = "-100";
+// let e = "20";
+// let f = 30;
+// let g = true;
 
-console.log(-d * +e); // 2000
-console.log(-d + ++f + ++e * ++g); // 173
+// console.log(-d * +e); // 2000
+// console.log(-d + ++f + ++e * ++g); // 173
+
+million = 1_000_000;
+billion = 1_000_000_000;
+
+console.log(million, billion);
+console.log(1e6);
+console.log(Math.PI);
+console.log(Math.E);
+
+console.log(Number.MAX_VALUE);
+console.log(Number.MIN_VALUE);
+console.log(Number.NaN);
+console.log(Number.NEGATIVE_INFINITY);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(Number.MIN_SAFE_INTEGER);
+console.log(Number.EPSILON);
