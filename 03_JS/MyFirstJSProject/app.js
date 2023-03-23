@@ -68,20 +68,20 @@
 
 // document.body.innerHTML = markup;
 
-// Exercise:
-var articleTitle = "Elzero",
-  articleDescription = "Elzero Web School",
-  articleDate = "25/10";
+// // Exercise:
+// var articleTitle = "Elzero",
+//   articleDescription = "Elzero Web School",
+//   articleDate = "25/10";
 
-let htmlMarkup = `
-        <article>
-            <h3>Hello ${articleTitle}</h3>
-            <p>${articleDescription}</p>
-            <span>${articleDate}</span>
-        </article>
-`;
+// let htmlMarkup = `
+//         <article>
+//             <h3>Hello ${articleTitle}</h3>
+//             <p>${articleDescription}</p>
+//             <span>${articleDate}</span>
+//         </article>
+// `;
 
-var articlesContainer = document.createElement("div");
-articlesContainer.className = "articles-container";
-articlesContainer.innerHTML = htmlMarkup.repeat(4);
-document.body.appendChild(articlesContainer);
+// var articlesContainer = document.createElement("div");
+// articlesContainer.className = "articles-container";
+// articlesContainer.innerHTML = htmlMarkup.repeat(4);
+// document.body.appendChild(articlesContainer);
