@@ -88,24 +88,44 @@
 
 // Unary Plus && Unary Negation
 
-console.log("Unary Plus");
-console.log(+100);
-console.log(+"100");
-console.log(+"-100");
-console.log(+"Mohammed");
-console.log(+2.6);
-console.log(+0xff);
-console.log(+true);
-console.log(+false);
-console.log(+null);
+// console.log("Unary Plus");
+// console.log(+100);
+// console.log(+"100");
+// console.log(+"-100");
+// console.log(+"Mohammed");
+// console.log(+2.6);
+// console.log(+0xff);
+// console.log(+true);
+// console.log(+false);
+// console.log(+null);
+// console.log(+"");
 
-console.log("Unary Negation");
-console.log(-100);
-console.log(-"100");
-console.log(-"-100");
-console.log(-"Mohammed");
-console.log(-2.6);
-console.log(-0xff);
-console.log(-true);
-console.log(-false);
-console.log(-null);
+// console.log("Unary Negation");
+// console.log(-100);
+// console.log(-"100");
+// console.log(-"-100");
+// console.log(-"Mohammed");
+// console.log(-2.6);
+// console.log(-0xff);
+// console.log(-true);
+// console.log(-false);
+// console.log(-null);
+// console.log(-"");
+
+// Exercise 2
+
+let a = 10;
+let b = "20";
+let c = 80;
+
+console.log(++a + +b++ + +c++ - +a++);
+console.log(++a + -b + +c++ - -a++ + +a);
+console.log(--c + +b + --a * +b++ - +b * a + --a - +true);
+
+let d = "-100";
+let e = "20";
+let f = 30;
+let g = true;
+
+console.log(-d * +e); // 2000
+console.log(-d + ++f + ++e * ++g); // 173
