@@ -41,9 +41,7 @@ console.log(`undefined ${undefined}`, "Type Of: " + typeof undefined);
 
 console.log("Hello from Windows");
 
-(username = "motasemabunima"), (userAge = 37);
-console.log(`Name: ${username}\nAge: ${userAge}`);
+let a = "I love";
+let b = "JS";
 
-console.log(hello);
-
-hello.innerHTML = "Bye";
+document.write(a + " " + b);
