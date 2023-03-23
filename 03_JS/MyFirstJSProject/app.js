@@ -35,3 +35,5 @@ console.log(`skills ${skills}`, "Type Of: "+ typeof(skills))
 console.log(`student ${student}`, "Type Of: "+ typeof(student)) 
 console.log(`null ${null}`, "Type Of: "+ typeof(null)) 
 console.log(`undefined ${undefined}`, "Type Of: "+ typeof(undefined)) 
+
+console.log("Hello from Windows");
