@@ -130,18 +130,25 @@
 // console.log(-d * +e); // 2000
 // console.log(-d + ++f + ++e * ++g); // 173
 
-million = 1_000_000;
-billion = 1_000_000_000;
+// million = 1_000_000;
+// billion = 1_000_000_000;
 
-console.log(million, billion);
-console.log(1e6);
-console.log(Math.PI);
-console.log(Math.E);
+// console.log(million, billion);
+// console.log(1e6);
+// console.log(Math.PI);
+// console.log(Math.E);
 
-console.log(Number.MAX_VALUE);
-console.log(Number.MIN_VALUE);
-console.log(Number.NaN);
-console.log(Number.NEGATIVE_INFINITY);
-console.log(Number.MAX_SAFE_INTEGER);
-console.log(Number.MIN_SAFE_INTEGER);
-console.log(Number.EPSILON);
+// console.log(Number.MAX_VALUE);
+// console.log(Number.MIN_VALUE);
+// console.log(Number.NaN);
+// console.log(Number.NEGATIVE_INFINITY);
+// console.log(Number.MAX_SAFE_INTEGER);
+// console.log(Number.MIN_SAFE_INTEGER);
+// console.log(Number.EPSILON);
+
+console.log((100).toString());
+console.log((12.2532).toFixed(2));
+console.log(parseInt("100"));
+console.log(parseFloat("100.23"));
+console.log(isNaN("100e"));
+console.log(Number.isInteger("100"));
