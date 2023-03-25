@@ -146,9 +146,11 @@
 // console.log(Number.MIN_SAFE_INTEGER);
 // console.log(Number.EPSILON);
 
-console.log((100).toString());
-console.log((12.2532).toFixed(2));
-console.log(parseInt("100"));
-console.log(parseFloat("100.23"));
-console.log(isNaN("100e"));
-console.log(Number.isInteger("100"));
+// console.log((100).toString());
+// console.log((12.2532).toFixed(2));
+// console.log(parseInt("100"));
+// console.log(parseFloat("100.23"));
+// console.log(isNaN("100e"));
+// console.log(Number.isInteger("100"));
+
+console.log("Ramadan Kareem");
