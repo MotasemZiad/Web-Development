@@ -153,4 +153,7 @@
 // console.log(isNaN("100e"));
 // console.log(Number.isInteger("100"));
 
-console.log("Ramadan Kareem");
+console.log(Math.min(10, 20, 30, -20, 24, 99));
+console.log(Math.max(10, 20, 30, -20, 24, 99));
+console.log(Math.trunc(999.99));
+console.log(Math.round(999.99));
