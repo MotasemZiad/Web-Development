@@ -158,17 +158,32 @@
 // console.log(Math.trunc(999.99));
 // console.log(Math.round(999.99));
 
-let a = 1_00;
-let b = 2_00.5;
-let c = 1e2;
-let d = 2.4;
+// let a = 1_00;
+// let b = 2_00.5;
+// let c = 1e2;
+// let d = 2.4;
 
-console.log(Math.trunc(Math.min(a, b, c, d)));
-console.log(Math.pow(a, Math.round(d)));
-console.log(Math.round(d));
-console.log(Math.floor(d));
-console.log(Math.trunc(d));
-console.log(d.toFixed());
-// b + d
-console.log((Math.floor(b) / Math.ceil(d)).toPrecision(4).toString()); // 66.67 => String
-console.log(Math.ceil(b) / Math.ceil(d)); // 67 => Number
+// console.log(Math.trunc(Math.min(a, b, c, d)));
+// console.log(Math.pow(a, Math.round(d)));
+// console.log(Math.round(d));
+// console.log(Math.floor(d));
+// console.log(Math.trunc(d));
+// console.log(d.toFixed());
+
+// console.log((Math.floor(b) / Math.ceil(d)).toPrecision(4).toString()); // 66.67 => String
+// console.log(Math.ceil(b) / Math.ceil(d)); // 67 => Number
+
+let myName = "Motasem Abunima";
+console.log(myName[2]);
+console.log(myName.charAt(2));
+console.log(myName.length);
+console.log(myName.substring(2, 9));
+console.log(myName.replace("m", "g"));
+console.log(myName.indexOf("n"));
+console.log(myName.slice(2, 6));
+console.log(myName.charCodeAt(3));
+console.log(myName.concat(", I love you so much"));
+console.log(myName.startsWith("m"));
+console.log(myName.endsWith("m"));
+console.log(myName.toUpperCase());
+console.log(myName.toLowerCase());
