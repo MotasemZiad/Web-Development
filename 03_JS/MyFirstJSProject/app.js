@@ -229,20 +229,107 @@
 // arrayOfSplittedString.pop();
 // console.log(arrayOfSplittedString);
 
-// Challenge:
-let a = "Elzero Web School";
-console.log(a.charAt(2).toUpperCase().concat(a.slice(3, 6)));
-console.log(
-  a
-    .charAt(a.length - 4)
-    .repeat(8)
-    .toUpperCase()
-);
-console.log(a.split(" ", 1));
-console.log(`${a.substr(0, 6)} ${a.substr(-6)}`);
-console.log(`${a.substring(0, 6)} ${a.substring(11)}`);
-console.log(
-  `${a[0].toLowerCase()}${a.substring(1, a.length - 1).toUpperCase()}${a[
-    a.length - 1
-  ].toLowerCase()}`
-);
+// // Challenge:
+// let a = "Elzero Web School";
+// console.log(a.charAt(2).toUpperCase().concat(a.slice(3, 6)));
+// console.log(
+//   a
+//     .charAt(a.length - 4)
+//     .repeat(8)
+//     .toUpperCase()
+// );
+// console.log(a.split(" ", 1));
+// console.log(`${a.substr(0, 6)} ${a.substr(-6)}`);
+// console.log(`${a.substring(0, 6)} ${a.substring(11)}`);
+// console.log(
+//   `${a[0].toLowerCase()}${a.substring(1, a.length - 1).toUpperCase()}${a[
+//     a.length - 1
+//   ].toLowerCase()}`
+// );
+
+// console.log(typeof "Motasem" === typeof "Aya");
+// console.log(10 === "10" && 50 === 50.0);
+// console.log("Ahmed" == "Sameer" || "Sally" == "Alaa");
+// console.log(!false);
+
+// let price = 100;
+// let hasADiscount = false;
+// let country = "Palestine";
+
+// console.log("Before", price);
+
+// if (country.toLowerCase() === "egypt") {
+//   price -= 30;
+// } else if (hasADiscount === true) {
+//   price -= 25;
+// } else {
+//   price -= 10;
+// }
+
+// console.log("After", price);
+
+// Ternary Operators (condition ? true : false)
+
+// let theName = "Fawzy";
+// let theGender = "Male";
+// let theAge = 32;
+
+// theGender === "Male"
+//   ? theAge >= 18
+//     ? console.log(`Mr. ${theName}`)
+//     : console.log(`Oh boy, ${theName}`)
+//   : console.log(`Mrs. ${theName}`);
+
+// console.log(
+//   `Hello ${theGender.toLowerCase() === "male" ? "Mr." : "Mrs."} ${theName}`
+// );
+
+// Falsy values: null, undefined, 0, "", false
+let price = null;
+
+// console.log(`the price is ${price || 100}`); // pipe
+// console.log(`the price is ${price ?? 100}`); // null coalescing operator
+
+// Challenge
+let a = 10;
+
+if (a < 10) {
+  console.log("< 10");
+} else if (a > 10 && a < 40) {
+  console.log("10 to 40");
+} else if (a > 40) {
+  console.log("> 40");
+} else {
+  console.log("Unknown");
+}
+
+a < 10
+  ? console.log("< 10")
+  : a > 10 && a < 40
+  ? console.log("10 to 40")
+  : a > 40
+  ? console.log("> 40")
+  : console.log("Unknown");
+
+let st = "Elzero Web School";
+
+if ((st.length * 2).toString() === "34") {
+  console.log("Good");
+}
+
+if (st.charAt(st.indexOf("W")).toLowerCase() === "w") {
+  console.log("Good");
+}
+
+if (!typeof st !== "string") {
+  console.log("Good");
+}
+
+if (typeof st.length === "number") {
+  console.log("Good");
+}
+
+if (st.substring(0, 6).repeat(2) === "ElzeroElzero") {
+  console.log("Good");
+}
+
