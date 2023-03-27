@@ -173,17 +173,54 @@
 // console.log((Math.floor(b) / Math.ceil(d)).toPrecision(4).toString()); // 66.67 => String
 // console.log(Math.ceil(b) / Math.ceil(d)); // 67 => Number
 
-let myName = "Motasem Abunima";
-console.log(myName[2]);
-console.log(myName.charAt(2));
-console.log(myName.length);
-console.log(myName.substring(2, 9));
-console.log(myName.replace("m", "g"));
-console.log(myName.indexOf("n"));
-console.log(myName.slice(2, 6));
-console.log(myName.charCodeAt(3));
-console.log(myName.concat(", I love you so much"));
-console.log(myName.startsWith("m"));
-console.log(myName.endsWith("m"));
-console.log(myName.toUpperCase());
-console.log(myName.toLowerCase());
+// let myName = "Motasem Abunima";
+// console.log(myName[2]);
+// console.log(myName.charAt(2));
+// console.log(myName.length);
+// console.log(myName.substring(2, 9));
+// console.log(myName.replace("m", "g"));
+// console.log(myName.indexOf("n"));
+// console.log(myName.slice(2, 6));
+// console.log(myName.charCodeAt(3));
+// console.log(myName.concat(", I love you so much"));
+// console.log(myName.startsWith("m"));
+// console.log(myName.endsWith("m"));
+// console.log(myName.toUpperCase());
+// console.log(myName.toLowerCase());
+
+// let username = "Motasem Abunima";
+// let email = "motasemabunima@gmail.com";
+// let age = 23;
+
+// console.log(`Username: ${username}
+// Email: ${email}
+// Age: ${age}`);
+
+let a = "Elzero Web School";
+let arrayOfSplittedString = a.split(" ");
+
+console.log(a.indexOf("o"));
+console.log(a.lastIndexOf("o"));
+console.log(a.slice(6));
+console.log(a.replace("o", "g"));
+console.log(a.repeat(4));
+console.log(a.concat(" I lovey you"));
+console.log(arrayOfSplittedString.push("Sami"));
+console.log(arrayOfSplittedString.push("Fawzy"));
+console.log(arrayOfSplittedString.join(", "));
+arrayOfSplittedString.map((v) => {
+  console.log(v);
+});
+
+arrayOfSplittedString.filter((v) => {
+  if (v.startsWith("S")) console.log(v);
+  else console.log("Not found...");
+});
+
+arrayOfSplittedString.forEach((v, i) => {
+  console.log(i, v);
+});
+
+arrayOfSplittedString.pop();
+arrayOfSplittedString.pop();
+console.log(arrayOfSplittedString);
