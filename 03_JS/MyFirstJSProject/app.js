@@ -196,35 +196,53 @@
 // Email: ${email}
 // Age: ${age}`);
 
+// let a = "Elzero Web School";
+// let arrayOfSplittedString = a.split(" ");
+
+// console.log(a.indexOf("o"));
+// console.log(a.lastIndexOf("o"));
+// console.log(a.slice(6));
+// console.log(a.replace("o", "g"));
+// console.log(a.repeat(4));
+// console.log(a.concat(" I lovey you"));
+// console.log(a.startsWith("g"));
+// console.log(a.endsWith("l"));
+// console.log(a.includes("Web"));
+// console.log(a.substring(7, 10));
+// console.log(arrayOfSplittedString.push("Sami"));
+// console.log(arrayOfSplittedString.push("Fawzy"));
+// console.log(arrayOfSplittedString.join(", "));
+// arrayOfSplittedString.map((v) => {
+//   console.log(v);
+// });
+
+// arrayOfSplittedString.filter((v) => {
+//   if (v.startsWith("S")) console.log(v);
+//   else console.log("Not found...");
+// });
+
+// arrayOfSplittedString.forEach((v, i) => {
+//   console.log(i, v);
+// });
+
+// arrayOfSplittedString.pop();
+// arrayOfSplittedString.pop();
+// console.log(arrayOfSplittedString);
+
+// Challenge:
 let a = "Elzero Web School";
-let arrayOfSplittedString = a.split(" ");
-
-console.log(a.indexOf("o"));
-console.log(a.lastIndexOf("o"));
-console.log(a.slice(6));
-console.log(a.replace("o", "g"));
-console.log(a.repeat(4));
-console.log(a.concat(" I lovey you"));
-console.log(a.startsWith("g"));
-console.log(a.endsWith("l"));
-console.log(a.includes("Web"));
-console.log(a.substring(7, 10));
-console.log(arrayOfSplittedString.push("Sami"));
-console.log(arrayOfSplittedString.push("Fawzy"));
-console.log(arrayOfSplittedString.join(", "));
-arrayOfSplittedString.map((v) => {
-  console.log(v);
-});
-
-arrayOfSplittedString.filter((v) => {
-  if (v.startsWith("S")) console.log(v);
-  else console.log("Not found...");
-});
-
-arrayOfSplittedString.forEach((v, i) => {
-  console.log(i, v);
-});
-
-arrayOfSplittedString.pop();
-arrayOfSplittedString.pop();
-console.log(arrayOfSplittedString);
+console.log(a.charAt(2).toUpperCase().concat(a.slice(3, 6)));
+console.log(
+  a
+    .charAt(a.length - 4)
+    .repeat(8)
+    .toUpperCase()
+);
+console.log(a.split(" ", 1));
+console.log(`${a.substr(0, 6)} ${a.substr(-6)}`);
+console.log(`${a.substring(0, 6)} ${a.substring(11)}`);
+console.log(
+  `${a[0].toLowerCase()}${a.substring(1, a.length - 1).toUpperCase()}${a[
+    a.length - 1
+  ].toLowerCase()}`
+);
