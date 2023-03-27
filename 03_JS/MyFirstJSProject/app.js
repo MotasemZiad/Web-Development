@@ -333,42 +333,52 @@ let price = null;
 //   console.log("Good");
 // }
 
-let job = "Manager";
-let salary = 0;
+// let job = "Manager";
+// let salary = 0;
 
-switch (job) {
-  case "Manager":
-    salary = 8000;
-    break;
-  case "IT":
-  case "Support":
-    salary = 6000;
-    break;
-  case "Developer":
-  case "Designer":
-    salary = 7000;
-    break;
-  default:
-    salary = 4000;
-}
+// switch (job) {
+//   case "Manager":
+//     salary = 8000;
+//     break;
+//   case "IT":
+//   case "Support":
+//     salary = 6000;
+//     break;
+//   case "Developer":
+//   case "Designer":
+//     salary = 7000;
+//     break;
+//   default:
+//     salary = 4000;
+// }
 
-console.log(`Job: ${job}\tSalary: ${salary}`);
+// console.log(`Job: ${job}\tSalary: ${salary}`);
 
-let holidays = 0;
-let money = 0;
+// let holidays = 0;
+// let money = 0;
 
-if (holidays == 0) {
-  money = 5000;
-} else if (holidays == 1 || holidays == 2) {
-  money = 3000;
-} else if (holidays == 3) {
-  money = 2000;
-} else if (holidays == 4) {
-  money = 1000;
-} else if (holidays == 5) {
-  money = 0;
-} else {
-  money = 0;
-}
+// if (holidays == 0) {
+//   money = 5000;
+// } else if (holidays == 1 || holidays == 2) {
+//   money = 3000;
+// } else if (holidays == 3) {
+//   money = 2000;
+// } else if (holidays == 4) {
+//   money = 1000;
+// } else if (holidays == 5) {
+//   money = 0;
+// } else {
+//   money = 0;
+// }
 
-console.log(`My money is ${money}`);
+// console.log(`My money is ${money}`);
+
+let myFriends = ["Ahmed", "Mohammed", "Mahmoud", "Sami", ["Marwan", "Rami"]];
+
+console.log(`Hello, ${myFriends[0]}`);
+console.log(`Hello, ${myFriends[2]}`);
+console.log(`Hello, ${myFriends[myFriends.length - 1][1]}`);
+console.log(`Hello, ${myFriends[myFriends.length - 1][1][3]}`);
+console.log(typeof myFriends);
+console.log(Array.isArray(myFriends));
+console.log(Array.isArray(myFriends[0]));
