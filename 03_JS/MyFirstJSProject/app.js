@@ -373,12 +373,16 @@ let price = null;
 
 // console.log(`My money is ${money}`);
 
-let myFriends = ["Ahmed", "Mohammed", "Mahmoud", "Sami", ["Marwan", "Rami"]];
+// let myFriends = ["Ahmed", "Mohammed", "Mahmoud", "Sami", ["Marwan", "Rami"]];
 
-console.log(`Hello, ${myFriends[0]}`);
-console.log(`Hello, ${myFriends[2]}`);
-console.log(`Hello, ${myFriends[myFriends.length - 1][1]}`);
-console.log(`Hello, ${myFriends[myFriends.length - 1][1][3]}`);
-console.log(typeof myFriends);
-console.log(Array.isArray(myFriends));
-console.log(Array.isArray(myFriends[0]));
+// console.log(`Hello, ${myFriends[0]}`);
+// console.log(`Hello, ${myFriends[2]}`);
+// console.log(`Hello, ${myFriends[myFriends.length - 1][1]}`);
+// console.log(`Hello, ${myFriends[myFriends.length - 1][1][3]}`);
+// console.log(typeof myFriends);
+// console.log(Array.isArray(myFriends));
+// console.log(Array.isArray(myFriends[0]));
+
+console.log("Hello JavaScript!");
+console.log("I love you so much");
+console.log("How is it going?");
