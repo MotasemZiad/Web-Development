@@ -382,7 +382,3 @@ let price = null;
 // console.log(typeof myFriends);
 // console.log(Array.isArray(myFriends));
 // console.log(Array.isArray(myFriends[0]));
-
-console.log("Hello JavaScript!");
-console.log("I love you so much");
-console.log("How is it going?");
