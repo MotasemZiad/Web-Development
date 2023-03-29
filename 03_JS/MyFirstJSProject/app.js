@@ -384,3 +384,39 @@ let price = null;
 // console.log(Array.isArray(myFriends[0]));
 
 console.log("Hi from Windows");
+/*
+ unshift & shift => adds or remove elements from the first
+ push & pop => adds or remove elements from the last 
+*/
+
+let courses = [
+  "Programming I",
+  "Programming II",
+  "Operating Systems",
+  "Distributed Systems",
+  "Data Science",
+  "Computer Architecture",
+  "Linear Algebra",
+  "Mathematics",
+  "Calculus",
+  "Data Structures and Algorithms",
+  "Web Development",
+  "Android Development",
+  "iOS Development",
+];
+
+console.log(`Number of Courses: ${courses.length}`);
+console.log(courses);
+
+console.log(courses.push("Machine Learning"));
+console.log(courses);
+console.log(courses.pop());
+console.log(courses.unshift("Introduction to Computer Science"));
+console.log(courses);
+console.log(courses.shift());
+
+console.log(`Number of Courses: ${courses.length}`);
+
+console.log(courses.sort());
+console.log(courses.reverse());
+console.log(courses);
