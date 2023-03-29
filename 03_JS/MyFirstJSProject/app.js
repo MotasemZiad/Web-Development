@@ -382,3 +382,5 @@ let price = null;
 // console.log(typeof myFriends);
 // console.log(Array.isArray(myFriends));
 // console.log(Array.isArray(myFriends[0]));
+
+console.log("Hi from Windows");
