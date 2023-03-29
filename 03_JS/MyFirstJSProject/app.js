@@ -442,15 +442,52 @@ console.log("Hi from Windows");
 // console.log(courses.join(" @ ").toLowerCase());
 
 // Array Challenge:
-let zero = 0;
-let counter = 3;
-let myArray = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+// let zero = 0;
+// let counter = 3;
+// let myArray = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
 
-myArray.splice(++counter, 2);
+// myArray.splice(++counter, 2);
 
-console.log(myArray.reverse()); // ["Osama", "Elham", "Mazero", "Ahmed"]
-console.log(myArray.slice(++zero, --counter)); // ["Elham", "Mazero"]
-console.log(myArray[--counter].replace("Ma", "El")); // "Elzero"
-console.log(
-  `${myArray[counter].charAt(4)}${myArray[counter].charAt(5).toUpperCase()}`
-); // "rO"
+// console.log(myArray.reverse()); // ["Osama", "Elham", "Mazero", "Ahmed"]
+// console.log(myArray.slice(++zero, --counter)); // ["Elham", "Mazero"]
+// console.log(myArray[--counter].replace("Ma", "El")); // "Elzero"
+// console.log(
+//   `${myArray[counter].charAt(4)}${myArray[counter].charAt(5).toUpperCase()}`
+// ); // "rO"
+
+let myFriends = ["Ahmed", "Mohammed", "Mahmoud", "Sami", "Ali", "Adel"];
+
+console.log("for");
+for (let index = 0; index < myFriends.length; index++) {
+  console.log(myFriends[index]);
+}
+
+console.log("for each");
+myFriends.forEach((e) => {
+  console.log(e);
+});
+
+console.log("for in");
+for (const friend in myFriends) {
+  console.log(myFriends[friend]);
+}
+
+console.log("for of");
+for (const friend of myFriends) {
+  console.log(friend);
+}
+
+let myArray = [1, 2, 3, "Ahmed", "Fawzy", "Sami", 4, "Tahseen", 5];
+let onlyStrings = [];
+let onlyNumbers = [];
+
+for (let i = 0; i < myArray.length; i++) {
+  if (typeof myArray[i] == "string") {
+    onlyStrings.push(myArray[i]);
+  } else if (typeof myArray[i] == "number") {
+    onlyNumbers.unshift(myArray[i]);
+  }
+}
+
+console.log(onlyStrings);
+console.log(onlyNumbers);
