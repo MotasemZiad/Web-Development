@@ -420,3 +420,13 @@ console.log(`Number of Courses: ${courses.length}`);
 console.log(courses.sort());
 console.log(courses.reverse());
 console.log(courses);
+
+console.log(courses.slice(2, -2));
+courses.splice(
+  3,
+  5,
+  "Game Development",
+  "Cloud Computing",
+  "Pervasive Computing"
+);
+console.log(courses);
