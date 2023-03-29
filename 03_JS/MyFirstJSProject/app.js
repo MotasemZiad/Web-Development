@@ -430,3 +430,13 @@ courses.splice(
   "Pervasive Computing"
 );
 console.log(courses);
+
+let newCourses = courses.concat("Graduation Research", "Graduation Project");
+console.log(newCourses);
+
+console.log(courses.join());
+console.log(courses.join(", "));
+console.log(courses.join(""));
+console.log(courses.join(" "));
+console.log(courses.join("|"));
+console.log(courses.join(" @ ").toLowerCase());
