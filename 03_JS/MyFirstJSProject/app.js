@@ -389,54 +389,68 @@ console.log("Hi from Windows");
  push & pop => adds or remove elements from the last 
 */
 
-let courses = [
-  "Programming I",
-  "Programming II",
-  "Operating Systems",
-  "Distributed Systems",
-  "Data Science",
-  "Computer Architecture",
-  "Linear Algebra",
-  "Mathematics",
-  "Calculus",
-  "Data Structures and Algorithms",
-  "Web Development",
-  "Android Development",
-  "iOS Development",
-];
+// let courses = [
+//   "Programming I",
+//   "Programming II",
+//   "Operating Systems",
+//   "Distributed Systems",
+//   "Data Science",
+//   "Computer Architecture",
+//   "Linear Algebra",
+//   "Mathematics",
+//   "Calculus",
+//   "Data Structures and Algorithms",
+//   "Web Development",
+//   "Android Development",
+//   "iOS Development",
+// ];
 
-console.log(`Number of Courses: ${courses.length}`);
-console.log(courses);
+// console.log(`Number of Courses: ${courses.length}`);
+// console.log(courses);
 
-console.log(courses.push("Machine Learning"));
-console.log(courses);
-console.log(courses.pop());
-console.log(courses.unshift("Introduction to Computer Science"));
-console.log(courses);
-console.log(courses.shift());
+// console.log(courses.push("Machine Learning"));
+// console.log(courses);
+// console.log(courses.pop());
+// console.log(courses.unshift("Introduction to Computer Science"));
+// console.log(courses);
+// console.log(courses.shift());
 
-console.log(`Number of Courses: ${courses.length}`);
+// console.log(`Number of Courses: ${courses.length}`);
 
-console.log(courses.sort());
-console.log(courses.reverse());
-console.log(courses);
+// console.log(courses.sort());
+// console.log(courses.reverse());
+// console.log(courses);
 
-console.log(courses.slice(2, -2));
-courses.splice(
-  3,
-  5,
-  "Game Development",
-  "Cloud Computing",
-  "Pervasive Computing"
-);
-console.log(courses);
+// console.log(courses.slice(2, -2));
+// courses.splice(
+//   3,
+//   5,
+//   "Game Development",
+//   "Cloud Computing",
+//   "Pervasive Computing"
+// );
+// console.log(courses);
 
-let newCourses = courses.concat("Graduation Research", "Graduation Project");
-console.log(newCourses);
+// let newCourses = courses.concat("Graduation Research", "Graduation Project");
+// console.log(newCourses);
 
-console.log(courses.join());
-console.log(courses.join(", "));
-console.log(courses.join(""));
-console.log(courses.join(" "));
-console.log(courses.join("|"));
-console.log(courses.join(" @ ").toLowerCase());
+// console.log(courses.join());
+// console.log(courses.join(", "));
+// console.log(courses.join(""));
+// console.log(courses.join(" "));
+// console.log(courses.join("|"));
+// console.log(courses.join(" @ ").toLowerCase());
+
+// Array Challenge:
+let zero = 0;
+let counter = 3;
+let myArray = ["Ahmed", "Mazero", "Elham", "Osama", "Gamal", "Ameer"];
+
+myArray.splice(++counter, 2);
+
+console.log(myArray.reverse()); // ["Osama", "Elham", "Mazero", "Ahmed"]
+console.log(myArray.slice(++zero, --counter)); // ["Elham", "Mazero"]
+console.log(myArray[--counter].replace("Ma", "El")); // "Elzero"
+console.log(
+  `${myArray[counter].charAt(4)}${myArray[counter].charAt(5).toUpperCase()}`
+); // "rO"
