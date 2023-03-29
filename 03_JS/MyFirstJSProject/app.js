@@ -491,3 +491,14 @@ for (let i = 0; i < myArray.length; i++) {
 
 console.log(onlyStrings);
 console.log(onlyNumbers);
+
+let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+let colors = ["Red", "Green", "Blue"];
+
+mainLoop: for (let i = 0; i < products.length; i++) {
+  console.log(products[i]);
+  nestedLoop: for (let j = 0; j < colors.length; j++) {
+    if (colors[j] == "Green") break mainLoop;
+    console.log(`- ${colors[j]}`);
+  }
+}
