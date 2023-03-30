@@ -505,24 +505,96 @@ let price = null;
 
 console.log("Hi from Ubuntu...");
 
-let products = [
-  "Keyboard",
-  "Mouse",
-  "Pen",
-  "Pad",
-  "Monitor",
-  "iPhone",
-  "iPad",
-  "iMac",
+// let products = [
+//   "Keyboard",
+//   "Mouse",
+//   "Pen",
+//   "Pad",
+//   "Monitor",
+//   "iPhone",
+//   "iPad",
+//   "iMac",
+// ];
+// let colors = ["Red", "Green", "Blue"];
+// let counts = 5;
+
+// document.write(`<h2>Show ${counts} products</h2>`);
+
+// for (let i = 0; i < counts; i++) {
+//   document.write(`<div>`);
+//   document.write(`[${i + 1}] ${products[i]}`);
+//   document.write(` <p> ${colors.join(" | ")} </p>`);
+//   document.write(`</div>`);
+// }
+
+// let products = [
+//   "Keyboard",
+//   "Mouse",
+//   "Pen",
+//   "Pad",
+//   "Monitor",
+//   "iPhone",
+//   "iPad",
+//   "iMac",
+// ];
+// let colors = ["Red", "Green", "Blue"];
+
+// var index = 0;
+// while (index <hr products.length) {
+//   console.log(`[${index + 1}] ${products[index]}`);
+
+//   if (index === 3) break;
+//   index++;
+// }
+
+// do {
+//   console.log("The End..");
+// } while (false);
+
+// Loop Challenge
+
+let admins = [
+  "Ahmed",
+  "Fareed",
+  "Haitham",
+  "Stop",
+  "Sameera",
+  "Mousa",
+  "Osama",
 ];
-let colors = ["Red", "Green", "Blue"];
-let counts = 5;
+let employees = [
+  "Fawzy",
+  "Sami",
+  "Amjad",
+  "Fehmi",
+  "Omar",
+  "Hamdi",
+  "Mohammed",
+  "Fathi",
+  "Mahmoud",
+  "Ali",
+  "Hassan",
+  "Samia",
+  "Othman",
+  "Osama",
+];
 
-document.write(`<h2>Show ${counts} products</h2>`);
+document.write(`<h1>We have ${admins.length} admins</h1>`);
+document.write("<hr>");
+let counter = 0;
 
-for (let i = 0; i < counts; i++) {
-  document.write(`<div>`);
-  document.write(`[${i + 1}] ${products[i]}`);
-  document.write(` <p> ${colors.join(" | ")} </p>`);
-  document.write(`</div>`);
+for (let i = 0; i < admins.length; i++) {
+  if (admins[i].toLowerCase() === "stop") continue;
+
+  document.write("<div>");
+  document.write(`<h2>The admin for team ${i + 1} is ${admins[i]}<h2>`);
+  document.write("<h3>Team members: </h3>");
+  for (let j = 0; j < employees.length; j++) {
+    if (admins[i][0] === employees[j][0]) {
+      document.write(`<p> ${++counter} - ${employees[j]}</p>`);
+    }
+  }
+  counter = 0;
+  document.write("<hr>");
+  document.write("</div>");
 }
