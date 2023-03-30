@@ -553,48 +553,82 @@ console.log("Hi from Ubuntu...");
 
 // Loop Challenge
 
-let admins = [
-  "Ahmed",
-  "Fareed",
-  "Haitham",
-  "Stop",
-  "Sameera",
-  "Mousa",
-  "Osama",
-];
-let employees = [
-  "Fawzy",
-  "Sami",
-  "Amjad",
-  "Fehmi",
-  "Omar",
-  "Hamdi",
-  "Mohammed",
-  "Fathi",
-  "Mahmoud",
-  "Ali",
-  "Hassan",
-  "Samia",
-  "Othman",
-  "Osama",
-];
+// let admins = [
+//   "Ahmed",
+//   "Fareed",
+//   "Haitham",
+//   "Stop",
+//   "Sameera",
+//   "Mousa",
+//   "Osama",
+// ];
+// let employees = [
+//   "Fawzy",
+//   "Sami",
+//   "Amjad",
+//   "Fehmi",
+//   "Omar",
+//   "Hamdi",
+//   "Mohammed",
+//   "Fathi",
+//   "Mahmoud",
+//   "Ali",
+//   "Hassan",
+//   "Samia",
+//   "Othman",
+//   "Osama",
+// ];
 
-document.write(`<h1>We have ${admins.length} admins</h1>`);
-document.write("<hr>");
-let counter = 0;
+// document.write(`<h1>We have ${admins.length} admins</h1>`);
+// document.write("<hr>");
+// let counter = 0;
 
-for (let i = 0; i < admins.length; i++) {
-  if (admins[i].toLowerCase() === "stop") continue;
+// for (let i = 0; i < admins.length; i++) {
+//   if (admins[i].toLowerCase() === "stop") continue;
 
-  document.write("<div>");
-  document.write(`<h2>The admin for team ${i + 1} is ${admins[i]}<h2>`);
-  document.write("<h3>Team members: </h3>");
-  for (let j = 0; j < employees.length; j++) {
-    if (admins[i][0] === employees[j][0]) {
-      document.write(`<p> ${++counter} - ${employees[j]}</p>`);
-    }
+//   document.write("<div>");
+//   document.write(`<h2>The admin for team ${i + 1} is ${admins[i]}<h2>`);
+//   document.write("<h3>Team members: </h3>");
+
+//   for (let j = 0; j < employees.length; j++) {
+//     if (admins[i][0] === employees[j][0]) {
+//       document.write(`<p> ${++counter} - ${employees[j]}</p>`);
+//     }
+//   }
+
+//   counter = 0;
+//   document.write("<hr>");
+//   document.write("</div>");
+// }
+
+// const myArray = [1, 2, 3, 4, 5];
+
+// if (
+//   [...myArray].includes(1) &&
+//   [...myArray].includes(2) &&
+//   [...myArray].includes(3)
+// ) {
+//   console.log("myArray contains 1, 2, and 3");
+// } else {
+//   console.log("myArray does not contain 1, 2, and 3");
+// }
+
+function generateYears(start, end, excluded) {
+  for (let i = start; i <= end; i++) {
+    if (i === excluded) continue;
+    if (i === 2000) return "Interrupting..";
+    console.log(i);
   }
-  counter = 0;
-  document.write("<hr>");
-  document.write("</div>");
+  console.log(end - start);
 }
+
+generateYears(1948, 2023, 2019);
+
+function concatOrSum(p0, p1) {
+  return p0 + p1;
+}
+
+var result = concatOrSum("Osama", " Mohamed");
+console.log(result);
+result = concatOrSum(7, 8);
+console.log(result);
