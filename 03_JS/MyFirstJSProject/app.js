@@ -613,22 +613,43 @@ console.log("Hi from Ubuntu...");
 //   console.log("myArray does not contain 1, 2, and 3");
 // }
 
-function generateYears(start, end, excluded) {
-  for (let i = start; i <= end; i++) {
-    if (i === excluded) continue;
-    if (i === 2000) return "Interrupting..";
-    console.log(i);
+// function generateYears(start, end, excluded) {
+//   for (let i = start; i <= end; i++) {
+//     if (i === excluded) continue;
+//     if (i === 2000) return "Interrupting..";
+//     console.log(i);
+//   }
+//   console.log(typeof excluded);
+//   console.log(end - start);
+// }
+
+// generateYears(1948, 2023, [2019, 2020, 2021]);
+
+// function concatOrSum(p0, p1) {
+//   return p0 + p1;
+// }
+
+// var result = concatOrSum("Osama", " Mohamed");
+// console.log(result);
+// result = concatOrSum(7, 8);
+// console.log(result);
+
+function sum(...numbers) {
+  var sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
   }
-  console.log(end - start);
+  return sum;
 }
 
-generateYears(1948, 2023, 2019);
-
-function concatOrSum(p0, p1) {
-  return p0 + p1;
+function avg(...numbers) {
+  return sum(...numbers) / numbers.length;
 }
 
-var result = concatOrSum("Osama", " Mohamed");
-console.log(result);
-result = concatOrSum(7, 8);
-console.log(result);
+const numbers = [10, 20, 30, 40, 50];
+
+console.log(
+  `The list of numbers are: 10, 20, 30, 40, 50\nSum:\t${sum(
+    ...numbers
+  )}\nAvg:\t${avg(...numbers)}`
+);
