@@ -502,3 +502,5 @@ mainLoop: for (let i = 0; i < products.length; i++) {
     console.log(`- ${colors[j]}`);
   }
 }
+
+console.log("Hi from Ubuntu...");
