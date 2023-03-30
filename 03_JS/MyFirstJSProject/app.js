@@ -634,22 +634,74 @@ console.log("Hi from Ubuntu...");
 // result = concatOrSum(7, 8);
 // console.log(result);
 
-function sum(...numbers) {
-  var sum = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
+// Shorthand function
+// const addition = (a, b) => a + b;
+// const subtraction = (a, b) => a - b;
+// const multiplication = (a, b) => a * b;
+// const division = (a, b) => a / b;
+// const modulus = (a, b) => a % b;
+// const power = (a, b) => a ** b;
+
+// console.log(addition(2, 5));
+// console.log(subtraction(2, 5));
+// console.log(multiplication(2, 5));
+// console.log(division(2, 5));
+// console.log(modulus(2, 5));
+// console.log(power(2, 5));
+
+// function sum(...numbers) {
+//   var sum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+//   return sum;
+// }
+
+// function avg(...numbers) {
+//   return sum(...numbers) / numbers.length;
+// }
+
+// const numbers = [10, 20, 30, 40, 50];
+
+// console.log(
+//   `The list of numbers are: 10, 20, 30, 40, 50\nSum:\t${sum(
+//     ...numbers
+//   )}\nAvg:\t${avg(...numbers)}`
+// );
+
+function showInfo(
+  userName = "Unknown",
+  age = "Unknown",
+  rate = 0,
+  showSkills = false,
+  ...skills
+) {
+  document.write("<div>");
+  document.write(`<h2>Welcome, ${userName}</h2>`);
+  document.write(`<p>Age: ${age}</p>`);
+  document.write(`<p>Hourly rate: ${rate}</p>`);
+  if (showSkills) {
+    if (skills.length > 0) {
+      document.write(`Skills: ${skills.join(" | ")}`);
+    } else {
+      document.write("No skills to show");
+    }
+  } else {
+    if (skills.length == 0) document.write("No skills to show");
+    else document.write("Skills is hidden");
   }
-  return sum;
+  document.write("</div>");
 }
 
-function avg(...numbers) {
-  return sum(...numbers) / numbers.length;
-}
-
-const numbers = [10, 20, 30, 40, 50];
-
-console.log(
-  `The list of numbers are: 10, 20, 30, 40, 50\nSum:\t${sum(
-    ...numbers
-  )}\nAvg:\t${avg(...numbers)}`
+showInfo(
+  "Motasem Abunima",
+  23,
+  20,
+  true,
+  "HTML",
+  "CSS",
+  "JS",
+  "Angular",
+  "AWS",
+  "Linux"
 );
