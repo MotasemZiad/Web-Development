@@ -504,3 +504,25 @@ let price = null;
 // }
 
 console.log("Hi from Ubuntu...");
+
+let products = [
+  "Keyboard",
+  "Mouse",
+  "Pen",
+  "Pad",
+  "Monitor",
+  "iPhone",
+  "iPad",
+  "iMac",
+];
+let colors = ["Red", "Green", "Blue"];
+let counts = 5;
+
+document.write(`<h2>Show ${counts} products</h2>`);
+
+for (let i = 0; i < counts; i++) {
+  document.write(`<div>`);
+  document.write(`[${i + 1}] ${products[i]}`);
+  document.write(` <p> ${colors.join(" | ")} </p>`);
+  document.write(`</div>`);
+}
