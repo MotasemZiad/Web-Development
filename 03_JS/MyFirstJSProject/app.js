@@ -669,39 +669,66 @@ console.log("Hi from Ubuntu...");
 //   )}\nAvg:\t${avg(...numbers)}`
 // );
 
-function showInfo(
-  userName = "Unknown",
-  age = "Unknown",
-  rate = 0,
-  showSkills = false,
-  ...skills
-) {
-  document.write("<div>");
-  document.write(`<h2>Welcome, ${userName}</h2>`);
-  document.write(`<p>Age: ${age}</p>`);
-  document.write(`<p>Hourly rate: ${rate}</p>`);
-  if (showSkills) {
-    if (skills.length > 0) {
-      document.write(`Skills: ${skills.join(" | ")}`);
-    } else {
-      document.write("No skills to show");
+// function showInfo(
+//   userName = "Unknown",
+//   age = "Unknown",
+//   rate = 0,
+//   showSkills = false,
+//   ...skills
+// ) {
+//   document.write("<div>");
+//   document.write(`<h2>Welcome, ${userName}</h2>`);
+//   document.write(`<p>Age: ${age}</p>`);
+//   document.write(`<p>Hourly rate: ${rate}</p>`);
+//   if (showSkills) {
+//     if (skills.length > 0) {
+//       document.write(`Skills: ${skills.join(" | ")}`);
+//     } else {
+//       document.write("No skills to show");
+//     }
+//   } else {
+//     if (skills.length == 0) document.write("No skills to show");
+//     else document.write("Skills is hidden");
+//   }
+//   document.write("</div>");
+// }
+
+// showInfo(
+//   "Motasem Abunima",
+//   23,
+//   20,
+//   true,
+//   "HTML",
+//   "CSS",
+//   "JS",
+//   "Angular",
+//   "AWS",
+//   "Linux"
+// );
+
+function showDetails(p0, p1, p2) {
+  var candidateName = "Unknown",
+    candidateAge = 0,
+    candidateStatus = false;
+  for (let i = 0; i < arguments.length; i++) {
+    if (typeof arguments[i] === "string") {
+      candidateName = arguments[i];
+    } else if (typeof arguments[i] === "number") {
+      candidateAge = arguments[i];
+    } else if (typeof arguments[i] === "boolean") {
+      candidateStatus = arguments[i];
     }
-  } else {
-    if (skills.length == 0) document.write("No skills to show");
-    else document.write("Skills is hidden");
   }
-  document.write("</div>");
+  console.log(
+    `Hello ${candidateName}, You are ${candidateAge} years old, ${
+      candidateStatus
+        ? "You are available for hire."
+        : "You are not available for hire."
+    }`
+  );
 }
 
-showInfo(
-  "Motasem Abunima",
-  23,
-  20,
-  true,
-  "HTML",
-  "CSS",
-  "JS",
-  "Angular",
-  "AWS",
-  "Linux"
-);
+showDetails("Ahmed", 28, true);
+showDetails(28, true, "Ahmed");
+showDetails(true, "Ahmed", 28);
+showDetails("Ahmed", 28);
