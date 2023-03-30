@@ -711,14 +711,15 @@ function showDetails(p0, p1, p2) {
     candidateAge = 0,
     candidateStatus = false;
   for (let i = 0; i < arguments.length; i++) {
-    if (typeof arguments[i] === "string") {
-      candidateName = arguments[i];
-    } else if (typeof arguments[i] === "number") {
-      candidateAge = arguments[i];
-    } else if (typeof arguments[i] === "boolean") {
-      candidateStatus = arguments[i];
-    }
+    typeof arguments[i] === "string"
+      ? (candidateName = arguments[i])
+      : typeof arguments[i] === "number"
+      ? (candidateAge = arguments[i])
+      : typeof arguments[i] == "boolean"
+      ? (candidateStatus = arguments[i])
+      : Error("Something went wrong");
   }
+
   console.log(
     `Hello ${candidateName}, You are ${candidateAge} years old, ${
       candidateStatus
