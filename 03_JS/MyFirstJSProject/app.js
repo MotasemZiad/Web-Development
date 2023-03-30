@@ -383,7 +383,7 @@ let price = null;
 // console.log(Array.isArray(myFriends));
 // console.log(Array.isArray(myFriends[0]));
 
-console.log("Hi from Windows");
+// console.log("Hi from Windows");
 /*
  unshift & shift => adds or remove elements from the first
  push & pop => adds or remove elements from the last 
@@ -455,52 +455,52 @@ console.log("Hi from Windows");
 //   `${myArray[counter].charAt(4)}${myArray[counter].charAt(5).toUpperCase()}`
 // ); // "rO"
 
-let myFriends = ["Ahmed", "Mohammed", "Mahmoud", "Sami", "Ali", "Adel"];
+// let myFriends = ["Ahmed", "Mohammed", "Mahmoud", "Sami", "Ali", "Adel"];
 
-console.log("for");
-for (let index = 0; index < myFriends.length; index++) {
-  console.log(myFriends[index]);
-}
+// console.log("for");
+// for (let index = 0; index < myFriends.length; index++) {
+//   console.log(myFriends[index]);
+// }
 
-console.log("for each");
-myFriends.forEach((e) => {
-  console.log(e);
-});
+// console.log("for each");
+// myFriends.forEach((e) => {
+//   console.log(e);
+// });
 
-console.log("for in");
-for (const friend in myFriends) {
-  console.log(myFriends[friend]);
-}
+// console.log("for in");
+// for (const friend in myFriends) {
+//   console.log(myFriends[friend]);
+// }
 
-console.log("for of");
-for (const friend of myFriends) {
-  console.log(friend);
-}
+// console.log("for of");
+// for (const friend of myFriends) {
+//   console.log(friend);
+// }
 
-let myArray = [1, 2, 3, "Ahmed", "Fawzy", "Sami", 4, "Tahseen", 5];
-let onlyStrings = [];
-let onlyNumbers = [];
+// let myArray = [1, 2, 3, "Ahmed", "Fawzy", "Sami", 4, "Tahseen", 5];
+// let onlyStrings = [];
+// let onlyNumbers = [];
 
-for (let i = 0; i < myArray.length; i++) {
-  if (typeof myArray[i] == "string") {
-    onlyStrings.push(myArray[i]);
-  } else if (typeof myArray[i] == "number") {
-    onlyNumbers.unshift(myArray[i]);
-  }
-}
+// for (let i = 0; i < myArray.length; i++) {
+//   if (typeof myArray[i] == "string") {
+//     onlyStrings.push(myArray[i]);
+//   } else if (typeof myArray[i] == "number") {
+//     onlyNumbers.unshift(myArray[i]);
+//   }
+// }
 
-console.log(onlyStrings);
-console.log(onlyNumbers);
+// console.log(onlyStrings);
+// console.log(onlyNumbers);
 
-let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
-let colors = ["Red", "Green", "Blue"];
+// let products = ["Keyboard", "Mouse", "Pen", "Pad", "Monitor"];
+// let colors = ["Red", "Green", "Blue"];
 
-mainLoop: for (let i = 0; i < products.length; i++) {
-  console.log(products[i]);
-  nestedLoop: for (let j = 0; j < colors.length; j++) {
-    if (colors[j] == "Green") break mainLoop;
-    console.log(`- ${colors[j]}`);
-  }
-}
+// mainLoop: for (let i = 0; i < products.length; i++) {
+//   console.log(products[i]);
+//   nestedLoop: for (let j = 0; j < colors.length; j++) {
+//     if (colors[j] == "Green") break mainLoop;
+//     console.log(`- ${colors[j]}`);
+//   }
+// }
 
 console.log("Hi from Ubuntu...");
