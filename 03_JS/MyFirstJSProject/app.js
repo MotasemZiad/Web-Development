@@ -745,6 +745,10 @@ console.log("Hi from Ubuntu...");
 // let calculator2 = (x, y) => x + y;
 // console.log(calculator(2, 3));
 
-setTimeout(() => {
-  console.log("Ramadan Kareem :)");
-}, 2000);
+// setTimeout(() => {
+//   console.log("Ramadan Kareem :)");
+// }, 2000);
+
+// setInterval(() => {
+//   console.log("Ramadan Kareem :)");
+// }, 2000);
