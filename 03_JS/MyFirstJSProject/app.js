@@ -753,15 +753,38 @@ console.log("Hi from Ubuntu...");
 //   console.log("Ramadan Kareem :)");
 // }, 2000);
 
-var a = 1;
-let b = 2;
+// var a = 1;
+// let b = 2;
 
-function myFun() {
-  var a = 10;
-  let b = 20;
-  console.log(`From local function, a = ${a} and b = ${b}`);
-}
+// function myFun() {
+//   var a = 10;
+//   let b = 20;
+//   console.log(`From local function, a = ${a} and b = ${b}`);
+// }
 
-console.log(`From global, a = ${a} and b = ${b}`);
+// console.log(`From global, a = ${a} and b = ${b}`);
 
-myFun();
+// myFun();
+
+// // var is global (function scope) scope and can be reassigned
+// // let is local (block scope) and can be reassigned within the scope
+// // const is (block scope) but cannot be reassigned
+
+// Arrow Function Challenge
+
+let names = (...listOfNames) =>
+  `${(typeof listOfNames[0])[0]
+    .toUpperCase()
+    .concat((typeof listOfNames[0]).substring(1))} ${listOfNames
+    .map((e) => {
+      return `[${e}]`;
+    })
+    .join(", ")} => Done !`;
+
+console.log(names("Osama", "Mohammed", "Ali", "Ibrahim"));
+// String [Osama], [Mohammed], [Ali], [Ibrahim] => Done !
+
+let myNumbers = [20, 50, 10, 60];
+let calc = (one, two, ...nums) => one + two + nums[1];
+
+console.log(calc(10, 20, ...myNumbers)); // 80
