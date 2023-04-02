@@ -772,21 +772,43 @@ console.log("Hi from Ubuntu...");
 
 // Arrow Function Challenge
 
-let names = (...listOfNames) =>
-  `${(typeof listOfNames[0])[0]
-    .toUpperCase()
-    .concat((typeof listOfNames[0]).substring(1))} ${listOfNames
-    .map((e) => {
-      return `[${e}]`;
-    })
-    .join(", ")} => Done !`;
+// let names = (...listOfNames) =>
+//   `${(typeof listOfNames[0])[0]
+//     .toUpperCase()
+//     .concat((typeof listOfNames[0]).substring(1))} ${listOfNames
+//     .map((e) => {
+//       return `[${e}]`;
+//     })
+//     .join(", ")} => Done !`;
 
-console.log(names("Osama", "Mohammed", "Ali", "Ibrahim"));
-// String [Osama], [Mohammed], [Ali], [Ibrahim] => Done !
+// console.log(names("Osama", "Mohammed", "Ali", "Ibrahim"));
+// // String [Osama], [Mohammed], [Ali], [Ibrahim] => Done !
 
-let myNumbers = [20, 50, 10, 60];
-let calc = function (one, two, ...nums) {
-  return one + two + nums[1];
-};
+// let myNumbers = [20, 50, 10, 60];
+// let calc = function (one, two, ...nums) {
+//   return one + two + nums[1];
+// };
 
-console.log(calc(10, 20, ...myNumbers)); // 80
+// console.log(calc(10, 20, ...myNumbers)); // 80
+
+// Higher Order Function (map, filter, reduce, etc...)
+
+let swappingCases = "elZERo";
+let invertedNumbers = [1, -10, -23, 15, 125, -30];
+let ignoreNumbers = "Elz123er40o";
+
+let mapSwappingCases = swappingCases
+  .split("")
+  .map((e) => (e == e.toLowerCase() ? e.toUpperCase() : e.toLowerCase()))
+  .join("");
+
+let mapInvertedNumbers = invertedNumbers.map((e) => e * -1);
+
+let mapIgnoreNumbers = ignoreNumbers
+  .split("")
+  .map((e) => (isNaN(e) ? e : ""))
+  .join("");
+
+console.log(mapSwappingCases);
+console.log(mapInvertedNumbers);
+console.log(mapIgnoreNumbers);
