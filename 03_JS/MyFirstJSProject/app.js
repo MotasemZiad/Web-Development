@@ -634,7 +634,7 @@ console.log("Hi from Ubuntu...");
 // result = concatOrSum(7, 8);
 // console.log(result);
 
-// Shorthand function
+// Shorthand function (Arrow Function)
 // const addition = (a, b) => a + b;
 // const subtraction = (a, b) => a - b;
 // const multiplication = (a, b) => a * b;
@@ -706,30 +706,45 @@ console.log("Hi from Ubuntu...");
 //   "Linux"
 // );
 
-function showDetails(p0, p1, p2) {
-  var candidateName = "Unknown",
-    candidateAge = 0,
-    candidateStatus = false;
-  for (let i = 0; i < arguments.length; i++) {
-    typeof arguments[i] === "string"
-      ? (candidateName = arguments[i])
-      : typeof arguments[i] === "number"
-      ? (candidateAge = arguments[i])
-      : typeof arguments[i] == "boolean"
-      ? (candidateStatus = arguments[i])
-      : Error("Something went wrong");
-  }
+// function showDetails(p0, p1, p2) {
+//   var candidateName = "Unknown",
+//     candidateAge = 0,
+//     candidateStatus = false;
+//   for (let i = 0; i < arguments.length; i++) {
+//     typeof arguments[i] === "string"
+//       ? (candidateName = arguments[i])
+//       : typeof arguments[i] === "number"
+//       ? (candidateAge = arguments[i])
+//       : typeof arguments[i] == "boolean"
+//       ? (candidateStatus = arguments[i])
+//       : Error("Something went wrong");
+//   }
 
-  console.log(
-    `Hello ${candidateName}, You are ${candidateAge} years old, ${
-      candidateStatus
-        ? "You are available for hire."
-        : "You are not available for hire."
-    }`
-  );
-}
+//   console.log(
+//     `Hello ${candidateName}, You are ${candidateAge} years old, ${
+//       candidateStatus
+//         ? "You are available for hire."
+//         : "You are not available for hire."
+//     }`
+//   );
+// }
 
-showDetails("Ahmed", 28, true);
-showDetails(28, true, "Ahmed");
-showDetails(true, "Ahmed", 28);
-showDetails("Ahmed", 28);
+// showDetails("Ahmed", 28, true);
+// showDetails(28, true, "Ahmed");
+// showDetails(true, "Ahmed", 28);
+// showDetails("Ahmed", 28);
+
+// Anonymous Function
+
+// let calculator = function (x, y) {
+//   return x + y;
+// };
+// let calculator1 = (x, y) => {
+//   return x + y;
+// };
+// let calculator2 = (x, y) => x + y;
+// console.log(calculator(2, 3));
+
+setTimeout(() => {
+  console.log("Ramadan Kareem :)");
+}, 2000);
