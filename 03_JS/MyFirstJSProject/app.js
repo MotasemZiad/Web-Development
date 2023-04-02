@@ -785,6 +785,8 @@ console.log(names("Osama", "Mohammed", "Ali", "Ibrahim"));
 // String [Osama], [Mohammed], [Ali], [Ibrahim] => Done !
 
 let myNumbers = [20, 50, 10, 60];
-let calc = (one, two, ...nums) => one + two + nums[1];
+let calc = function (one, two, ...nums) {
+  return one + two + nums[1];
+};
 
 console.log(calc(10, 20, ...myNumbers)); // 80
