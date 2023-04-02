@@ -752,3 +752,16 @@ console.log("Hi from Ubuntu...");
 // setInterval(() => {
 //   console.log("Ramadan Kareem :)");
 // }, 2000);
+
+var a = 1;
+let b = 2;
+
+function myFun() {
+  var a = 10;
+  let b = 20;
+  console.log(`From local function, a = ${a} and b = ${b}`);
+}
+
+console.log(`From global, a = ${a} and b = ${b}`);
+
+myFun();
