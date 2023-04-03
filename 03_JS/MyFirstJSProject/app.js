@@ -909,42 +909,59 @@ console.log("Hi from Ubuntu...");
 //     .join(" | ")
 // );
 
-let nums = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+// let nums = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
 
-let reducedNums = nums.reduce(
-  (accumulator, element) => (accumulator += element),
-  50
-);
+// let reducedNums = nums.reduce(
+//   (accumulator, element) => (accumulator += element),
+//   50
+// );
 
-console.log(reducedNums);
+// console.log(reducedNums);
 
-let theBiggest = [
-  "Bla",
-  "Propaganda",
-  "Other",
-  "Ahmed",
-  "Battery",
-  "Car",
-  "Monitor",
-];
-let removeCharacters = ["E", "@", "@", "L", "Z", "@", "@", "E", "R", "@", "O"];
+// let theBiggest = [
+//   "Bla",
+//   "Propaganda",
+//   "Other",
+//   "Ahmed",
+//   "Battery",
+//   "Car",
+//   "Monitor",
+// ];
+// let removeCharacters = ["E", "@", "@", "L", "Z", "@", "@", "E", "R", "@", "O"];
 
-let reduceTheBiggest = theBiggest.reduce((accumulator, currentValue) =>
-  accumulator.length > currentValue.length ? accumulator : currentValue
-);
+// let reduceTheBiggest = theBiggest.reduce((accumulator, currentValue) =>
+//   accumulator.length > currentValue.length ? accumulator : currentValue
+// );
 
-let reduceRemoveCharacters = removeCharacters.reduce(
-  (accumulator, currentValue) => {
-    if (currentValue !== "@") accumulator += currentValue;
+// let reduceRemoveCharacters = removeCharacters.reduce(
+//   (accumulator, currentValue) => {
+//     if (currentValue !== "@") accumulator += currentValue;
 
-    return accumulator;
-  }
-);
+//     return accumulator;
+//   }
+// );
 
-let filterRemoveCharacters = removeCharacters.filter((e) => e !== "@").join("");
+// let filterRemoveCharacters = removeCharacters.filter((e) => e !== "@").join("");
 
-console.log(reduceTheBiggest);
-console.log(reduceRemoveCharacters);
-console.log(filterRemoveCharacters);
+// console.log(reduceTheBiggest);
+// console.log(reduceRemoveCharacters);
+// console.log(filterRemoveCharacters);
 
 // forEach does NOT return anything, it returns undefined
+
+// Higher Order Function Challenge..
+
+let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
+
+let solution = myString
+  .split(",")
+  .filter((e) => isNaN(e))
+  .map((e) => {
+    let newElement = e.replace("_", " ").replace("Z", " ");
+    return newElement[0];
+  })
+  .reduce((acc, e) => {
+    return (acc += e);
+  });
+
+console.log(solution); // Elzero Web School
