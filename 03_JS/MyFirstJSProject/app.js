@@ -917,3 +917,34 @@ let reducedNums = nums.reduce(
 );
 
 console.log(reducedNums);
+
+let theBiggest = [
+  "Bla",
+  "Propaganda",
+  "Other",
+  "Ahmed",
+  "Battery",
+  "Car",
+  "Monitor",
+];
+let removeCharacters = ["E", "@", "@", "L", "Z", "@", "@", "E", "R", "@", "O"];
+
+let reduceTheBiggest = theBiggest.reduce((accumulator, currentValue) =>
+  accumulator.length > currentValue.length ? accumulator : currentValue
+);
+
+let reduceRemoveCharacters = removeCharacters.reduce(
+  (accumulator, currentValue) => {
+    if (currentValue !== "@") accumulator += currentValue;
+
+    return accumulator;
+  }
+);
+
+let filterRemoveCharacters = removeCharacters.filter((e) => e !== "@").join("");
+
+console.log(reduceTheBiggest);
+console.log(reduceRemoveCharacters);
+console.log(filterRemoveCharacters);
+
+// forEach does NOT return anything, it returns undefined
