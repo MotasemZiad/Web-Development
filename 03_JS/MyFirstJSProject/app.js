@@ -795,7 +795,7 @@ console.log("Hi from Ubuntu...");
 
 // let swappingCases = "elZERo";
 // let invertedNumbers = [1, -10, -23, 15, 125, -30];
-let ignoreNumbers = "Elz123er40o";
+// let ignoreNumbers = "Elz123er40o";
 
 // let mapSwappingCases = swappingCases
 //   .split("")
@@ -804,20 +804,20 @@ let ignoreNumbers = "Elz123er40o";
 
 // let mapInvertedNumbers = invertedNumbers.map((e) => -e);
 
-let mapIgnoreNumbers = ignoreNumbers
-  .split("")
-  .map((e) => (isNaN(e) ? e : ""))
-  .join("");
+// let mapIgnoreNumbers = ignoreNumbers
+//   .split("")
+//   .map((e) => (isNaN(e) ? e : ""))
+//   .join("");
 
-let filterIgnoreNumbers = ignoreNumbers
-  .split("")
-  .filter((e) => isNaN(e))
-  .join("");
+// let filterIgnoreNumbers = ignoreNumbers
+//   .split("")
+//   .filter((e) => isNaN(e))
+//   .join("");
 
 // console.log(mapSwappingCases);
 // console.log(mapInvertedNumbers);
-console.log(mapIgnoreNumbers);
-console.log(filterIgnoreNumbers);
+// console.log(mapIgnoreNumbers);
+// console.log(filterIgnoreNumbers);
 
 // let friends = [
 //   "Ahmed",
@@ -890,21 +890,30 @@ console.log(filterIgnoreNumbers);
 
 // console.log(primeNumbers);
 
-let sentence = "I love food code too playing much";
-console.log(
-  sentence
-    .split(" ")
-    .filter((e) => e.length <= 4)
-    .join(" ")
+// let sentence = "I love food code too playing much";
+// console.log(
+//   sentence
+//     .split(" ")
+//     .filter((e) => e.length <= 4)
+//     .join(" ")
+// );
+
+// let mix = "A13BS2ZX";
+
+// console.log(
+//   "Filter Strings and multiply numbers:",
+//   mix
+//     .split("")
+//     .filter((e) => !isNaN(e))
+//     .map((e) => e * e)
+//     .join(" | ")
+// );
+
+let nums = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+
+let reducedNums = nums.reduce(
+  (accumulator, element) => (accumulator += element),
+  50
 );
 
-let mix = "A13BS2ZX";
-
-console.log(
-  "Filter Strings and multiply numbers:",
-  mix
-    .split("")
-    .filter((e) => !isNaN(e))
-    .map((e) => e * e)
-    .join(" | ")
-);
+console.log(reducedNums);
