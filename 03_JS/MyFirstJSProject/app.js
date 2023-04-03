@@ -951,17 +951,52 @@ console.log("Hi from Ubuntu...");
 
 // Higher Order Function Challenge..
 
-let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
+// let myString = "1,2,3,EE,l,z,e,r,o,_,W,e,b,_,S,c,h,o,o,l,2,0,Z";
 
-let solution = myString
-  .split(",")
-  .filter((e) => isNaN(e))
-  .map((e) => {
-    let newElement = e.replace("_", " ").replace("Z", " ");
-    return newElement[0];
-  })
-  .reduce((acc, e) => {
-    return (acc += e);
-  });
+// let solution = myString
+//   .split(",")
+//   .filter((e) => isNaN(e))
+//   .map((e) => {
+//     let newElement = e.replace("_", " ").replace("Z", " ");
+//     return newElement[0];
+//   })
+//   .reduce((acc, e) => {
+//     return (acc += e);
+//   });
 
-console.log(solution); // Elzero Web School
+// console.log(solution); // Elzero Web School
+
+// ! Getting started With "Object Oriented Programming"
+/*
+1. Encapsulation
+2. Inheritance
+3. Abstraction
+4. Polymorphism
+*/
+
+let user = {
+  name: "Motasem",
+  age: 23,
+  sayHi: function () {
+    return `Hi, My name is ${this.name}. I am ${this.age} years old.`;
+  },
+};
+
+console.log(user.name);
+console.log(user.age);
+console.log(user.sayHi());
+
+let person = new Object();
+
+person["name"] = "Ahmed";
+person.age = 29;
+
+console.log(
+  `Hi, this is ${person.name}, his age is ${person["age"]} years old`
+);
+
+console.log(`Object Keys`, Object.keys(person));
+console.log(`Object Values`, Object.values(person));
+
+let { name, age } = person;
+console.log(`Person Name: ${name}\tPerson Age: ${age}`);
