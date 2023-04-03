@@ -793,22 +793,93 @@ console.log("Hi from Ubuntu...");
 
 // Higher Order Function (map, filter, reduce, etc...)
 
-let swappingCases = "elZERo";
-let invertedNumbers = [1, -10, -23, 15, 125, -30];
-let ignoreNumbers = "Elz123er40o";
+// let swappingCases = "elZERo";
+// let invertedNumbers = [1, -10, -23, 15, 125, -30];
+// let ignoreNumbers = "Elz123er40o";
 
-let mapSwappingCases = swappingCases
-  .split("")
-  .map((e) => (e == e.toLowerCase() ? e.toUpperCase() : e.toLowerCase()))
-  .join("");
+// let mapSwappingCases = swappingCases
+//   .split("")
+//   .map((e) => (e == e.toLowerCase() ? e.toUpperCase() : e.toLowerCase()))
+//   .join("");
 
-let mapInvertedNumbers = invertedNumbers.map((e) => -e);
+// let mapInvertedNumbers = invertedNumbers.map((e) => -e);
 
-let mapIgnoreNumbers = ignoreNumbers
-  .split("")
-  .map((e) => (isNaN(e) ? e : ""))
-  .join("");
+// let mapIgnoreNumbers = ignoreNumbers
+//   .split("")
+//   .map((e) => (isNaN(e) ? e : ""))
+//   .join("");
 
-console.log(mapSwappingCases);
-console.log(mapInvertedNumbers);
-console.log(mapIgnoreNumbers);
+// console.log(mapSwappingCases);
+// console.log(mapInvertedNumbers);
+// console.log(mapIgnoreNumbers);
+
+let friends = [
+  "Ahmed",
+  "Sameh",
+  "Samah",
+  "Sayed",
+  "Amjad",
+  "Israa",
+  "Adel",
+  "Ibrahim",
+  "Ali",
+];
+
+let numbers = [3, 5, 7, 9, 11, 13, 20, 23, 39, 36, 72, 87, 99, 102];
+
+let friendsStartWithA = friends
+  .filter((element) => element.startsWith("A"))
+  .join(" | ");
+
+let evenNumbers = numbers.filter((element) => element % 2 == 0).join(" | ");
+
+let primaryNumbers = numbers
+  .filter((element) => {
+    let tempArray = [];
+    for (let i = 1; i <= element; i++) {
+      if (element % i == 0) {
+        tempArray.push(i);
+      }
+    }
+    return tempArray.length == 2;
+  })
+  .join(" | ");
+
+console.log("Friends start with the letter A:", friendsStartWithA);
+console.log("Even Numbers:", evenNumbers);
+console.log("Primary Numbers:", primaryNumbers);
+
+function isPrime(number) {
+  if (number <= 1) {
+    return false;
+  }
+
+  for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+      console.log(`Square root of ${number} is ${Math.sqrt(number)}`);
+      return false;
+    }
+  }
+
+  return true;
+}
+
+function isPrime(n) {
+  if (n <= 1) {
+    return false;
+  }
+  for (let i = 2; i * i <= n; i++) {
+    if (n % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+const listOfNumbers = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 101, 103, 105, 107, 109, 111, 117, 113,
+];
+
+const primeNumbers = listOfNumbers.filter(isPrime).join(" | ");
+
+console.log(primeNumbers);
