@@ -802,7 +802,7 @@ let mapSwappingCases = swappingCases
   .map((e) => (e == e.toLowerCase() ? e.toUpperCase() : e.toLowerCase()))
   .join("");
 
-let mapInvertedNumbers = invertedNumbers.map((e) => e * -1);
+let mapInvertedNumbers = invertedNumbers.map((e) => -e);
 
 let mapIgnoreNumbers = ignoreNumbers
   .split("")
