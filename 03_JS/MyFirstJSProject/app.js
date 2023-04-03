@@ -974,41 +974,44 @@ console.log("Hi from Ubuntu...");
 4. Polymorphism
 */
 
-let user = {
-  name: "Motasem",
-  age: 23,
-  sayHi: function () {
-    return `Hi, My name is ${this.name}. I am ${this.age} years old.`;
-  },
-};
+// let user = {
+//   name: "Motasem",
+//   age: 23,
+//   sayHi: function () {
+//     return `Hi, My name is ${this.name}. I am ${this.age} years old.`;
+//   },
+// };
 
-console.log(user.name);
-console.log(user.age);
-console.log(user.sayHi());
+// console.log(user.name);
+// console.log(user.age);
+// console.log(user.sayHi());
 
-let person = new Object();
+// let person = new Object();
 
-person["name"] = "Ahmed";
-person.age = 29;
+// person["name"] = "Ahmed";
+// person.age = 29;
 
-console.log(
-  `Hi, this is ${person.name}, his age is ${person["age"]} years old`
-);
+// console.log(
+//   `Hi, this is ${person.name}, his age is ${person["age"]} years old`
+// );
 
-console.log(`Object Keys`, Object.keys(person));
-console.log(`Object Values`, Object.values(person));
+// console.log(`Object Keys`, Object.keys(person));
+// console.log(`Object Values`, Object.values(person));
 
-let { name, age } = person;
-console.log(`Person Name: ${name}\tPerson Age: ${age}`);
+// let { name, age } = person;
+// console.log(`Person Name: ${name}\tPerson Age: ${age}`);
 
-let car = Object.create({
-  name: "Kia",
-  model: "Hijacking",
-  year: "2022",
-});
+// let car = Object.create({
+//   name: "Kia",
+//   model: "Hijacking",
+//   year: "2022",
+// });
 
-console.log("Car description", car.name, car.model, car.year);
+// console.log("Car description", car.name, car.model, car.year);
 
-let vehicle = Object.assign(user, person);
+// let vehicle = Object.assign(user, person);
 
-console.log(vehicle);
+// console.log(vehicle);
+
+// DOM => Document Object Model
+// BOM => Browser Object Model
