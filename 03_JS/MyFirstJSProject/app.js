@@ -1000,3 +1000,15 @@ console.log(`Object Values`, Object.values(person));
 
 let { name, age } = person;
 console.log(`Person Name: ${name}\tPerson Age: ${age}`);
+
+let car = Object.create({
+  name: "Kia",
+  model: "Hijacking",
+  year: "2022",
+});
+
+console.log("Car description", car.name, car.model, car.year);
+
+let vehicle = Object.assign(user, person);
+
+console.log(vehicle);
