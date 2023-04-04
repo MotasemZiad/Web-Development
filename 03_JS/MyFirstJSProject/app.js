@@ -1016,23 +1016,100 @@ console.log("Hi from Windows");
 // DOM => Document Object Model
 // BOM => Browser Object Model
 
-for (let i = 0; i < 100; i++) {
-  let productDiv = document.createElement("div");
-  let productTitle = document.createElement("h3");
-  let productDescription = document.createElement("p");
+// for (let i = 0; i < 100; i++) {
+//   let productDiv = document.createElement("div");
+//   let productTitle = document.createElement("h3");
+//   let productDescription = document.createElement("p");
 
-  let productTitleText = document.createTextNode(`Product Title ${i + 1}`);
-  let productDescriptionText = document.createTextNode(
-    `Product Description ${i + 1}`
-  );
+//   let productTitleText = document.createTextNode(`Product Title ${i + 1}`);
+//   let productDescriptionText = document.createTextNode(
+//     `Product Description ${i + 1}`
+//   );
 
-  productDiv.className = "product";
-  document.body.appendChild(productDiv);
+//   productDiv.className = "product";
+//   document.body.appendChild(productDiv);
 
-  productTitle.appendChild(productTitleText);
-  productDescription.appendChild(productDescriptionText);
+//   productTitle.appendChild(productTitleText);
+//   productDescription.appendChild(productDescriptionText);
 
-  productDiv.appendChild(productTitle);
-  productDiv.appendChild(productDescription);
+//   productDiv.appendChild(productTitle);
+//   productDiv.appendChild(productDescription);
+// }
+
+// DOM Challenge
+
+const globalStyles = "margin: 0;font-family: Tahoma, Arial;background-color: rgb(236, 236, 236);box-sizing: border-box;"
+const headerStyles = "display: flex; justify-content: space-between; align-items: center; padding: 20px; backgroundColor: rgb(255, 255, 255)"
+const contentStyles = `
+                    display: flex;
+                    padding: 20px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                    min-height: calc(100vh - 142px);`
+const productStyles = `
+                    padding: 20px;
+                    background-color: white;
+                    border: 1px solid rgb(221, 221, 221);
+                    width: calc((100% - 40px) / 4);
+                    text-align: center;
+                    color: rgb(136, 136, 136);
+                    border-radius: 6px;`
+const spanStyles = `
+                    display: block;
+                    font-size: 40px;
+                    margin-bottom: 10px;
+                    margin-top: 10px;`
+document.body.style.cssText = globalStyles
+
+
+let headerElement = document.createElement('header')
+headerElement.style.cssText = headerStyles
+let logoElement = document.createElement('a')
+logoElement.className = "logo"
+logoElement.textContent = "Elzero"
+
+let menuElement = document.createElement('ul')
+menuElement.className = 'menu'
+menuElement.style.listStyle = "none"
+
+let HomeListElement = document.createElement('li')
+HomeListElement.innerHTML = "Home"
+let AboutListElement = document.createElement('li')
+AboutListElement.innerHTML = "About"
+let ServicesListElement = document.createElement('li')
+ServicesListElement.innerHTML = "Services"
+let ContactListElement = document.createElement('li')
+ContactListElement.innerHTML = "Contact"
+
+menuElement.appendChild(HomeListElement)
+menuElement.appendChild(AboutListElement)
+menuElement.appendChild(ServicesListElement)
+menuElement.appendChild(ContactListElement)
+headerElement.appendChild(logoElement)
+headerElement.appendChild(menuElement)
+
+let contentElement = document.createElement('div')
+contentElement.className = 'content'
+contentElement.style.cssText = contentStyles
+
+for(let i = 0; i < 15; i++){
+    let productElement = document.createElement('div')
+    productElement.className = "product"
+    productElement.style.cssText = productStyles;
+    let productNumberElement = document.createElement("span")
+    productNumberElement.style.cssText = spanStyles
+    productNumberElement.textContent = `${i + 1}`
+    productElement.appendChild(productNumberElement)
+    productElement.append("Product");
+    contentElement.appendChild(productElement)
 }
 
+
+
+let footerElement = document.createElement('footer')
+footerElement.textContent = "Copyright 2023"
+
+document.body.appendChild(headerElement)
+document.body.appendChild(contentElement)
+document.body.appendChild(footerElement)
