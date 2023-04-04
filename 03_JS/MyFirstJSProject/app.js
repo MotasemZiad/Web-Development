@@ -383,7 +383,7 @@ let price = null;
 // console.log(Array.isArray(myFriends));
 // console.log(Array.isArray(myFriends[0]));
 
-// console.log("Hi from Windows");
+console.log("Hi from Windows");
 /*
  unshift & shift => adds or remove elements from the first
  push & pop => adds or remove elements from the last 
@@ -503,7 +503,7 @@ let price = null;
 //   }
 // }
 
-console.log("Hi from Ubuntu...");
+// console.log("Hi from Ubuntu...");
 
 // let products = [
 //   "Keyboard",
@@ -1015,3 +1015,4 @@ console.log("Hi from Ubuntu...");
 
 // DOM => Document Object Model
 // BOM => Browser Object Model
+
