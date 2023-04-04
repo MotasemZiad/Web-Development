@@ -1016,3 +1016,25 @@ console.log("Hi from Windows");
 // DOM => Document Object Model
 // BOM => Browser Object Model
 
+for (let i = 0; i < 100; i++) {
+  let productDiv = document.createElement("div");
+  let productTitle = document.createElement("h3");
+  let productDescription = document.createElement("p");
+
+  let productTitleText = document.createTextNode(`Product Title ${i + 1}`);
+  let productDescriptionText = document.createTextNode(
+    `Product Description ${i + 1}`
+  );
+
+  productDiv.className = "product";
+  document.body.appendChild(productDiv);
+
+  productTitle.appendChild(productTitleText);
+  productDescription.appendChild(productDescriptionText);
+
+  productDiv.appendChild(productTitle);
+  productDiv.appendChild(productDescription);
+}
+
+// productTitle.innerText = "Product Title";
+// productDescription.innerText = "Product Description";
