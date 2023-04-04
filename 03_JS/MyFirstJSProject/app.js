@@ -1038,8 +1038,18 @@ console.log("Hi from Windows");
 
 // DOM Challenge
 
-const globalStyles = `margin: 0;font-family: Tahoma, Arial;background-color: rgb(236, 236, 236);box-sizing: border-box;`;
-const headerStyles = `display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: rgb(255, 255, 255); box-shadow: 1px 2px 3px #e4e5e5`;
+const globalStyles = `
+                    margin: 0;
+                    font-family: Tahoma, Arial;
+                    background-color: rgb(236, 236, 236);
+                    box-sizing: border-box;`;
+const headerStyles = `
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 20px;
+                    background-color: rgb(255, 255, 255);
+                    box-shadow: 1px 2px 3px #e4e5e5`;
 const logoStyles = `
                     font-weight: bold;
                     color: rgb(35, 169, 110);
@@ -1050,17 +1060,14 @@ const menuStyles = `
                     display: flex;
                     list-style: none;`;
 const contentStyles = `
-                    display: flex;
-                    padding: 20px;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 20px;
-                    min-height: calc(100vh - 142px);`;
+                    display: grid;
+                    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+                    gap: 30px;
+                    padding: 20px;`;
 const productStyles = `
                     padding: 20px;
                     background-color: white;
                     border: 1px solid rgb(221, 221, 221);
-                    width: calc((100% - 40px) / 4);
                     text-align: center;
                     color: rgb(136, 136, 136);
                     border-radius: 6px;`;
@@ -1118,7 +1125,7 @@ let contentElement = document.createElement("div");
 contentElement.className = "content";
 contentElement.style.cssText = contentStyles;
 
-for (let i = 0; i < 15; i++) {
+for (let i = 0; i < 16; i++) {
   let productElement = document.createElement("div");
   productElement.className = "product";
   productElement.style.cssText = productStyles;
