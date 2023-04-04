@@ -1038,15 +1038,24 @@ console.log("Hi from Windows");
 
 // DOM Challenge
 
-const globalStyles = "margin: 0;font-family: Tahoma, Arial;background-color: rgb(236, 236, 236);box-sizing: border-box;"
-const headerStyles = "display: flex; justify-content: space-between; align-items: center; padding: 20px; backgroundColor: rgb(255, 255, 255)"
+const globalStyles = `margin: 0;font-family: Tahoma, Arial;background-color: rgb(236, 236, 236);box-sizing: border-box;`;
+const headerStyles = `display: flex; justify-content: space-between; align-items: center; padding: 20px; background-color: rgb(255, 255, 255); box-shadow: 1px 2px 3px #e4e5e5`;
+const logoStyles = `
+                    font-weight: bold;
+                    color: rgb(35, 169, 110);
+                    font-size: 26px;`;
+const menuStyles = `
+                    padding: 0px;
+                    margin: 0px;
+                    display: flex;
+                    list-style: none;`;
 const contentStyles = `
                     display: flex;
                     padding: 20px;
                     flex-wrap: wrap;
                     justify-content: center;
                     gap: 20px;
-                    min-height: calc(100vh - 142px);`
+                    min-height: calc(100vh - 142px);`;
 const productStyles = `
                     padding: 20px;
                     background-color: white;
@@ -1054,62 +1063,77 @@ const productStyles = `
                     width: calc((100% - 40px) / 4);
                     text-align: center;
                     color: rgb(136, 136, 136);
-                    border-radius: 6px;`
+                    border-radius: 6px;`;
 const spanStyles = `
                     display: block;
                     font-size: 40px;
+                    color: black;
                     margin-bottom: 10px;
-                    margin-top: 10px;`
-document.body.style.cssText = globalStyles
+                    margin-top: 10px;`;
+const footerStyles = `
+                    background-color: rgb(35, 169, 110);
+                    color: white;
+                    font-size: 22px;
+                    text-align: center;
+                    padding: 20px;
+                    margin: 20px auto 0;
+                    `;
 
+document.body.style.cssText = globalStyles;
 
-let headerElement = document.createElement('header')
-headerElement.style.cssText = headerStyles
-let logoElement = document.createElement('a')
-logoElement.className = "logo"
-logoElement.textContent = "Elzero"
+let headerElement = document.createElement("header");
+headerElement.style.cssText = headerStyles;
+let logoElement = document.createElement("a");
+logoElement.className = "logo";
+logoElement.textContent = "Elzero";
+logoElement.style.cssText = logoStyles;
 
-let menuElement = document.createElement('ul')
-menuElement.className = 'menu'
-menuElement.style.listStyle = "none"
+let menuElement = document.createElement("ul");
+menuElement.className = "menu";
+menuElement.style.cssText = menuStyles;
 
-let HomeListElement = document.createElement('li')
-HomeListElement.innerHTML = "Home"
-let AboutListElement = document.createElement('li')
-AboutListElement.innerHTML = "About"
-let ServicesListElement = document.createElement('li')
-ServicesListElement.innerHTML = "Services"
-let ContactListElement = document.createElement('li')
-ContactListElement.innerHTML = "Contact"
+let HomeListElement = document.createElement("li");
+HomeListElement.innerHTML = "Home";
+let AboutListElement = document.createElement("li");
+AboutListElement.innerHTML = "About";
+let ServicesListElement = document.createElement("li");
+ServicesListElement.innerHTML = "Services";
+let ContactListElement = document.createElement("li");
+ContactListElement.innerHTML = "Contact";
 
-menuElement.appendChild(HomeListElement)
-menuElement.appendChild(AboutListElement)
-menuElement.appendChild(ServicesListElement)
-menuElement.appendChild(ContactListElement)
-headerElement.appendChild(logoElement)
-headerElement.appendChild(menuElement)
+menuElement.appendChild(HomeListElement);
+menuElement.appendChild(AboutListElement);
+menuElement.appendChild(ServicesListElement);
+menuElement.appendChild(ContactListElement);
 
-let contentElement = document.createElement('div')
-contentElement.className = 'content'
-contentElement.style.cssText = contentStyles
-
-for(let i = 0; i < 15; i++){
-    let productElement = document.createElement('div')
-    productElement.className = "product"
-    productElement.style.cssText = productStyles;
-    let productNumberElement = document.createElement("span")
-    productNumberElement.style.cssText = spanStyles
-    productNumberElement.textContent = `${i + 1}`
-    productElement.appendChild(productNumberElement)
-    productElement.append("Product");
-    contentElement.appendChild(productElement)
+for (let i = 0; i < menuElement.children.length; i++) {
+  const element = menuElement.children[i];
+  element.style.marginRight = "10px";
 }
 
+headerElement.appendChild(logoElement);
+headerElement.appendChild(menuElement);
 
+let contentElement = document.createElement("div");
+contentElement.className = "content";
+contentElement.style.cssText = contentStyles;
 
-let footerElement = document.createElement('footer')
-footerElement.textContent = "Copyright 2023"
+for (let i = 0; i < 15; i++) {
+  let productElement = document.createElement("div");
+  productElement.className = "product";
+  productElement.style.cssText = productStyles;
+  let productNumberElement = document.createElement("span");
+  productNumberElement.style.cssText = spanStyles;
+  productNumberElement.textContent = `${i + 1}`;
+  productElement.appendChild(productNumberElement);
+  productElement.append("Product");
+  contentElement.appendChild(productElement);
+}
 
-document.body.appendChild(headerElement)
-document.body.appendChild(contentElement)
-document.body.appendChild(footerElement)
+let footerElement = document.createElement("footer");
+footerElement.textContent = "Copyright 2023";
+footerElement.style.cssText = footerStyles;
+
+document.body.appendChild(headerElement);
+document.body.appendChild(contentElement);
+document.body.appendChild(footerElement);
