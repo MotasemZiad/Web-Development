@@ -1036,12 +1036,3 @@ for (let i = 0; i < 100; i++) {
   productDiv.appendChild(productDescription);
 }
 
-// Events
-
-window.onscroll = function () {
-    console.log("Scrolling...");
-}
-
-let btnClick = document.getElementById("btn")
-btnClick.onclick = () => console.log("Click")
-
