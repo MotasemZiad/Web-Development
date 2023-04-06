@@ -1147,8 +1147,9 @@
 
 // BOM => Browser Object Model
 
-let alertValue = alert("Hello, I love you!")
-let confirmValue = confirm("I want to be a Prompt Engineer")
-console.log(typeof confirmValue, confirmValue);
-let promptValue = prompt("Please write down your email")
+// let alertValue = alert("Hello, I love you!")
+// let confirmValue = confirm("I want to be a Prompt Engineer")
+// console.log(typeof confirmValue, confirmValue);
+let promptValue = prompt("Please write down your email", "Your email should be unique and valid")
 console.log(typeof promptValue, promptValue);
+
