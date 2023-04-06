@@ -1150,6 +1150,55 @@
 // let alertValue = alert("Hello, I love you!")
 // let confirmValue = confirm("I want to be a Prompt Engineer")
 // console.log(typeof confirmValue, confirmValue);
-let promptValue = prompt("Please write down your email", "Your email should be unique and valid")
-console.log(typeof promptValue, promptValue);
+// let promptValue = prompt("Please write down your email", "Your email should be unique and valid")
+// console.log(typeof promptValue, promptValue);
 
+// setTimeout & setInterval
+let stopButton = document.querySelector("button")
+
+// let counter = setTimeout(
+//   () => console.log("setTimeout")
+// , 2000);
+
+// stopButton.onclick = function () {
+//   clearTimeout(counter)
+// }
+
+// console.log(counter);
+
+
+// let showProfile = setTimeout(profile, 3000, "motasemabuinma", "motasemabunima@gmail.com")
+// function profile(username, email){
+//   console.log(`Username: ${username}\tEmail address: ${email}`);
+// }
+// console.log(showProfile);
+// stopButton.onclick = () => clearTimeout(showProfile)
+
+// setInterval(() => {
+//   console.log("setInterval");
+// }, 2000);
+
+// clearInterval(1)
+
+// let intervalCounter = setInterval(() => {
+//   console.log("setInterval");
+// }, 2000);
+
+// console.log(intervalCounter);
+
+// stopButton.onclick = () => {
+//   clearInterval(intervalCounter)
+// }
+
+let myDiv = document.querySelector("div")
+function countDown() {
+    myDiv.innerHTML -= 1;
+    if(myDiv.innerHTML === "0")
+      clearInterval(divInterval)
+}
+
+let divInterval = setInterval(countDown, 1000) 
+
+stopButton.onclick = () => {
+  clearInterval(divInterval)
+}
