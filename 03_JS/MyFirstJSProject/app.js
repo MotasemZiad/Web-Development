@@ -1190,15 +1190,15 @@ let stopButton = document.querySelector("button")
 //   clearInterval(intervalCounter)
 // }
 
-let myDiv = document.querySelector("div")
-function countDown() {
-    myDiv.innerHTML -= 1;
-    if(myDiv.innerHTML === "0")
-      clearInterval(divInterval)
-}
+// let myDiv = document.querySelector("div")
+// function countDown() {
+//     myDiv.innerHTML -= 1;
+//     if(myDiv.innerHTML === "0")
+//       clearInterval(divInterval)
+// }
 
-let divInterval = setInterval(countDown, 1000) 
+// let divInterval = setInterval(countDown, 1000) 
 
-stopButton.onclick = () => {
-  clearInterval(divInterval)
-}
+// stopButton.onclick = () => {
+//   clearInterval(divInterval)
+// }
