@@ -1240,3 +1240,25 @@ window.onclick = () => {
         behavior: "smooth"
     })
 }
+
+// Working with local storage
+
+console.log(localStorage)
+console.log(localStorage.length)
+console.log(typeof localStorage);
+
+localStorage.setItem("color", "#f00")
+localStorage.fontSize = "30px"
+localStorage['fontWeight'] = "bolder"
+
+console.log(localStorage.getItem("color"))
+console.log(localStorage.fontSize)
+console.log(localStorage[`fontWeight`])
+
+console.log(localStorage.key(2))
+localStorage.removeItem('color')
+localStorage.clear()
+document.body.style.backgroundColor = localStorage.getItem("color")
+document.body.style.fontSize = localStorage.fontSize
+document.body.style.fontWeight = localStorage.fontWeight
+
