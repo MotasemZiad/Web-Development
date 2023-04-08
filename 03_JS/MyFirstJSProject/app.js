@@ -1243,22 +1243,44 @@ window.onclick = () => {
 
 // Working with local storage
 
-console.log(localStorage)
-console.log(localStorage.length)
-console.log(typeof localStorage);
+// console.log(localStorage)
+// console.log(localStorage.length)
+// console.log(typeof localStorage);
 
-localStorage.setItem("color", "#f00")
-localStorage.fontSize = "30px"
-localStorage['fontWeight'] = "bolder"
+// localStorage.setItem("color", "#f00")
+// localStorage.fontSize = "30px"
+// localStorage['fontWeight'] = "bolder"
 
-console.log(localStorage.getItem("color"))
-console.log(localStorage.fontSize)
-console.log(localStorage[`fontWeight`])
+// console.log(localStorage.getItem("color"))
+// console.log(localStorage.fontSize)
+// console.log(localStorage[`fontWeight`])
 
-console.log(localStorage.key(2))
-localStorage.removeItem('color')
-localStorage.clear()
-document.body.style.backgroundColor = localStorage.getItem("color")
-document.body.style.fontSize = localStorage.fontSize
-document.body.style.fontWeight = localStorage.fontWeight
+// console.log(localStorage.key(2))
+// localStorage.removeItem('color')
+// localStorage.clear()
+// document.body.style.backgroundColor = localStorage.getItem("color")
+// document.body.style.fontSize = localStorage.fontSize
+// document.body.style.fontWeight = localStorage.fontWeight
 
+// Local Storage Practicing...
+
+
+let lis = document.querySelectorAll("ul li")
+let exp = document.querySelector(".experiment")
+
+if(localStorage.getItem("color")){
+    exp.style.backgroundColor = localStorage.getItem("color");
+    lis.forEach((li) => li.classList.remove("active"))
+    document.querySelector(`[data-color="${localStorage.getItem("color")}"]`).classList.add("active")
+}
+
+lis.forEach((li) => {
+    li.addEventListener("click", (e) => {
+        // console.log(e.currentTarget.dataset.color);
+        lis.forEach((li) => li.classList.remove("active"))
+        e.currentTarget.classList.add("active")
+
+        localStorage.setItem("color", e.currentTarget.dataset.color)
+        exp.style.backgroundColor = localStorage.getItem("color")
+    })
+})
