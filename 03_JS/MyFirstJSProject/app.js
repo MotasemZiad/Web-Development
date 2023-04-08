@@ -1265,22 +1265,28 @@ window.onclick = () => {
 // Local Storage Practicing...
 
 
-let lis = document.querySelectorAll("ul li")
-let exp = document.querySelector(".experiment")
+// let lis = document.querySelectorAll("ul li")
+// let exp = document.querySelector(".experiment")
 
-if(localStorage.getItem("color")){
-    exp.style.backgroundColor = localStorage.getItem("color");
-    lis.forEach((li) => li.classList.remove("active"))
-    document.querySelector(`[data-color="${localStorage.getItem("color")}"]`).classList.add("active")
-}
+// if(localStorage.getItem("color")){
+//     exp.style.backgroundColor = localStorage.getItem("color");
+//     lis.forEach((li) => li.classList.remove("active"))
+//     document.querySelector(`[data-color="${localStorage.getItem("color")}"]`).classList.add("active")
+// }
 
-lis.forEach((li) => {
-    li.addEventListener("click", (e) => {
-        // console.log(e.currentTarget.dataset.color);
-        lis.forEach((li) => li.classList.remove("active"))
-        e.currentTarget.classList.add("active")
+// lis.forEach((li) => {
+//     li.addEventListener("click", (e) => {
+//         // console.log(e.currentTarget.dataset.color);
+//         lis.forEach((li) => li.classList.remove("active"))
+//         e.currentTarget.classList.add("active")
 
-        localStorage.setItem("color", e.currentTarget.dataset.color)
-        exp.style.backgroundColor = localStorage.getItem("color")
-    })
-})
+//         localStorage.setItem("color", e.currentTarget.dataset.color)
+//         exp.style.backgroundColor = localStorage.getItem("color")
+//     })
+// })
+
+let taskInput = document.querySelector(`input[type="text"]`)
+let submitInput = document.querySelector(`input[type="submit"]`)
+
+console.log(taskInput);
+console.log(submitInput);
