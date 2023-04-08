@@ -1,0 +1,21 @@
+body {
+    height: 5000px;
+}
+
+.up {
+    display: block;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 6px 12px;
+    width: fit-content;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px grey;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}

@@ -1202,3 +1202,41 @@ let stopButton = document.querySelector("button")
 // stopButton.onclick = () => {
 //   clearInterval(divInterval)
 // }
+
+// setTimeout(function () {
+//   let myNewWindow = window.open("https://google.com", "_blank", "width=500,height=500,left=200,top=100")
+//   setTimeout(() => {
+//     myNewWindow.close()
+//     console.log("Closed...");
+//   }, 3000);
+// }, 3000)
+
+// window.scrollTo({
+//     left: 500,
+//     top: 200,
+//     behavior: "smooth"
+// })
+
+// window.scrollBy({
+//     left: 500,
+//     top: 200,
+//     behavior: "smooth"
+// })
+
+let btnScrollToTop = document.querySelector("button")
+
+window.onscroll = () => {
+    if(window.scrollY >= 600){
+        btnScrollToTop.style.display = "block"
+    }else {
+        btnScrollToTop.style.display = "none"
+    }
+}
+
+window.onclick = () => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+    })
+}
