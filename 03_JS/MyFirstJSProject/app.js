@@ -1285,8 +1285,68 @@ window.onclick = () => {
 //     })
 // })
 
+
 let taskInput = document.querySelector(`input[type="text"]`)
 let submitInput = document.querySelector(`input[type="submit"]`)
+let tasksList = document.querySelector(`.tasks`)
 
-console.log(taskInput);
-console.log(submitInput);
+let ulTag = document.createElement("ul")
+
+
+// Load tasks from local storage
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+// Function to render the task list
+const renderTasks = () => {
+    // Clear the task list
+    tasksList.appendChild(ulTag);
+    ulTag.innerHTML = ''
+
+    // Render each task as an li element
+    tasks.forEach((task, index) => {
+        const li = document.createElement('li');
+        const text = document.createTextNode(task);
+        li.appendChild(text);
+
+        const deleteButton = document.createElement('span');
+        deleteButton.innerHTML = 'Delete';
+        deleteButton.addEventListener('click', () => {
+            // Remove the task from the array and update local storage
+            tasks.splice(index, 1);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            renderTasks();
+        });
+
+        li.appendChild(deleteButton);
+        ulTag.appendChild(li);
+    });
+};
+
+
+taskInput.addEventListener('input', () => {
+    if(taskInput.value.trim() !== ''){
+        submitInput.removeAttribute('disabled')
+    }else {
+        submitInput.setAttribute('disabled', true)
+    }
+})
+
+
+// Add an event listener to the form to handle task submission
+document.querySelector('form').addEventListener('submit', event => {
+    event.preventDefault();
+    const task = taskInput.value.trim();
+
+    if(task !== ''){
+        // Add the task to the array and update local storage
+        tasks.push(task);
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+
+        // Clear the input and render the task list
+        taskInput.value = '';
+        renderTasks();
+    }
+});
+
+// Render the task list on page load
+renderTasks();
