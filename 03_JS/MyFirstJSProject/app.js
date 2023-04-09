@@ -1293,16 +1293,12 @@ let tasksList = document.querySelector(`.tasks`)
 let ulTag = document.createElement("ul")
 
 
-// Load tasks from local storage
 let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-// Function to render the task list
 const renderTasks = () => {
-    // Clear the task list
     tasksList.appendChild(ulTag);
     ulTag.innerHTML = ''
 
-    // Render each task as an li element
     tasks.forEach((task, index) => {
         const li = document.createElement('li');
         const text = document.createTextNode(task);
@@ -1311,7 +1307,6 @@ const renderTasks = () => {
         const deleteButton = document.createElement('span');
         deleteButton.innerHTML = 'Delete';
         deleteButton.addEventListener('click', () => {
-            // Remove the task from the array and update local storage
             tasks.splice(index, 1);
             localStorage.setItem('tasks', JSON.stringify(tasks));
             renderTasks();
@@ -1332,21 +1327,17 @@ taskInput.addEventListener('input', () => {
 })
 
 
-// Add an event listener to the form to handle task submission
 document.querySelector('form').addEventListener('submit', event => {
     event.preventDefault();
     const task = taskInput.value.trim();
 
     if(task !== ''){
-        // Add the task to the array and update local storage
         tasks.push(task);
         localStorage.setItem('tasks', JSON.stringify(tasks));
 
-        // Clear the input and render the task list
         taskInput.value = '';
         renderTasks();
     }
 });
 
-// Render the task list on page load
 renderTasks();
