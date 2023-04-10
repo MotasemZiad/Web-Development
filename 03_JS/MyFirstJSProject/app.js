@@ -1360,3 +1360,66 @@ console.log(`Before x = ${x}, y = ${y}`);
 [x, y] = [y, x];
 
 console.log(`After x = ${x}, y = ${y}`);
+
+const user = {
+  firstName: "Motasem",
+  lastName: "Abunima",
+  age: 23,
+  gpa: 85.51,
+  isGraduated: true,
+  courses: [
+    "Programming",
+    "Operating Systems",
+    "Distributed Systems",
+    "Cloud Computing",
+    "Calculus",
+  ],
+  jobTitle: "Software Developer",
+  address: {
+    location: {
+      latitude: 192.2341,
+      longitude: 37.24301,
+    },
+    country: "Palestine",
+    city: "Gaza",
+    street: "Yaffa St.",
+    zipCode: 28110,
+  },
+};
+
+console.log(user.firstName, user.lastName);
+console.log(user.age, user.isGraduated);
+console.log(`Courses: ${user.courses.join(" | ")}`);
+console.log(
+  `Address:\nLocation: (${user.address.location.latitude}, ${user.address.location.longitude})\nCountry: ${user.address.country}\nCity: ${user.address.city}\nStreet: ${user.address.street}\nZip Code: ${user.address.zipCode}`
+);
+
+({
+  firstName,
+  lastName,
+  age,
+  gpa,
+  isGraduated,
+  courses,
+  address: {
+    location: { latitude, longitude },
+    country,
+    city: c,
+    street: s,
+    zipCode: z,
+  },
+} = user);
+
+console.log(
+  firstName,
+  lastName,
+  age,
+  isGraduated,
+  gpa,
+  courses[4],
+  latitude,
+  longitude,
+  c,
+  s,
+  z
+);
