@@ -1423,3 +1423,25 @@ console.log(
   s,
   z
 );
+
+function showDetails({
+  firstName,
+  lastName,
+  jobTitle,
+  address: {
+    location: { latitude, longitude },
+    country,
+    city,
+    street,
+    zipCode,
+  },
+} = user) {
+  console.log(
+    `Hi ${firstName} ${lastName}, Your current job title is ${jobTitle}`
+  );
+  console.log(
+    `Your full address is ${country} - ${city} - ${street} - ${zipCode} - (${latitude}, ${longitude})`
+  );
+}
+
+showDetails(user);
