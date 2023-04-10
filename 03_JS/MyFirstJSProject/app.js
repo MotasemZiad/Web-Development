@@ -1337,111 +1337,169 @@ let stopButton = document.querySelector("button");
 
 // Array Destructuring
 
+// let myFriends = [
+//   "Ahmed",
+//   "Sayed",
+//   "Ali",
+//   ["Shady", "Amr", ["Mohamed", "Gamal"]],
+// ];
+
+// let [, , , [a, , [, b]]] = myFriends;
+
+// console.log(a, b);
+
+// let x = 10,
+//   y = 5;
+
+// console.log(`Before x = ${x}, y = ${y}`);
+
+// // let temp = x;
+// // x = y;
+// // y = temp;
+
+// [x, y] = [y, x];
+
+// console.log(`After x = ${x}, y = ${y}`);
+
+// const user = {
+//   firstName: "Motasem",
+//   lastName: "Abunima",
+//   age: 23,
+//   gpa: 85.51,
+//   isGraduated: true,
+//   courses: [
+//     "Programming",
+//     "Operating Systems",
+//     "Distributed Systems",
+//     "Cloud Computing",
+//     "Calculus",
+//   ],
+//   jobTitle: "Software Developer",
+//   address: {
+//     location: {
+//       latitude: 192.2341,
+//       longitude: 37.24301,
+//     },
+//     country: "Palestine",
+//     city: "Gaza",
+//     street: "Yaffa St.",
+//     zipCode: 28110,
+//   },
+// };
+
+// console.log(user.firstName, user.lastName);
+// console.log(user.age, user.isGraduated);
+// console.log(`Courses: ${user.courses.join(" | ")}`);
+// console.log(
+//   `Address:\nLocation: (${user.address.location.latitude}, ${user.address.location.longitude})\nCountry: ${user.address.country}\nCity: ${user.address.city}\nStreet: ${user.address.street}\nZip Code: ${user.address.zipCode}`
+// );
+
+// ({
+//   firstName,
+//   lastName,
+//   age,
+//   gpa,
+//   isGraduated,
+//   courses,
+//   address: {
+//     location: { latitude, longitude },
+//     country,
+//     city: c,
+//     street: s,
+//     zipCode: z,
+//   },
+// } = user);
+
+// console.log(
+//   firstName,
+//   lastName,
+//   age,
+//   isGraduated,
+//   gpa,
+//   courses[4],
+//   latitude,
+//   longitude,
+//   c,
+//   s,
+//   z
+// );
+
+// function showDetails({
+//   firstName,
+//   lastName,
+//   jobTitle,
+//   address: {
+//     location: { latitude, longitude },
+//     country,
+//     city,
+//     street,
+//     zipCode,
+//   },
+// } = user) {
+//   console.log(
+//     `Hi ${firstName} ${lastName}, Your current job title is ${jobTitle}`
+//   );
+//   console.log(
+//     `Your full address is ${country} - ${city} - ${street} - ${zipCode} - (${latitude}, ${longitude})`
+//   );
+// }
+
+// showDetails(user);
+
+// Destructuring (Array, Object, Function) challenge
+
+let chosen = prompt("Enter the chosen number");
 let myFriends = [
-  "Ahmed",
-  "Sayed",
-  "Ali",
-  ["Shady", "Amr", ["Mohamed", "Gamal"]],
+  {
+    title: "Osama Mohamed",
+    age: 39,
+    available: true,
+    skills: ["Java", "Spring"],
+  },
+  {
+    title: "Ahmed Ali",
+    age: 25,
+    available: false,
+    skills: ["Python", "Django"],
+  },
+  {
+    title: "Adel Fawzy",
+    age: 28,
+    available: true,
+    skills: ["PHP", "Laravel"],
+  },
+  {
+    title: "Rakan Ahmed",
+    age: 32,
+    available: false,
+    skills: ["JavaScript", "NodeJS"],
+  },
+  {
+    title: "Ahmed Sami",
+    age: 19,
+    available: true,
+    skills: ["C#", "ASP.NET"],
+  },
+  {
+    title: "Tawfiq Okasha",
+    age: 36,
+    available: false,
+    skills: ["Ruby", "RubyOnRails"],
+  },
 ];
 
-let [, , , [a, , [, b]]] = myFriends;
+try {
+  let {
+    title: empName,
+    age,
+    available,
+    skills: [, lastSkill],
+  } = myFriends[chosen - 1];
 
-console.log(a, b);
-
-let x = 10,
-  y = 5;
-
-console.log(`Before x = ${x}, y = ${y}`);
-
-// let temp = x;
-// x = y;
-// y = temp;
-
-[x, y] = [y, x];
-
-console.log(`After x = ${x}, y = ${y}`);
-
-const user = {
-  firstName: "Motasem",
-  lastName: "Abunima",
-  age: 23,
-  gpa: 85.51,
-  isGraduated: true,
-  courses: [
-    "Programming",
-    "Operating Systems",
-    "Distributed Systems",
-    "Cloud Computing",
-    "Calculus",
-  ],
-  jobTitle: "Software Developer",
-  address: {
-    location: {
-      latitude: 192.2341,
-      longitude: 37.24301,
-    },
-    country: "Palestine",
-    city: "Gaza",
-    street: "Yaffa St.",
-    zipCode: 28110,
-  },
-};
-
-console.log(user.firstName, user.lastName);
-console.log(user.age, user.isGraduated);
-console.log(`Courses: ${user.courses.join(" | ")}`);
-console.log(
-  `Address:\nLocation: (${user.address.location.latitude}, ${user.address.location.longitude})\nCountry: ${user.address.country}\nCity: ${user.address.city}\nStreet: ${user.address.street}\nZip Code: ${user.address.zipCode}`
-);
-
-({
-  firstName,
-  lastName,
-  age,
-  gpa,
-  isGraduated,
-  courses,
-  address: {
-    location: { latitude, longitude },
-    country,
-    city: c,
-    street: s,
-    zipCode: z,
-  },
-} = user);
-
-console.log(
-  firstName,
-  lastName,
-  age,
-  isGraduated,
-  gpa,
-  courses[4],
-  latitude,
-  longitude,
-  c,
-  s,
-  z
-);
-
-function showDetails({
-  firstName,
-  lastName,
-  jobTitle,
-  address: {
-    location: { latitude, longitude },
-    country,
-    city,
-    street,
-    zipCode,
-  },
-} = user) {
-  console.log(
-    `Hi ${firstName} ${lastName}, Your current job title is ${jobTitle}`
-  );
-  console.log(
-    `Your full address is ${country} - ${city} - ${street} - ${zipCode} - (${latitude}, ${longitude})`
-  );
+  console.log(empName);
+  console.log(age);
+  console.log(available ? "available" : "not avialable");
+  console.log(lastSkill);
+} catch (error) {
+  console.log(`Something went wrong:\n${error}`);
 }
-
-showDetails(user);
