@@ -1154,7 +1154,7 @@
 // console.log(typeof promptValue, promptValue);
 
 // setTimeout & setInterval
-let stopButton = document.querySelector("button")
+let stopButton = document.querySelector("button");
 
 // let counter = setTimeout(
 //   () => console.log("setTimeout")
@@ -1165,7 +1165,6 @@ let stopButton = document.querySelector("button")
 // }
 
 // console.log(counter);
-
 
 // let showProfile = setTimeout(profile, 3000, "motasemabuinma", "motasemabunima@gmail.com")
 // function profile(username, email){
@@ -1197,7 +1196,7 @@ let stopButton = document.querySelector("button")
 //       clearInterval(divInterval)
 // }
 
-// let divInterval = setInterval(countDown, 1000) 
+// let divInterval = setInterval(countDown, 1000)
 
 // stopButton.onclick = () => {
 //   clearInterval(divInterval)
@@ -1223,23 +1222,23 @@ let stopButton = document.querySelector("button")
 //     behavior: "smooth"
 // })
 
-let btnScrollToTop = document.querySelector("button")
+// let btnScrollToTop = document.querySelector("button");
 
-window.onscroll = () => {
-    if(window.scrollY >= 600){
-        btnScrollToTop.style.display = "block"
-    }else {
-        btnScrollToTop.style.display = "none"
-    }
-}
+// window.onscroll = () => {
+//   if (window.scrollY >= 600) {
+//     btnScrollToTop.style.display = "block";
+//   } else {
+//     btnScrollToTop.style.display = "none";
+//   }
+// };
 
-window.onclick = () => {
-    window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth"
-    })
-}
+// window.onclick = () => {
+//   window.scrollTo({
+//     top: 0,
+//     left: 0,
+//     behavior: "smooth",
+//   });
+// };
 
 // Working with local storage
 
@@ -1264,7 +1263,6 @@ window.onclick = () => {
 
 // Local Storage Practicing...
 
-
 // let lis = document.querySelectorAll("ul li")
 // let exp = document.querySelector(".experiment")
 
@@ -1285,60 +1283,80 @@ window.onclick = () => {
 //     })
 // })
 
+// let taskInput = document.querySelector(`input[type="text"]`);
+// let submitInput = document.querySelector(`input[type="submit"]`);
+// let tasksList = document.querySelector(`.tasks`);
 
-// let taskInput = document.querySelector(`input[type="text"]`)
-// let submitInput = document.querySelector(`input[type="submit"]`)
-// let tasksList = document.querySelector(`.tasks`)
+// let ulTag = document.createElement("ul");
 
-// let ulTag = document.createElement("ul")
-
-
-// let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+// let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
 // const renderTasks = () => {
-//     tasksList.appendChild(ulTag);
-//     ulTag.innerHTML = ''
+//   tasksList.appendChild(ulTag);
+//   ulTag.innerHTML = "";
 
-//     tasks.forEach((task, index) => {
-//         const li = document.createElement('li');
-//         const text = document.createTextNode(task);
-//         li.appendChild(text);
+//   tasks.forEach((task, index) => {
+//     const li = document.createElement("li");
+//     const text = document.createTextNode(task);
+//     li.appendChild(text);
 
-//         const deleteButton = document.createElement('span');
-//         deleteButton.innerHTML = 'Delete';
-//         deleteButton.addEventListener('click', () => {
-//             tasks.splice(index, 1);
-//             localStorage.setItem('tasks', JSON.stringify(tasks));
-//             renderTasks();
-//         });
-
-//         li.appendChild(deleteButton);
-//         ulTag.appendChild(li);
+//     const deleteButton = document.createElement("span");
+//     deleteButton.innerHTML = "Delete";
+//     deleteButton.addEventListener("click", () => {
+//       tasks.splice(index, 1);
+//       localStorage.setItem("tasks", JSON.stringify(tasks));
+//       renderTasks();
 //     });
+
+//     li.appendChild(deleteButton);
+//     ulTag.appendChild(li);
+//   });
 // };
 
+// taskInput.addEventListener("input", () => {
+//   if (taskInput.value.trim() !== "") {
+//     submitInput.removeAttribute("disabled");
+//   } else {
+//     submitInput.setAttribute("disabled", true);
+//   }
+// });
 
-// taskInput.addEventListener('input', () => {
-//     if(taskInput.value.trim() !== ''){
-//         submitInput.removeAttribute('disabled')
-//     }else {
-//         submitInput.setAttribute('disabled', true)
-//     }
-// })
+// document.querySelector("form").addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   const task = taskInput.value.trim();
+//   if (task !== "") {
+//     tasks.push(task);
+//     localStorage.setItem("tasks", JSON.stringify(tasks));
 
-
-// document.querySelector('form').addEventListener('submit', event => {
-//     event.preventDefault();
-//     const task = taskInput.value.trim();
-//     if(task !== ''){
-//         tasks.push(task);
-//         localStorage.setItem('tasks', JSON.stringify(tasks));
-
-//         taskInput.value = '';
-//         renderTasks();
-//     }
+//     taskInput.value = "";
+//     renderTasks();
+//   }
 // });
 
 // renderTasks();
 
+// Array Destructuring
 
+let myFriends = [
+  "Ahmed",
+  "Sayed",
+  "Ali",
+  ["Shady", "Amr", ["Mohamed", "Gamal"]],
+];
+
+let [, , , [a, , [, b]]] = myFriends;
+
+console.log(a, b);
+
+let x = 10,
+  y = 5;
+
+console.log(`Before x = ${x}, y = ${y}`);
+
+// let temp = x;
+// x = y;
+// y = temp;
+
+[x, y] = [y, x];
+
+console.log(`After x = ${x}, y = ${y}`);
