@@ -1448,58 +1448,70 @@ let stopButton = document.querySelector("button");
 
 // Destructuring (Array, Object, Function) challenge
 
-let chosen = prompt("Enter the chosen number");
-let myFriends = [
-  {
-    title: "Osama Mohamed",
-    age: 39,
-    available: true,
-    skills: ["Java", "Spring"],
-  },
-  {
-    title: "Ahmed Ali",
-    age: 25,
-    available: false,
-    skills: ["Python", "Django"],
-  },
-  {
-    title: "Adel Fawzy",
-    age: 28,
-    available: true,
-    skills: ["PHP", "Laravel"],
-  },
-  {
-    title: "Rakan Ahmed",
-    age: 32,
-    available: false,
-    skills: ["JavaScript", "NodeJS"],
-  },
-  {
-    title: "Ahmed Sami",
-    age: 19,
-    available: true,
-    skills: ["C#", "ASP.NET"],
-  },
-  {
-    title: "Tawfiq Okasha",
-    age: 36,
-    available: false,
-    skills: ["Ruby", "RubyOnRails"],
-  },
-];
+// let chosen = prompt("Enter the chosen number");
+// let myFriends = [
+//   {
+//     title: "Osama Mohamed",
+//     age: 39,
+//     available: true,
+//     skills: ["Java", "Spring"],
+//   },
+//   {
+//     title: "Ahmed Ali",
+//     age: 25,
+//     available: false,
+//     skills: ["Python", "Django"],
+//   },
+//   {
+//     title: "Adel Fawzy",
+//     age: 28,
+//     available: true,
+//     skills: ["PHP", "Laravel"],
+//   },
+//   {
+//     title: "Rakan Ahmed",
+//     age: 32,
+//     available: false,
+//     skills: ["JavaScript", "NodeJS"],
+//   },
+//   {
+//     title: "Ahmed Sami",
+//     age: 19,
+//     available: true,
+//     skills: ["C#", "ASP.NET"],
+//   },
+//   {
+//     title: "Tawfiq Okasha",
+//     age: 36,
+//     available: false,
+//     skills: ["Ruby", "RubyOnRails"],
+//   },
+// ];
 
-try {
-  let {
-    title: empName,
-    age,
-    available,
-    skills: [, lastSkill],
-  } = myFriends[chosen - 1];
+// try {
+//   let {
+//     title: empName,
+//     age,
+//     available,
+//     skills: [, lastSkill],
+//   } = myFriends[chosen - 1];
 
-  console.log(empName);
-  console.log(age);
-  console.log(available ? "available" : "not avialable");
-  console.log(lastSkill);
-} catch (error) {
-  console.log(`Something went wrong:\n${error}`);
-}
+//   console.log(empName);
+//   console.log(age);
+//   console.log(available ? "available" : "not available");
+//   console.log(lastSkill);
+// } catch (error) {
+//   console.log(`Something went wrong:\n${error}`);
+// }
+
+const weekDays = new Set([
+  "Saturday",
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+]);
+
+console.log(weekDays, typeof weekDays);
