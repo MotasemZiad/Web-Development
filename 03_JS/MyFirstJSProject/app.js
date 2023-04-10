@@ -1286,58 +1286,59 @@ window.onclick = () => {
 // })
 
 
-let taskInput = document.querySelector(`input[type="text"]`)
-let submitInput = document.querySelector(`input[type="submit"]`)
-let tasksList = document.querySelector(`.tasks`)
+// let taskInput = document.querySelector(`input[type="text"]`)
+// let submitInput = document.querySelector(`input[type="submit"]`)
+// let tasksList = document.querySelector(`.tasks`)
 
-let ulTag = document.createElement("ul")
-
-
-let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-
-const renderTasks = () => {
-    tasksList.appendChild(ulTag);
-    ulTag.innerHTML = ''
-
-    tasks.forEach((task, index) => {
-        const li = document.createElement('li');
-        const text = document.createTextNode(task);
-        li.appendChild(text);
-
-        const deleteButton = document.createElement('span');
-        deleteButton.innerHTML = 'Delete';
-        deleteButton.addEventListener('click', () => {
-            tasks.splice(index, 1);
-            localStorage.setItem('tasks', JSON.stringify(tasks));
-            renderTasks();
-        });
-
-        li.appendChild(deleteButton);
-        ulTag.appendChild(li);
-    });
-};
+// let ulTag = document.createElement("ul")
 
 
-taskInput.addEventListener('input', () => {
-    if(taskInput.value.trim() !== ''){
-        submitInput.removeAttribute('disabled')
-    }else {
-        submitInput.setAttribute('disabled', true)
-    }
-})
+// let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+// const renderTasks = () => {
+//     tasksList.appendChild(ulTag);
+//     ulTag.innerHTML = ''
+
+//     tasks.forEach((task, index) => {
+//         const li = document.createElement('li');
+//         const text = document.createTextNode(task);
+//         li.appendChild(text);
+
+//         const deleteButton = document.createElement('span');
+//         deleteButton.innerHTML = 'Delete';
+//         deleteButton.addEventListener('click', () => {
+//             tasks.splice(index, 1);
+//             localStorage.setItem('tasks', JSON.stringify(tasks));
+//             renderTasks();
+//         });
+
+//         li.appendChild(deleteButton);
+//         ulTag.appendChild(li);
+//     });
+// };
 
 
-document.querySelector('form').addEventListener('submit', event => {
-    event.preventDefault();
-    const task = taskInput.value.trim();
+// taskInput.addEventListener('input', () => {
+//     if(taskInput.value.trim() !== ''){
+//         submitInput.removeAttribute('disabled')
+//     }else {
+//         submitInput.setAttribute('disabled', true)
+//     }
+// })
 
-    if(task !== ''){
-        tasks.push(task);
-        localStorage.setItem('tasks', JSON.stringify(tasks));
 
-        taskInput.value = '';
-        renderTasks();
-    }
-});
+// document.querySelector('form').addEventListener('submit', event => {
+//     event.preventDefault();
+//     const task = taskInput.value.trim();
+//     if(task !== ''){
+//         tasks.push(task);
+//         localStorage.setItem('tasks', JSON.stringify(tasks));
 
-renderTasks();
+//         taskInput.value = '';
+//         renderTasks();
+//     }
+// });
+
+// renderTasks();
+
+
