@@ -1576,7 +1576,24 @@ let stopButton = document.querySelector("button");
 // console.log(myWeakMap.delete(user));
 // console.log(myWeakMap.has("something"));
 
-let n1 = [10, 30, 10, 20];
-let n2 = [30, 20, 10];
+// let n1 = [10, 30, 10, 20];
+// let n2 = [30, 20, 10];
 
-console.log([...n1, ...n2].length * new Set(n1).size * Math.min(...n2));
+// console.log([...n1, ...n2].length * new Set(n1).size * Math.min(...n2));
+
+/*
+Getting started with regular expression (Regex)
+    - Email
+    - Username
+    - Password
+    - Phone
+    - IP
+    - URL
+*/
+
+let myString = `I love Motasem Abunima. motasem is a lovely person.`;
+
+let pattern = /motasem/gi;
+
+console.log(myString.match(pattern));
+console.log(pattern.test(myString));
