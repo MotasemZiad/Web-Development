@@ -1591,13 +1591,64 @@ Getting started with regular expression (Regex)
     - URL
 */
 
-let myString = `I love Motasem Abunima. motasem is a lovely person.`;
+// let myString = `I love Motasem Abunima. motasem is a lovely person.`;
 
-let pattern = /motasem/gi;
-let pattern2 = new RegExp("motasem", "gi");
+// let pattern = /motasem/gi;
+// let pattern2 = new RegExp("motasem", "gi");
 
-console.log(myString.match(pattern));
-console.log(pattern.test(myString));
+// console.log(myString.match(pattern));
+// console.log(pattern.test(myString));
 
-console.log(myString.match(pattern2));
-console.log(pattern2.test(myString));
+// console.log(myString.match(pattern2));
+// console.log(pattern2.test(myString));
+
+// let topLevelDomain = "Com Net Org Co Gov IO Info Dev";
+// let topLevelDomainRegex = /(com|org|io)/gi;
+// console.log(topLevelDomain.match(topLevelDomainRegex));
+
+// let practice = "Os1 Os1Os Os2 Os8Os Os5";
+// let practiceRegex = /os[5-9]os/gi;
+// console.log(practice.match(practiceRegex));
+
+// let text = "AaBbCcdefG123!456%&^*";
+// let aToZ = /[a-zA-Z]/g;
+// console.log(text.match(aToZ));
+
+// let myString = `motasemabunima@gmail.com O@@@g...com O@g.net o@g.c o-g@see.co 1@1.com`;
+// let dotRegex = /./g;
+// let wordRegex = /\w/g; // [a-zA-Z0-9_]
+// let nonWordRegex = /\W/g;
+// let digitRegex = /\d/g;
+// let nonDigitRegex = /\D/g;
+// let spaceRegex = /\s/g;
+// let nospaceRegex = /\S/g;
+// let startOrEndRegex = /(\bspam|spam\b)/gi;
+// let notStartOrEndRegex = /\Bnotspam|notspam\B/g;
+
+// let validEmail = /\w+@\w+[^0-9].(com|net)/g;
+
+// console.log("dotRegex", myString.match(dotRegex));
+// console.log("wordRegex", myString.match(wordRegex));
+// console.log("nonWordRegex", myString.match(nonWordRegex));
+// console.log("digitRegex", myString.match(digitRegex));
+// console.log("nonDigitRegex", myString.match(nonDigitRegex));
+// console.log("spaceRegex", myString.match(spaceRegex));
+// console.log("nospaceRegex", myString.match(nospaceRegex));
+// console.log("validEmail", myString.match(validEmail));
+// console.log("startOrEndRegex", myString.match(startOrEndRegex));
+// console.log("notStartOrEndRegex", myString.match(notStartOrEndRegex));
+
+// const urls = "https://github.com http://www.website.net web.com"
+// let urlRegex = /(https?:\/\/)?(www.)?\w+.\w+/ig
+// console.log(urls.match(urlRegex));
+// console.log(urlRegex.test(urls));
+
+document.getElementById("register").onsubmit = () => {
+    let phoneInput = document.getElementById("phone").value
+    let phoneRegex = /\(\d{3}\)\s\d{2}\s\d{3}\s\d{4}/g     // (970) 59 983 8964
+    if (!phoneRegex.test(phoneInput))
+        return false
+    return true
+}   
+
+
