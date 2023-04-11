@@ -1575,3 +1575,13 @@ let stopButton = document.querySelector("button");
 // console.log(myWeakMap.get(user));
 // console.log(myWeakMap.delete(user));
 // console.log(myWeakMap.has("something"));
+
+let n1 = [10, 30, 10, 20];
+let n2 = [30, 20, 10];
+
+console.log(
+  `Your final result is`,
+  Math.min(...n1) * Math.min(...n2) +
+    Math.min(...n1) * Math.min(...n2) +
+    Math.min(...n1)
+); // 210
