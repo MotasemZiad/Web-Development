@@ -1643,12 +1643,35 @@ Getting started with regular expression (Regex)
 // console.log(urls.match(urlRegex));
 // console.log(urlRegex.test(urls));
 
-document.getElementById("register").onsubmit = () => {
-    let phoneInput = document.getElementById("phone").value
-    let phoneRegex = /\(\d{3}\)\s\d{2}\s\d{3}\s\d{4}/g     // (970) 59 983 8964
-    if (!phoneRegex.test(phoneInput))
-        return false
-    return true
-}   
+// document.getElementById("register").onsubmit = () => {
+//     let phoneInput = document.getElementById("phone").value
+//     let phoneRegex = /\(\d{3}\)\s\d{2}\s\d{3}\s\d{4}/g     // (970) 59 983 8964
+//     if (!phoneRegex.test(phoneInput))
+//         return false
+//     return true
+// }   
+
+// Regex challenge
+let url1 = 'elzero.org'
+let url2 = 'http://elzero.org'
+let url3 = 'https://elzero.org'
+let url4 = 'https://www.elzero.org'
+let url5 = 'https://www.elzero.org/articles.php?id=100&cat=topics'
+
+let urlRegex = /(https?:\/\/)?(www.)?\w+.\w+/ig
+// let urlRegex = /(https?:\/\/(www\.))?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ 
+
+
+console.log(url1.match(urlRegex));
+console.log(url2.match(urlRegex));
+console.log(url3.match(urlRegex));
+console.log(url4.match(urlRegex));
+console.log(url5.match(urlRegex));
+
+console.log(urlRegex.test(url1));
+console.log(urlRegex.test(url2));
+console.log(urlRegex.test(url3));
+console.log(urlRegex.test(url4));
+console.log(urlRegex.test(url5));
 
 
