@@ -1516,26 +1516,62 @@ let stopButton = document.querySelector("button");
 
 // console.log(weekDays, typeof weekDays);
 
-let myMap = new Map();
+// let myMap = new Map();
 
-myMap.set("username", "motasemabunima");
-myMap.set("email", "motasemabunima@gmail.com");
+// myMap.set("username", "motasemabunima");
+// myMap.set("email", "motasemabunima@gmail.com");
 
-myMap.set("email", "moatasem.abunema@gmail.com");
+// myMap.set("email", "moatasem.abunema@gmail.com");
 
-console.log(myMap.delete("password"));
-console.log(myMap.get("username"));
+// console.log(myMap.delete("password"));
+// console.log(myMap.get("username"));
 
-console.log(myMap.keys());
-console.log(myMap.values());
+// console.log(myMap.keys());
+// console.log(myMap.values());
 
-console.log(myMap.entries());
-console.log(myMap.size);
-console.log(myMap.has("password"));
-myMap.forEach((v, k) => {
-  console.log("key", k);
-  console.log("value", v);
-});
+// console.log(myMap.entries());
+// console.log(myMap.size);
+// console.log(myMap.has("password"));
+// myMap.forEach((v, k) => {
+//   console.log("key", k);
+//   console.log("value", v);
+// });
 
-myMap.clear();
-console.log(myMap);
+// myMap.clear();
+// console.log(myMap);
+
+const user = {
+  firstName: "Motasem",
+  lastName: "Abunima",
+  age: 23,
+  gpa: 85.51,
+  isGraduated: true,
+  courses: [
+    "Programming",
+    "Operating Systems",
+    "Distributed Systems",
+    "Cloud Computing",
+    "Calculus",
+  ],
+  jobTitle: "Software Developer",
+  address: {
+    location: {
+      latitude: 192.2341,
+      longitude: 37.24301,
+    },
+    country: "Palestine",
+    city: "Gaza",
+    street: "Yaffa St.",
+    zipCode: 28110,
+  },
+};
+
+let myWeakMap = new WeakMap();
+
+myWeakMap.set(user, "Object values");
+
+console.log(myWeakMap);
+
+console.log(myWeakMap.get(user));
+console.log(myWeakMap.delete(user));
+console.log(myWeakMap.has("something"));
