@@ -1540,38 +1540,38 @@ let stopButton = document.querySelector("button");
 // myMap.clear();
 // console.log(myMap);
 
-const user = {
-  firstName: "Motasem",
-  lastName: "Abunima",
-  age: 23,
-  gpa: 85.51,
-  isGraduated: true,
-  courses: [
-    "Programming",
-    "Operating Systems",
-    "Distributed Systems",
-    "Cloud Computing",
-    "Calculus",
-  ],
-  jobTitle: "Software Developer",
-  address: {
-    location: {
-      latitude: 192.2341,
-      longitude: 37.24301,
-    },
-    country: "Palestine",
-    city: "Gaza",
-    street: "Yaffa St.",
-    zipCode: 28110,
-  },
-};
+// const user = {
+//   firstName: "Motasem",
+//   lastName: "Abunima",
+//   age: 23,
+//   gpa: 85.51,
+//   isGraduated: true,
+//   courses: [
+//     "Programming",
+//     "Operating Systems",
+//     "Distributed Systems",
+//     "Cloud Computing",
+//     "Calculus",
+//   ],
+//   jobTitle: "Software Developer",
+//   address: {
+//     location: {
+//       latitude: 192.2341,
+//       longitude: 37.24301,
+//     },
+//     country: "Palestine",
+//     city: "Gaza",
+//     street: "Yaffa St.",
+//     zipCode: 28110,
+//   },
+// };
 
-let myWeakMap = new WeakMap();
+// let myWeakMap = new WeakMap();
 
-myWeakMap.set(user, "Object values");
+// myWeakMap.set(user, "Object values");
 
-console.log(myWeakMap);
+// console.log(myWeakMap);
 
-console.log(myWeakMap.get(user));
-console.log(myWeakMap.delete(user));
-console.log(myWeakMap.has("something"));
+// console.log(myWeakMap.get(user));
+// console.log(myWeakMap.delete(user));
+// console.log(myWeakMap.has("something"));
