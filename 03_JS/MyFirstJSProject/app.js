@@ -1504,14 +1504,38 @@ let stopButton = document.querySelector("button");
 //   console.log(`Something went wrong:\n${error}`);
 // }
 
-const weekDays = new Set([
-  "Saturday",
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-]);
+// const weekDays = new Set([
+//   "Saturday",
+//   "Sunday",
+//   "Monday",
+//   "Tuesday",
+//   "Wednesday",
+//   "Thursday",
+//   "Friday",
+// ]);
 
-console.log(weekDays, typeof weekDays);
+// console.log(weekDays, typeof weekDays);
+
+let myMap = new Map();
+
+myMap.set("username", "motasemabunima");
+myMap.set("email", "motasemabunima@gmail.com");
+
+myMap.set("email", "moatasem.abunema@gmail.com");
+
+console.log(myMap.delete("password"));
+console.log(myMap.get("username"));
+
+console.log(myMap.keys());
+console.log(myMap.values());
+
+console.log(myMap.entries());
+console.log(myMap.size);
+console.log(myMap.has("password"));
+myMap.forEach((v, k) => {
+  console.log("key", k);
+  console.log("value", v);
+});
+
+myMap.clear();
+console.log(myMap);
