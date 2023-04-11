@@ -1594,6 +1594,10 @@ Getting started with regular expression (Regex)
 let myString = `I love Motasem Abunima. motasem is a lovely person.`;
 
 let pattern = /motasem/gi;
+let pattern2 = new RegExp("motasem", "gi");
 
 console.log(myString.match(pattern));
 console.log(pattern.test(myString));
+
+console.log(myString.match(pattern2));
+console.log(pattern2.test(myString));
