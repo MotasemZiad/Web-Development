@@ -1707,53 +1707,53 @@ Getting started with regular expression (Regex)
 // console.log(user3);
 
 
-class Person {
-    static count = 0;
-    #employabilityStatus;
-    constructor(firstName, lastName, age, employed, employabilityStatus){
-        Person.count++;
-        this.firstName = firstName;
-        this.lastName = lastName 
-        this.age = age
-        this.employed = employed
-        this.#employabilityStatus = employabilityStatus;
-    }
+// class Person {
+//     static count = 0;
+//     #employabilityStatus;
+//     constructor(firstName, lastName, age, employed, employabilityStatus){
+//         Person.count++;
+//         this.firstName = firstName;
+//         this.lastName = lastName 
+//         this.age = age
+//         this.employed = employed
+//         this.#employabilityStatus = employabilityStatus;
+//     }
 
-    #getEmployabilityStatus(){
-        return this.employed ? "Employed" : "Not Employed"
-    }
+//     #getEmployabilityStatus(){
+//         return this.employed ? "Employed" : "Not Employed"
+//     }
 
-    getFullName(){ 
-        return `${this.firstName} ${this.lastName}`
-    }
+//     getFullName(){ 
+//         return `${this.firstName} ${this.lastName}`
+//     }
 
-    static countMembers(){
-        return `${Person.count} Members Created`
-    }
-}
+//     static countMembers(){
+//         return `${Person.count} Members Created`
+//     }
+// }
 
-class Employee extends Person {
-    constructor(firstName, lastName, age, employed, employabilityStatus, role, salary){
-        super(firstName, lastName, age, employed, employabilityStatus)
-        this.role = role
-        this.salary = salary;
-    }
+// class Employee extends Person {
+//     constructor(firstName, lastName, age, employed, employabilityStatus, role, salary){
+//         super(firstName, lastName, age, employed, employabilityStatus)
+//         this.role = role
+//         this.salary = salary;
+//     }
 
-    getEmployeeRole(){
-        return `Your employability role is ${this.role}`;
-    }
+//     getEmployeeRole(){
+//         return `Your employability role is ${this.role}`;
+//     }
     
-}
+// }
 
-let p1 = new Person("Motasem", "Abunima", 27, "Not Employed")
-let e1 = new Employee("Ahmed", "Ali", 28, true, "Employed", "Quality Assurance Engineer", 3200)
-let e2 = new Employee("Adel", "Jamal", 32, false, "Not Employed", "Solutions Architect", 4000)
+// let p1 = new Person("Motasem", "Abunima", 27, "Not Employed")
+// let e1 = new Employee("Ahmed", "Ali", 28, true, "Employed", "Quality Assurance Engineer", 3200)
+// let e2 = new Employee("Adel", "Jamal", 32, false, "Not Employed", "Solutions Architect", 4000)
 
-console.log(p1.getFullName());
-console.log(e1.getEmployeeRole());
-console.log(e2.getFullName());
-console.log(e2.employabilityStatus);
-console.log(e1);
-console.log(e2);
+// console.log(p1.getFullName());
+// console.log(e1.getEmployeeRole());
+// console.log(e2.getFullName());
+// console.log(e2.employabilityStatus);
+// console.log(e1);
+// console.log(e2);
 
-console.log(Person.countMembers());
+// console.log(Person.countMembers());
