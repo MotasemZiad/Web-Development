@@ -1652,26 +1652,77 @@ Getting started with regular expression (Regex)
 // }   
 
 // Regex challenge
-let url1 = 'elzero.org'
-let url2 = 'http://elzero.org'
-let url3 = 'https://elzero.org'
-let url4 = 'https://www.elzero.org'
-let url5 = 'https://www.elzero.org/articles.php?id=100&cat=topics'
+// let url1 = 'elzero.org'
+// let url2 = 'http://elzero.org'
+// let url3 = 'https://elzero.org'
+// let url4 = 'https://www.elzero.org'
+// let url5 = 'https://www.elzero.org/articles.php?id=100&cat=topics'
 
-let urlRegex = /(https?:\/\/)?(www.)?\w+.\w+/ig
-// let urlRegex = /(https?:\/\/(www\.))?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ 
-
-
-console.log(url1.match(urlRegex));
-console.log(url2.match(urlRegex));
-console.log(url3.match(urlRegex));
-console.log(url4.match(urlRegex));
-console.log(url5.match(urlRegex));
-
-console.log(urlRegex.test(url1));
-console.log(urlRegex.test(url2));
-console.log(urlRegex.test(url3));
-console.log(urlRegex.test(url4));
-console.log(urlRegex.test(url5));
+// let urlRegex = /(https?:\/\/)?(www.)?\w+.\w+/ig
+// // let urlRegex = /(https?:\/\/(www\.))?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ 
 
 
+// console.log(url1.match(urlRegex));
+// console.log(url2.match(urlRegex));
+// console.log(url3.match(urlRegex));
+// console.log(url4.match(urlRegex));
+// console.log(url5.match(urlRegex));
+
+// console.log(urlRegex.test(url1));
+// console.log(urlRegex.test(url2));
+// console.log(urlRegex.test(url3));
+// console.log(urlRegex.test(url4));
+// console.log(urlRegex.test(url5));
+
+
+/* 
+    OOP => Object Oriented Programming
+        - Encapsulation
+        - Inheritance
+        - Abstraction
+        - Polymorphism
+*/
+
+// const person = {
+//     firstName: "Motasem",
+//     lastName: "Abunima",
+//     age: 23,
+//     getFullName: function () {
+//         return `${this.firstName} ${this.lastName}`;
+//     } 
+// }
+
+// function User(id, name, salary){
+//     this.id = id;
+//     this.name = name;
+//     this.salary = salary + 500;
+// }
+
+// let user1 = new User(101, "Ahmed Ali", 5000)
+// let user2 = new User(102, "Fawzy Sameer", 6000)
+// let user3 = new User(103, "Adel Fathy", 7000)
+
+// console.log(user1);
+// console.log(user2);
+// console.log(user3);
+
+
+class Person {
+    constructor(firstName, lastName, age){
+        this.firstName = firstName;
+        this.lastName = lastName
+        this.age = age
+    }
+
+
+    getFullName(){
+        return `${this.firstName} ${this.lastName}`
+    }
+}
+
+let p1 = new Person("Motasem", "Abunima", 25)
+
+console.log(p1.getFullName());
+console.log(p1 instanceof Person);
+console.log(p1 instanceof Object);
+console.log(p1.constructor === Person);
