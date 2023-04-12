@@ -1757,3 +1757,13 @@ Getting started with regular expression (Regex)
 // console.log(e2);
 
 // console.log(Person.countMembers());
+
+// Date & Time
+
+let datenow = new Date()
+console.log(datenow)
+
+let myBirthday = new Date("May 11 2000")
+let difference = datenow - myBirthday
+
+console.log(`My current age: ${(difference / 1000 / 60 / 60 / 24 / 365).toFixed(2) }`);
