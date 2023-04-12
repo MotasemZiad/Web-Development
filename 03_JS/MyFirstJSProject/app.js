@@ -1709,39 +1709,51 @@ Getting started with regular expression (Regex)
 
 class Person {
     static count = 0;
-    constructor(firstName, lastName, age){
-        this.firstName = firstName || "Unknown";
+    #employabilityStatus;
+    constructor(firstName, lastName, age, employed, employabilityStatus){
+        Person.count++;
+        this.firstName = firstName;
         this.lastName = lastName 
         this.age = age
-        this.msg = function(){
-            return `Hello ${this.firstName}, your age is ${this.age}`
-        }
-        Person.count++;
+        this.employed = employed
+        this.#employabilityStatus = employabilityStatus;
+    }
+
+    #getEmployabilityStatus(){
+        return this.employed ? "Employed" : "Not Employed"
     }
 
     getFullName(){ 
         return `${this.firstName} ${this.lastName}`
     }
 
-    static sayHello () {return `Hello from the class`}
-
     static countMembers(){
         return `${Person.count} Members Created`
     }
 }
 
-let p1 = new Person("Motasem", "Abunima", 5)
-let p2 = new Person("Ahmed", "Ali", 28)
-let p3 = new Person("Adel", "Jamal", 32)
+class Employee extends Person {
+    constructor(firstName, lastName, age, employed, employabilityStatus, role, salary){
+        super(firstName, lastName, age, employed, employabilityStatus)
+        this.role = role
+        this.salary = salary;
+    }
+
+    getEmployeeRole(){
+        return `Your employability role is ${this.role}`;
+    }
+    
+}
+
+let p1 = new Person("Motasem", "Abunima", 27, "Not Employed")
+let e1 = new Employee("Ahmed", "Ali", 28, true, "Employed", "Quality Assurance Engineer", 3200)
+let e2 = new Employee("Adel", "Jamal", 32, false, "Not Employed", "Solutions Architect", 4000)
 
 console.log(p1.getFullName());
-console.log(p1.msg());
-// console.log(p1.msg); // Native Code
+console.log(e1.getEmployeeRole());
+console.log(e2.getFullName());
+console.log(e2.employabilityStatus);
+console.log(e1);
+console.log(e2);
 
-console.log(p1 instanceof Person);
-console.log(p1 instanceof Object);
-console.log(p1.constructor === Person);
-
-console.log(Person.count);
-console.log(Person.sayHello());
 console.log(Person.countMembers());
