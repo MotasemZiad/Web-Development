@@ -1708,21 +1708,40 @@ Getting started with regular expression (Regex)
 
 
 class Person {
+    static count = 0;
     constructor(firstName, lastName, age){
-        this.firstName = firstName;
-        this.lastName = lastName
+        this.firstName = firstName || "Unknown";
+        this.lastName = lastName 
         this.age = age
+        this.msg = function(){
+            return `Hello ${this.firstName}, your age is ${this.age}`
+        }
+        Person.count++;
     }
 
-
-    getFullName(){
+    getFullName(){ 
         return `${this.firstName} ${this.lastName}`
+    }
+
+    static sayHello () {return `Hello from the class`}
+
+    static countMembers(){
+        return `${Person.count} Members Created`
     }
 }
 
-let p1 = new Person("Motasem", "Abunima", 25)
+let p1 = new Person("Motasem", "Abunima", 5)
+let p2 = new Person("Ahmed", "Ali", 28)
+let p3 = new Person("Adel", "Jamal", 32)
 
 console.log(p1.getFullName());
+console.log(p1.msg());
+// console.log(p1.msg); // Native Code
+
 console.log(p1 instanceof Person);
 console.log(p1 instanceof Object);
 console.log(p1.constructor === Person);
+
+console.log(Person.count);
+console.log(Person.sayHello());
+console.log(Person.countMembers());
