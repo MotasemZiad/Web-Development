@@ -1769,23 +1769,42 @@ Getting started with regular expression (Regex)
 // console.log(`My current age: ${(difference / 1000 / 60 / 60 / 24 / 365).toFixed(2) }`);
 
 // Generator 
+// function* generateNumbers() {
+//     yield 1;
+//     yield 2;
+//     yield 3;
+//     yield 4;
+// }
+
+// let generator = generateNumbers();
+// console.log(typeof generator);
+// console.log(generator);
+
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().done);
+
+// for(let value of generateNumbers()){
+//     console.log(value);
+// }
+
+
+
 function* generateNumbers() {
-    yield 1;
-    yield 2;
-    yield 3;
-    yield 4;
+    let index = 0;
+
+    while(true){
+        yield index++;
+    }
 }
 
 let generator = generateNumbers();
-console.log(typeof generator);
-console.log(generator);
 
 console.log(generator.next().value);
 console.log(generator.next().value);
 console.log(generator.next().value);
 console.log(generator.next().value);
-console.log(generator.next().done);
-
-for(let value of generateNumbers()){
-    console.log(value);
-}
+console.log(generator.return());
+console.log(generator.next().value);
