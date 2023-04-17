@@ -1803,3 +1803,23 @@ Getting started with regular expression (Regex)
 // console.log(generator.next().value);
 // console.log(generator.return());
 // console.log(generator.next().value);
+
+// JSON => object
+// JSON.parse();
+// object => JSON
+// JSON.stringify();
+
+fetch("https://jsonplaceholder.typicode.com/posts/1")
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(typeof data);
+    console.log(data);
+
+    const jsonData = JSON.stringify(data);
+    console.log(typeof jsonData);
+    console.log(jsonData);
+
+    const jsObjectData = JSON.parse(jsonData);
+    console.log(typeof jsObjectData);
+    console.log(jsObjectData);
+  });
