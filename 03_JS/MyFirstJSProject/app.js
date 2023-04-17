@@ -1154,7 +1154,7 @@
 // console.log(typeof promptValue, promptValue);
 
 // setTimeout & setInterval
-let stopButton = document.querySelector("button");
+// let stopButton = document.querySelector("button");
 
 // let counter = setTimeout(
 //   () => console.log("setTimeout")
@@ -1649,7 +1649,7 @@ Getting started with regular expression (Regex)
 //     if (!phoneRegex.test(phoneInput))
 //         return false
 //     return true
-// }   
+// }
 
 // Regex challenge
 // let url1 = 'elzero.org'
@@ -1659,8 +1659,7 @@ Getting started with regular expression (Regex)
 // let url5 = 'https://www.elzero.org/articles.php?id=100&cat=topics'
 
 // let urlRegex = /(https?:\/\/)?(www.)?\w+.\w+/ig
-// // let urlRegex = /(https?:\/\/(www\.))?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/ 
-
+// // let urlRegex = /(https?:\/\/(www\.))?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#()?&//=]*)/
 
 // console.log(url1.match(urlRegex));
 // console.log(url2.match(urlRegex));
@@ -1673,7 +1672,6 @@ Getting started with regular expression (Regex)
 // console.log(urlRegex.test(url3));
 // console.log(urlRegex.test(url4));
 // console.log(urlRegex.test(url5));
-
 
 /* 
     OOP => Object Oriented Programming
@@ -1689,7 +1687,7 @@ Getting started with regular expression (Regex)
 //     age: 23,
 //     getFullName: function () {
 //         return `${this.firstName} ${this.lastName}`;
-//     } 
+//     }
 // }
 
 // function User(id, name, salary){
@@ -1706,14 +1704,13 @@ Getting started with regular expression (Regex)
 // console.log(user2);
 // console.log(user3);
 
-
 // class Person {
 //     static count = 0;
 //     #employabilityStatus;
 //     constructor(firstName, lastName, age, employed, employabilityStatus){
 //         Person.count++;
 //         this.firstName = firstName;
-//         this.lastName = lastName 
+//         this.lastName = lastName
 //         this.age = age
 //         this.employed = employed
 //         this.#employabilityStatus = employabilityStatus;
@@ -1723,7 +1720,7 @@ Getting started with regular expression (Regex)
 //         return this.employed ? "Employed" : "Not Employed"
 //     }
 
-//     getFullName(){ 
+//     getFullName(){
 //         return `${this.firstName} ${this.lastName}`
 //     }
 
@@ -1742,7 +1739,7 @@ Getting started with regular expression (Regex)
 //     getEmployeeRole(){
 //         return `Your employability role is ${this.role}`;
 //     }
-    
+
 // }
 
 // let p1 = new Person("Motasem", "Abunima", 27, "Not Employed")
@@ -1768,7 +1765,7 @@ Getting started with regular expression (Regex)
 
 // console.log(`My current age: ${(difference / 1000 / 60 / 60 / 24 / 365).toFixed(2) }`);
 
-// Generator 
+// Generator
 // function* generateNumbers() {
 //     yield 1;
 //     yield 2;
@@ -1790,21 +1787,19 @@ Getting started with regular expression (Regex)
 //     console.log(value);
 // }
 
+// function* generateNumbers() {
+//     let index = 0;
 
+//     while(true){
+//         yield index++;
+//     }
+// }
 
-function* generateNumbers() {
-    let index = 0;
+// let generator = generateNumbers();
 
-    while(true){
-        yield index++;
-    }
-}
-
-let generator = generateNumbers();
-
-console.log(generator.next().value);
-console.log(generator.next().value);
-console.log(generator.next().value);
-console.log(generator.next().value);
-console.log(generator.return());
-console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.return());
+// console.log(generator.next().value);

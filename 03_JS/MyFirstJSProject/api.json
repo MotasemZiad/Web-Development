@@ -1,0 +1,12 @@
+{
+  "string": "Motasem",
+  "integer number": 23,
+  "floating-point number": 85.51,
+  "boolean": false,
+  "array": ["Palestine", "Jordan", "Lebanon", "Syria"],
+  "object": {
+    "a": "a",
+    "b": "b"
+  },
+  "null": null
+}
