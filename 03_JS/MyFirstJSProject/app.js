@@ -1809,17 +1809,29 @@ Getting started with regular expression (Regex)
 // object => JSON
 // JSON.stringify();
 
-fetch("https://jsonplaceholder.typicode.com/posts/1")
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(typeof data);
-    console.log(data);
+// fetch("https://jsonplaceholder.typicode.com/posts/1")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     console.log(typeof data);
+//     console.log(data);
 
-    const jsonData = JSON.stringify(data);
-    console.log(typeof jsonData);
-    console.log(jsonData);
+//     const jsonData = JSON.stringify(data);
+//     console.log(typeof jsonData);
+//     console.log(jsonData);
 
-    const jsObjectData = JSON.parse(jsonData);
-    console.log(typeof jsObjectData);
-    console.log(jsObjectData);
-  });
+//     const jsObjectData = JSON.parse(jsonData);
+//     console.log(typeof jsObjectData);
+//     console.log(jsObjectData);
+//   });
+
+let myRequest = new XMLHttpRequest();
+myRequest.open("GET", "https://api.github.com/users/motasemziad");
+myRequest.send();
+
+console.log(myRequest);
+
+myRequest.onreadystatechange = () => {
+  if (myRequest.readyState === 4 && myRequest.status === 200) {
+    console.log(myRequest.responseText);
+  }
+};
