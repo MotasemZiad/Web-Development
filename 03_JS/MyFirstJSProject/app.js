@@ -1825,13 +1825,22 @@ Getting started with regular expression (Regex)
 //   });
 
 let myRequest = new XMLHttpRequest();
-myRequest.open("GET", "https://api.github.com/users/motasemziad");
+myRequest.open("GET", "https://api.github.com/users/motasemziad/repos");
 myRequest.send();
 
 console.log(myRequest);
 
 myRequest.onreadystatechange = () => {
   if (myRequest.readyState === 4 && myRequest.status === 200) {
-    console.log(myRequest.responseText);
+    let jsData = JSON.parse(myRequest.responseText);
+    console.log(jsData);
+
+    for (let i = 0; i < jsData.length; i++) {
+      let div = document.createElement("div");
+      let divContent = document.createTextNode(jsData[i]["full_name"]);
+
+      div.appendChild(divContent);
+      document.body.appendChild(div);
+    }
   }
 };
