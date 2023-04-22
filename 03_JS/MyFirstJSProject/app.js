@@ -1930,16 +1930,16 @@ Getting started with regular expression (Regex)
 //     console.log(ten[0].name);
 //   });
 
-const myPromise = new Promise((res, rej) => {
-  setTimeout(() => {
-    res("I am the way I am and I will never change");
-  }, 2000);
-});
+// const myPromise = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("I am the way I am and I will never change");
+//   }, 2000);
+// });
 
-async function readData() {
-  console.log("Before Promise");
-  console.log(await myPromise);
-  console.log("After Promise");
-}
+// async function readData() {
+//   console.log("Before Promise");
+//   console.log(await myPromise);
+//   console.log("After Promise");
+// }
 
-readData();
+// readData();
