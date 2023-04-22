@@ -1824,23 +1824,40 @@ Getting started with regular expression (Regex)
 //     console.log(jsObjectData);
 //   });
 
-let myRequest = new XMLHttpRequest();
-myRequest.open("GET", "https://api.github.com/users/motasemziad/repos");
-myRequest.send();
+// let myRequest = new XMLHttpRequest();
+// myRequest.open("GET", "https://api.github.com/users/motasemziad/repos");
+// myRequest.send();
 
-console.log(myRequest);
+// console.log(myRequest);
 
-myRequest.onreadystatechange = () => {
-  if (myRequest.readyState === 4 && myRequest.status === 200) {
-    let jsData = JSON.parse(myRequest.responseText);
-    console.log(jsData);
+// myRequest.onreadystatechange = () => {
+//   if (myRequest.readyState === 4 && myRequest.status === 200) {
+//     let jsData = JSON.parse(myRequest.responseText);
+//     console.log(jsData);
 
-    for (let i = 0; i < jsData.length; i++) {
-      let div = document.createElement("div");
-      let divContent = document.createTextNode(jsData[i]["full_name"]);
+//     for (let i = 0; i < jsData.length; i++) {
+//       let div = document.createElement("div");
+//       let divContent = document.createTextNode(jsData[i]["full_name"]);
 
-      div.appendChild(divContent);
-      document.body.appendChild(div);
-    }
+//       div.appendChild(divContent);
+//       document.body.appendChild(div);
+//     }
+//   }
+// };
+
+let myPromise = new Promise((resolve, reject) => {
+  let connection = false;
+
+  if (connection) {
+    resolve("Connection Established");
+  } else {
+    reject(Error("Connection failed"));
   }
-};
+});
+
+console.log(myPromise, typeof myPromise);
+
+myPromise.then(
+  (value) => console.log(`Good ${value}`),
+  (reason) => console.log(`Bad ${reason}`)
+);
