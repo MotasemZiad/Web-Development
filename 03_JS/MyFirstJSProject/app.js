@@ -1887,33 +1887,45 @@ Getting started with regular expression (Regex)
 //   .catch((reason) => console.log(`Something went wrong ${reason}`))
 //   .finally(() => console.log("Everything is going to be good"));
 
-const getData = (apiLink) => {
-  return new Promise((resolve, reject) => {
-    let myRequest = new XMLHttpRequest();
-    myRequest.onload = () => {
-      if (myRequest.status === 200) {
-        resolve(JSON.parse(myRequest.responseText));
-      } else {
-        reject(new Error("Data Not Found"));
-      }
-    };
+// const getData = (apiLink) => {
+//   return new Promise((resolve, reject) => {
+//     let myRequest = new XMLHttpRequest();
+//     myRequest.onload = () => {
+//       if (myRequest.status === 200) {
+//         resolve(JSON.parse(myRequest.responseText));
+//       } else {
+//         reject(new Error("Data Not Found"));
+//       }
+//     };
 
-    myRequest.open("GET", apiLink);
-    myRequest.send();
-  });
-};
+//     myRequest.open("GET", apiLink);
+//     myRequest.send();
+//   });
+// };
 
-getData("https://api.github.com/users/motasemziad/repos")
-  .then((value) => {
-    value.length = 10;
-    return value;
+// getData("https://api.github.com/users/motasemziad/repos")
+//   .then((value) => {
+//     value.length = 10;
+//     return value;
+//   })
+//   .then((value) => {
+//     for (let i = 0; i < value.length; i++) {
+//       let div = document.createElement("div");
+//       let divContent = document.createTextNode(value[i]["full_name"]);
+
+//       div.appendChild(divContent);
+//       document.body.appendChild(div);
+//     }
+//   });
+
+fetch("https://api.github.com/users/devmsh/repos")
+  .then((result) => {
+    return result.json();
   })
-  .then((value) => {
-    for (let i = 0; i < value.length; i++) {
-      let div = document.createElement("div");
-      let divContent = document.createTextNode(value[i]["full_name"]);
-
-      div.appendChild(divContent);
-      document.body.appendChild(div);
-    }
+  .then((full) => {
+    full.length = 10;
+    return full;
+  })
+  .then((ten) => {
+    console.log(ten[0].name);
   });
