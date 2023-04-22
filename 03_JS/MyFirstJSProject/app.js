@@ -1862,27 +1862,58 @@ Getting started with regular expression (Regex)
 //   (reason) => console.log(`Bad ${reason}`)
 // );
 
-let myPromise = new Promise((resolve, reject) => {
-  let employees = ["Ahmed", "Sayed", "Sami", "Fawzy"];
+// let myPromise = new Promise((resolve, reject) => {
+//   let employees = ["Ahmed", "Sayed", "Sami", "Fawzy"];
 
-  if (employees.length === 4) {
-    resolve(employees);
-  } else {
-    reject(Error("Some of the employees have not come yet"));
-  }
-});
+//   if (employees.length === 4) {
+//     resolve(employees);
+//   } else {
+//     reject(Error("Some of the employees have not come yet"));
+//   }
+// });
 
-console.log(myPromise);
+// console.log(myPromise);
 
-myPromise
+// myPromise
+//   .then((value) => {
+//     value.length = 2;
+//     return value;
+//   })
+//   .then((value) => {
+//     value.length = 1;
+//     return value;
+//   })
+//   .then((value) => console.log(`THE CHOSEN EMPLOYEE IS ${value}`))
+//   .catch((reason) => console.log(`Something went wrong ${reason}`))
+//   .finally(() => console.log("Everything is going to be good"));
+
+const getData = (apiLink) => {
+  return new Promise((resolve, reject) => {
+    let myRequest = new XMLHttpRequest();
+    myRequest.onload = () => {
+      if (myRequest.status === 200) {
+        resolve(JSON.parse(myRequest.responseText));
+      } else {
+        reject(new Error("Data Not Found"));
+      }
+    };
+
+    myRequest.open("GET", apiLink);
+    myRequest.send();
+  });
+};
+
+getData("https://api.github.com/users/motasemziad/repos")
   .then((value) => {
-    value.length = 2;
+    value.length = 10;
     return value;
   })
   .then((value) => {
-    value.length = 1;
-    return value;
-  })
-  .then((value) => console.log(`THE CHOSEN EMPLOYEE IS ${value}`))
-  .catch((reason) => console.log(`Something went wrong ${reason}`))
-  .finally(() => console.log("Everything is going to be good"));
+    for (let i = 0; i < value.length; i++) {
+      let div = document.createElement("div");
+      let divContent = document.createTextNode(value[i]["full_name"]);
+
+      div.appendChild(divContent);
+      document.body.appendChild(div);
+    }
+  });
