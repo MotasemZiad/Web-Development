@@ -1845,19 +1845,44 @@ Getting started with regular expression (Regex)
 //   }
 // };
 
-let myPromise = new Promise((resolve, reject) => {
-  let connection = false;
+// let myPromise = new Promise((resolve, reject) => {
+//   let connection = false;
 
-  if (connection) {
-    resolve("Connection Established");
+//   if (connection) {
+//     resolve("Connection Established");
+//   } else {
+//     reject(Error("Connection failed"));
+//   }
+// });
+
+// console.log(myPromise, typeof myPromise);
+
+// myPromise.then(
+//   (value) => console.log(`Good ${value}`),
+//   (reason) => console.log(`Bad ${reason}`)
+// );
+
+let myPromise = new Promise((resolve, reject) => {
+  let employees = ["Ahmed", "Sayed", "Sami", "Fawzy"];
+
+  if (employees.length === 4) {
+    resolve(employees);
   } else {
-    reject(Error("Connection failed"));
+    reject(Error("Some of the employees have not come yet"));
   }
 });
 
-console.log(myPromise, typeof myPromise);
+console.log(myPromise);
 
-myPromise.then(
-  (value) => console.log(`Good ${value}`),
-  (reason) => console.log(`Bad ${reason}`)
-);
+myPromise
+  .then((value) => {
+    value.length = 2;
+    return value;
+  })
+  .then((value) => {
+    value.length = 1;
+    return value;
+  })
+  .then((value) => console.log(`THE CHOSEN EMPLOYEE IS ${value}`))
+  .catch((reason) => console.log(`Something went wrong ${reason}`))
+  .finally(() => console.log("Everything is going to be good"));
